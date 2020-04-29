@@ -1,0 +1,2143 @@
+,keyword,text,label
+8216,account name,"Congrats!
+It just takes time to show up, try searching by your developer account name.
+Also you can share thw link with us so we can check it out and give you honest feedback :)",0
+5921,account names,"You could use the material design guidelines to build a nice user form.
+In French, don't forget to write ""Prénom"" instead of ""Prenom"".
+For the email, you can implement an autocomplete textview with account names from the AccountManager. And then you validate it with a pattern.
+You write gender, maybe it's better to ask for the sex (I don't know but it could be different...).
+The phone number can be tricky too if a valid number is mandatory, you can use libphonenumber to check it.
+
+Moreover you can disable the button and enable it when all fields are valid.
+
+In a nutshell a nice user form is cool to fill in, and TextInputLayout from the new Design Library can help you.",1
+4680,advertising id,"You can check:
+
+http://googleadsdeveloper.blogspot.com/2014/02/since-joining-google-play-services-back.html
+
+and
+
+https://developer.android.com/google/play-services/id.html
+
+&gt; Giving users control
+&gt;
+&gt;Users can reset their advertising ID or opt out of interest-based ads at any time, right from the Google Settings app. Their preferences apply across all ad companies that use the advertising ID.",1
+392,audio recording,"Stumbled upon this SO question and I took a swing at it. Simple... but I can't get it to work either.:http://stackoverflow.com/questions/18321999/unsolved-android-audio-recording-using-example-from-google
+
+I thought getFilesDir would work. Why does something like this work on one of my devices, and not the other one?",1
+860,camera,"My experiences developing on Android:I just finished writing my second app on Android and thought I'd share my experiences &amp; thoughts.  Before Android, I had a .Net (C#) background.  I was a Dev for 5 years before quitting my job earlier this year to pursue entrepreneurship.
+
+Biggest lessons I learned:
+
+
+- Make use of popular frameworks/libraries.  Android requires lots of boiler plate code to get simple things done and libraries will make it quicker for you to finish an app.  For my app I used OkHttp, Dagger, Otto, Gson, to name a few.
+Square has a repository of well-tested Android libraries.
+Some sites like Appbrain also list the most popular android libraries/frameworks being used, which can give you ideas on new libraries to check out.
+
+
+- If you need to persist data through SQL, consider using an ORM library like OrmLite.  In my case I decided to implement content providers myself, but in the end it was a lot of boiler plate code to write (I had several tables and 6+ content providers to maintain).  Knowing how to implement content providers yourself is useful, but for my next project I'll definitely be going with a library to avoid having to write so much boiler plate code.
+
+
+- Learn how to write performant and memory efficient list views.  It took a while to wrap my head around how android listview adapters handle virtualization (it is quite low level), but I've come to appreciate the control it gives you.  For example, when using a CursorAdapter with a content provider I can load just the data I need to render into memory, then render that data.  So even if my content provider points to a table with 10,000 rows, if my view only fits 10 items at a time, I only load 10 rows out of the table and render that 10.  With a standard ArrayAdapter, you'd need to load all 10,000 items into memory first, before having the listview adapter filter down to show 10.
+
+
+- Learn how fragments work and code your app with fragments.  This will help alot with code re-use across your activities, moving layouts around (if your designer likes to change their mind often), and later on when you want to target tablets.
+
+
+- Install some crash monitoring service such as Crashlytics/Bugsense.  They can help you catch crashes quickly, but more importantly, you can log handled exceptions so that you can fail gracefully but still log the issue to the server for debugging.  This has helped me alot in tracking down fragmentation issues.
+
+
+- Become familiar with Maven repository.  Whenever searching up dependencies, this is usually my first stop.  Instead of having to find the jar to download and import, your IDE can download the dependency from Maven.
+
+
+- Be prepared to hit fragmentation issues if your app has dependencies on hardware/carrier specific features (i.e. Camera, Sms/Mms).  I think Android fragmentation isn't that bad if you aren't targetting these.
+
+In terms of my biggest frustration with Android so far, it would have to be the lack of a standard design pattern (MVC, MVVM, MVP, etc.) supported by the platform.  It seems like MVC and MVP are some of the more popular ones the community suggests but I haven't found any popular/well-supported libraries for them yet, so I wrote my own, which lead to lots of boilerplate code.
+
+
+Here are the two apps I wrote recently which are on the play store:
+
+Comet Messenger - a quick way to get your friends' opinions in group chat (US and Canada only)
+
+MSP - A simple stock tracker &amp; widget (Only in countries where Google Finance is supported)
+
+Edit: Also feel free to give feedback on the apps!",0
+5001,camera,"&gt; The question is why do we need OS updates if all features 
+
+Because it's not *features* that are being talked about really.
+
+The core features of the OS are things like: battery management, GPU drivers, camera drivers, etc  Plus settings screens, lock screens, notification systems, etc.
+
+Those can practically only be done with an OS upgrade - meaning an install of Android 5.0.
+
+These support library, put simply, is only about the visual interface - it isn't really adding any ""features"", it's adding only some new screen layouts, animations, and menu items.
+
+There are a pretty large number of people in this Android community that seem extremely concerned about the façade of apps.  Apple and the Apple marketplace is way more concerned with cosmetic beauty - so I guess it's some kind of Android fanboi inferiority complex to constantly criticize the colors and themes of Android apps ;)
+
+It also seems to be overlooked that Android is a global phone much more than Apple. Especially given the price and economics.  And what seems like great design in Cupertino, California may not be what originates in Korea!  Just wait until Mexico and Brazil starts designing more of our user interfaces ;)  The Android fanbois who love black/white status bar icons will have a stroke. /s
+
+&gt; why do we need OS updates
+
+Repeating: more than skin deep.  It isn't all shallow.",0
+5084,camera,"I don't really care for camera quality but after what /u/Fer22f said, I'll skip on Z3 Compact. ",0
+1025,camera,"Can someone look into this apk and find the encoded username and password for this camera:Meow,
+I bought one of those wifi rear view camera's off ebay and the android app they provided is HORRIBLE!
+
+The app in question can be found at: http://www.agptek.com/download/CarMoniter.rar
+
+The SSID is GLW-CAR-R0001209 with password of 88888 for the camera itself
+
+Can someone look into this apk and find the encoded username and password for this camera, as that's the missing piece that's keeping me from using better IP Camera apps!",0
+5668,camera,"Inspired by Jake Wharton and Jesse Wilson's talk on Open Source, I have finally decided to give it a try and release something I worked on this week to the public. It's a Rx-based implementation of NSD for Android, which has become probably my second-most hated part of the Android framework (after the Camera API obvs). There is still lots of issues seeing as it was only released the other day, but nevertheless it felt liberating to contribute something to the community. Even though nobody should ever deal with NSD on Android, seriously! /ramble",0
+6334,camera,"I saw your other comment saying you used Nova so you might be aware of some of these (or just know it works in Nova and not other launchers). Here's some off the top of my head.
+
+* Touch events go right through the lockscreen for a few seconds after screen off and to the app underneath (generally the Launcher) when pin/fingerprint is enabled. This causes seemingly random apps to launch when putting the phone in your pocket. Nova (beta) detects and discards these touch events.
+* Historically Samsung made the system Direct Dial shortcuts only work with their Launcher, and launchers need to use hacks to make them work
+* Then on the SGS6 and Note5 they removed the shortcut completely (even from their Launcher, go figure). Nova adds it back as we got a ton of bug reports about it missing.
+* They broke GET_CONTENT so it won't use the modern document chooser app. Nova uses this for restoring backups and picking images, and has to resort to a hack.
+* Another commenter mentioned that the camera apps forces their app to layout in landscape, what I was seeing was a portrait layout and configuration but the dimensions were landscape, so padding calculations went crazy. Nova detects and throws out these bad measurements.
+* On ICS creating hardware layers in some circumstances was like 5x slower on the sgs2 with ICS than the Galaxy Nexus, basically the same hardware. Nova needed to create them for folder animations and would cut half the animation if it was taking too long.
+* On some devices they expose a Bluetooth settings shortcut, for example so an app could ask the user to turn on Bluetooth without requiring the permission. But then in a system update they required the permission to launch the shortcut. Nova users already had it on the desktop and suddenly it stops working (and works in launchers that request every permission). Fortunately for me they had a bug in their settings app that let me bypass the permission check anyway.
+* Their ""App Optimizer"" breaks background notification listeners like teslaunread. I don't have a hacky workaround for that yet but am dreaming up some.
+* They broke the unofficial expand notification shade api, this I can't completely blame them as its unofficial. But its frustrating as Nova needs users to enable accessibility now for an alternative api.
+
+Ideally a developer should be able to make a good app by just building against the emulator or a Nexus device. But in practice you need to test heavily against Samsung and each of their system updates as you never know what will work and what won't. That said, I have hacks to work around bugs in HTC, LG, Moto, Huawei, and even smaller oems like Alcatel and LeTv too. Samsung is the biggest OEM by far, so we hear and care about bugs there more often than other oems. ",0
+6639,camera,"I'm currently working on a PC application that uses a USB camera and gives a live view of it. I would love to make this for Android, but I don't know if it's possible. It uses OpenCV and the camera's sdk which is a dll, but I believe the sdk came with the source code, because of that couldn't I compile it for Android? 
+
+Edit: There's a linux version of the SDK. Should that work fine on Android? From what I understand after researching all of this is that QT works well with OpenCV, and QT and OpenCV both work for Android. So as long as I can use this SDK on Android, this app should be possible, right?",1
+6894,camera,You aren't allowed to complain until you've implemented the original camera API.,0
+7084,camera,"**Features**
+
+* This release introduces a set of new camera change listeners for camera motion start, ongoing, and end events. You can also see why the camera is moving, whether it's caused by user gestures, built-in API animations or developer-controlled movements. Below is a summary of the new listeners. For details, see the guide to camera change events. (Issue 4636)
+
+* The onCameraMoveStarted() callback of the OnCameraMoveStartedListener is invoked when the camera starts moving. The callback method receives a reason for the camera motion.
+* The onCameraMove() callback of the OnCameraMoveListener is invoked multiple times while the camera is moving or the user is interacting with the touch screen.
+* The OnCameraIdle() callback of the OnCameraIdleListener is invoked when the camera stops moving and the user has stopped interacting with the map.
+* The OnCameraMoveCanceled() callback of the OnCameraMoveCanceledListener is invoked when the current camera movement has been interrupted.
+* You can store an arbitrary data object with a marker using Marker.setTag(), and retrieve the data object using Marker.getTag(). For details, see the guide to associating data with a marker. (Issue 4650)
+* With GoogleMap.setMinZoomPreference() and GoogleMap.setMaxZoomPreference() you can set a prefered minimum and/or maximum zoom level. This is useful, for example, if your app shows a defined area around a point of interest, or if you're using a custom tile overlay with a limited set of zoom levels. For details, see the guide to setting minimum/maximum zoom preferences. (Issue 4663)
+* With GoogleMap.setLatLngBoundsForCameraTarget(), you can constrain the lat/lng centre bounds of the focal point of the map (the camera target) so that users can only scroll and pan within these bounds. For example, a retail app for a shopping centre or airport may want to constrain the map to a particular bounds, allowing users to scroll and pan within those bounds. For details, see the guide to restricting the user's panning to a given area.
+
+**Resolved Issues**
+
+* Marker icon anchor breaks with Google Play services 9.0.83. (Issue 9768)
+* ActivityNotFoundException when Google Map is uninstalled/deactivated. (Issue 9483)
+
+**Notes**
+
+* The OnCameraChangeListener is deprecated in favour of the new listeners described above - that is, OnCameraMoveStartedListener, OnCameraMoveListener, OnCameraMoveCanceledListener and OnCameraIdleListener.",1
+7129,camera,Creating a camera will be very hard. I certainly wouldn't recommend it for anyone starting off with android.,1
+7469,camera,"Tesseract is meant to OCR properly-aligned, high-contrast scanned documents. It can work for camera images, but you'll need to do a lot of pre- and post-processing to get good results. Personally, I've gotten much better results out of Google Play Services OCR. ",1
+1585,camera,"Would you choose React Native or Kotlin 1.1 for a new project?:Its 2017 and very exciting for Android dev. One one hand you have Kotlin 1.1, which is seriously awesome.
+
+OTOH, you also have React Native - which seems to be Instagram-scale production ready.
+
+If you had to build an instagram scale app - with tons of features, background sync, lots of camera and hardware usage.. would you bet on React Native or Kotlin?",1
+7873,camera,"I don't believe I have anything to contribute, at this point, for open-source. I'm absolutely for the idea though. My content, or the definitions I've developed is for an extension of a website I'm working on. I'm absolutely for the idea of having other people able to utilize the structure of this project for their own projects. I'm just stuck at this point. 
+
+
+Where I'm at (I noticed the continuous action for camera preview, but I've found  this) --- I guess what I'm looking to do at this point, is combine this activity with a dictionary activity.",1
+8043,camera,"That is the screen I get on my rooted V20 when I reboot. 
+
+Just hold your finger over the proximity sensor to the right of the front camera and turn the screen off. It should be back to normal after that. ",0
+8236,camera,"The most perplexing part here is that it works fine on the emulator, but not on a real device. Which is making me think the problem is the way the image is being stored. However, the camera starts up and there is no errors. Some code from my fragment is below.
+
+    //Method to take picture
+    private void dispatchTakePictureIntent() {
+        Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        // Ensure that there's a camera activity to handle the intent
+        if (takePictureIntent.resolveActivity(getActivity().getPackageManager()) != null) {
+            // Create the File where the photo should go
+            File photoFile = null;
+            try {
+                photoFile = createImageFile();
+            } catch (IOException ex) {
+                // Error occurred while creating the File
+            }
+            // Continue only if the File was successfully created
+            if (photoFile != null) {
+                Uri photoURI = FileProvider.getUriForFile(this.getContext(),
+                        ""com.example.android.fileprovider"",
+                        photoFile);
+                takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
+                startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO);
+            }
+        }
+    }
+
+    //Camera Tab View: Fetches the image from the intent started with dispatchTakePictureIntent().
+    Bitmap myBitmap;
+    String mCurrentPhotoPath;
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        System.out.println(""requestCodeFrag: "" + requestCode);
+        System.out.println(""resultCodeFrag: "" + resultCode);
+        if (requestCode == REQUEST_TAKE_PHOTO &amp;&amp; resultCode == RESULT_OK) {
+            System.out.println(""dataFrag: "" + data);
+            File imgFile = new  File(mCurrentPhotoPath);
+
+            if(imgFile.exists()){
+
+                myBitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+                ImageView myImage = (ImageView) getView().findViewById(R.id.imageView);
+                myImage.setImageBitmap(myBitmap);
+                System.out.println(""Image: "");
+            }
+        }
+    }
+
+
+    //Camera tab View: Creates the picture file.
+    private File createImageFile() throws IOException {
+        // Create an image file name
+        String timeStamp = new SimpleDateFormat(""yyyyMMdd_HHmmss"").format(new Date());
+        String imageFileName = ""JPEG_"" + timeStamp + ""_"";
+        File storageDir = getActivity().getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+        File image = File.createTempFile(
+                imageFileName,  /* prefix */
+                "".jpg"",         /* suffix */
+                storageDir      /* directory */
+        );
+
+        // Save a file: path for use with ACTION_VIEW intents
+        mCurrentPhotoPath = image.getAbsolutePath();
+        return image;
+    }",1
+8618,camera,"Well, based on what I know, they seem to be just custom markers with their anchor set on the tip of the point. It's possible to get the coordinates of the camera. So, if we know the coordinates of the camera, and the coordinates of the routes, we should be able to set the markers along any point of the routes in the callback of a camera change listener. Don't have time to pinpoint every api needed, but I think you could figure it out based on that.",0
+10133,camera,"These 2 phones are not comparable that easy. If you have money buy pixel 2. It is flagship device. A5 is midrange. Choice is on you, is pixel 2 worth twice the price? It is sure better phone all around but will you benefit from much better camera, more storage and stock android?",0
+2040,camera,"Recommend 3D engine for Android (not for gaming):I'd like to build a stylised menu for my App, using a 3D engine.  I feel like the options for 'basic 3D rendering' on Android are not obvious, so it would be interesting to see what other people are having success or difficulty with using.  The solution I'm looking for should be able to...
+
+\- Display 3D objects in the context of regular Android Activities.
+
+\- Be able to apply a custom shader to objects (to give them either a monochrome, line-drawn or cel-shaded look)
+
+\- Ideally, be able to adjust the camera to parallel perspective (isometric)
+
+Is plain OpenGL ES the way to go here?  I'd rather there was some library that provided me a scene-graph, object importers and enough control over shaders and cameras to set up the above.
+
+Google Filament looks interesting but places a lot of emphasis on high-quality PBR rendering which might, again, be adding weight I don't need. Thoughts?",0
+10462,camera,"&gt; -lying about screen density
+&gt; 
+&gt; 
+&gt; 
+&gt; -camera rotation $h17!!!!! Mofo's!!!!! And no matter how deep you delve (storage, exif, hw camera orientation, camera(2) api calls, using width/height comparisons including sensor data!!!!) it is ALWAYS Samsung which screws picture orientation up ... and then on a very few devices DOES do what it is supposed to! :(
+&gt; 
+&gt; 
+&gt; 
+&gt; -storage locations :(
+
+",0
+3304,camera,"I think the only differences between the i9100G and i9100 are the Chipset and GPU. There maybe some system tweaks between the two, but I think they use the same camera hardware.",0
+3472,camera,"I only need to emulate the camera for proof of the zxing API working, this app will never actually go into the store or anything. ",1
+3562,camera,"Not complex, and you're absolutely right about the 2d plane thing.  I basically need an app that overlays a figure over the designated point on the camera view.  
+
+It really comes down to figuring out an angle and representing that angle on the display.  If we are looking down at a bird's eye view there are two points on the ground that we care about: the position of the user and the position of the ""target"".  You would need to compare the angle between the line connecting those two points and the direction line the camera is facing. Once you have that angle you can figure out where the display point should be on the camera view - column wise at least.  That's basically what I'm looking to do.",1
+428,camera,"Decoding IR with Galaxy S4 camera:I am working on my first android application and I was wondering if it would be possible to use the galaxy s4 camera to decode IR signals from a TV remote.
+
+I know the camera can see the IR light, but after reviewing the specs, it only records at 30FPS, which is 1 frame every 33.3ms.  However a TV remote will usually pulse a PWM signal with intervals ranging from 2.5ms to .5ms.  Would there be some sort of loss?  Would it be possible to compensate for it?",1
+649,camera,"Rock and Hard place:I feel I'm stuck between a rock and a hard place trying to get one of these last few features implemented.  The one I am stuck on is accessing the camera in a way for me to be able to upload a picture captured by the camera to a webpage.
+
+* I've tried the HTML5 way but it doesn't seem to respond the way I want, even after messing with the webview's settings.
+
+* Tried the javascript interface+startactivityforresult way but the javascript interface function completes before I am able to access the data and send it to the server.  Reason being is because it goes to the onactivityresult function and finishes there.
+
+* Another thing I am trying is a SurfaceView that is called from a javascriptinterface that accesses the camera and grabs the data, but that seems way off the deep end.
+
+I am trying to stay away from phonegap because what I have so far seems to be much more efficient compared to phonegap.  
+
+Any help is greatly appreciated, I've so far exhausted google searches and the few stack overflow posts that are close to what I'm trying to find out have no answer to them.
+
+Edit: Added something else I have tried.",1
+5941,camera,"Didn't want to self promote on here, so left that detail out. but I'll give you the past the text I sent to some reviewers...
+
+Progression... That's the name. The idea is to take photo's of your project, let's say building a driveway, you take a photo before you start and more photos as you progress through the project. With each new photo you take, the previous photo gets overlaid on the camera so that you can line up the image perfectly for the next photo. 
+
+Essentially what you end up with is a before and after photo of you project with lots of photos in between. All these photos would of been taken from the same position. You can then share this as a single before and after image or share all the photos in the project. ",1
+5971,camera,"I've got a question! Currently I'm working with the Camera API (not camera2, still working with the deprecated one.) and I'm really struggling with onPreviewFrame(byte[] bytes). It seems that a lot of newer phones (HTC One, Nexus 6, Note 4) only support ImageFormat.JPEG, and not the old YV12 or NV21. I can't seem to find a proper way of converting a byte array in JPEG format to a Bitmap for processing. Any thoughts?",1
+6285,camera,"Is it better to use global variables and reference them in your functions, or create a local variable and pass it through the function calls?
+
+I'm finishing up my camera app and am trying to make it more efficient so I have a lot of global ImageViews, Bitmaps, and more. 
+
+Thanks",1
+6581,camera,You're using cwac-camera or cwac-cam2?,1
+6883,camera,"The webpage about system permission says ""If the device is running Android 5.1 (API level 22) or lower, or the app's targetSdkVersion is 22 or lower, the system asks the user to grant the permissions at install time"". Those apps probably target an older SDK version so they're granted permissions automatically. However, you can still revoke them - just go into the settings app and try turning off permissions for some apps - fun things will happen.
+
+If you want to target an older Android version, go to your build.gradle file (the one that shows Module: app), and change the *targetSdkVersion* to 22 or lower. This is **not recommended** though.
+
+This is the absolute minimum you must do to ask for permissions:
+
+* In *AndroidManifest.xml*, declare your permission:
+
+        &lt;uses-permission android:name=""android.permission.CAMERA"" /&gt;
+
+* Also, because the app depends on the camera, you should add this line too:
+    
+        &lt;uses-feature android:name=""android.hardware.camera"" android:required=""true""/&gt;
+
+This will prevent the app from being installed to a device without a camera, but you still need to check if the device has a flash light.
+
+* When you need to use the flash light (probably in your Activity's onCreate()), ask the system for the camera permission. You only need to do this on devices with Marshmallow and above:
+
+
+        if (Build.VERSION.SDK_INT &gt;= 23)
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
+                    != PackageManager.PERMISSION_GRANTED)
+                ActivityCompat.requestPermissions(MainActivity.this, permissions, REQUEST_CODE);
+
+
+REQUEST_CODE is an integer of your choice.
+
+* In the same activity, override this method:
+
+        public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+            if (grantResults.length &gt; 0 &amp;&amp; grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                // Permission granted
+            }
+            else {
+                // Permission not granted. In this case, you can exit the app and show a toast telling the user to give it permission next time.
+            }",1
+7379,camera,"I am working on an emergency app for a uni assignment. One of the functions is that when the alert is triggered the user has the option of recording video for a set period out of 3 4 5 seconds, then the recorded file name/location is saved to be send to server.
+
+Problem -  recording video generally requires the interface to come up and interaction. Since this is an emergency app we need it to be a trigger only thing and fire on its own for set time.    No need for GUI or preview just turn front camera on, record seconds_amount  ... save file. return its name/location.
+
+I am currently fiddling with Camera2 API
+https://developer.android.com/samples/Camera2Video/index.html
+
+However it sends a preview to a texture view which is NOT WANTED and I am struggling to try and figure out how to just get past this.
+
+But I am at my limits perhaps past them on this, I am wondering if anyone can help me here with this.",1
+7393,camera,What is the easiest way to work with camera features inside surface view? Is there any lib that allows picture taking and video recording?,1
+7818,camera,"Alright, alright ;) I actually did do just that, and it felt okayish. But then I realised I also need to check and possibly query the camera permission. Which means I need to do requestPermission - onPermissionRequest query, and I need to also encode the information about originating button click there if I want to direct the user straight to camera after he has granted the permissions. Which I absolutely can do, but feels a bit icky (I could just handle the permissions differently though, e.g. already when user lands to the activity)",1
+7844,camera,I can see the crash report in google play. It's already fixed in the library on 0.9.12 and an updated APK will be released to the Play Store soon.  It happens due to me wrongly assuming that the camera will always have matching aspect ratios when comparing the set of available preview sizes and available picture capture sizes.,1
+8585,camera,"Because it doesn't work as expected on all devices. On some devices the image gets rotated the wrong way (if you take a portrait of a person, it will rotate it sideways). On some devices returned URI is null for whatever reason. The library I was using does start the camera intent and fixes those things which made it perfect for me, but it doesn't work on Galaxy S6 and S7 devices which are pretty common in my user base. I wanted to go trough library's source and fixing this issue myself, but I have very limited time which I use to devlop my app, so that's not an option.
+
+Edit: some writing mistakes.",1
+8896,camera,"I found that in my searching this afternoon, but I wasn't sure if it would be able to do what I want. Do you think it would be suitable? I'm not averse to rolling my own camera functionality, but I'd prefer to use libraries for functionality like that where possible.",1
+9853,camera,"Are there any docs / examples to using the multi-camera API? I see the little snippet in the P sdk item, but no real API explanation.
+
+Thanks for doing this!",1
+1945,camera,"Camera preview 1 is not full size/stretches:Hello, I am Android developer in local company. I have got a task to develop an library, which takes photo of id or passport crops it and send it via API and provides user authentication. I have developed all library (it is working ok, I can't share it here). **However, I run into problems with Android Camera Preview... Default camera preview stretches( I am talking about camera api 1, which is deprecated, but runs on all API - which is exactly why I can't use camera api 2).** I have tried all solutions, read all posts on stackoverflow and can't make it work... I might even get fired because of this poor performance either by me, or by Android camera problems... Maybe someone had implemented camera preview and can share his code? I am type of person, who won't forget this help and will help/provide job opportunities also.. This is regarding issue:Problem in Stackoverflow and my Github project code(I kept it small as possible, to not waste your precious time)... I would be more than grateful for your intake, experience and possible solution...
+
+My Github profile  
+",1
+10025,camera,"I second that, camerakit or pretty much any similar library would be better than using the miss is camera or camera 2.",1
+2168,camera,"Why does the ""Source Crop"" for my Camera2 preview SurfaceView keep changing when nothing else does?:This follows on from a previous conversation about  why my camera preview changes proportions after rotation \- I think I now *sort of*  know why it does, but what I don't know is what the blinking flip I need to do about it.
+
+Basically I have a CameraPreview that selects the closest available image size to the available space on the view and picks the correct size to match it. You might imagine that the CameraPreview looks a bit like this:  
+
+
+ **private void** createCameraPreviewSession() {
+
+**try** {
+
+mSurfaceView.getHolder().setFixedSize(width, height);
+
+Surface surface = **mSurfaceView**.getHolder().getSurface();  
+**mPreviewRequestBuilder** = **mCameraDevice**.createCaptureRequest(CameraDevice.***TEMPLATE\_PREVIEW***);  
+**mPreviewRequestBuilder**.addTarget(surface);  
+**if** (**mCameraDevice** != **null** &amp;&amp; **mImageReader** != **null** &amp;&amp; **fragmentState** == ***CONNECTING\_CAMERA***) {  
+  
+**mCameraDevice**.createCaptureSession(Arrays.*asList*(surface), createStateCallback(), **null**);  
+} **else** {  
+}  
+} **catch** (CameraAccessException e) {  
+Log.*w*(***TAG***, **""Access exception during CaptureSession initialisation: ""** \+ e.getMessage());  
+Log.*getStackTraceString*(e);  
+}
+
+}
+
+On the current test device, the width and height are 1280x720 or 720x1280 depending on orientation. The weird part is that when I first open the activity that uses this preview, the camera view is distorted. When I rotate it, it stays distorted, when I rotate it back, it looks fine and the proportions generally, but not always, stay alright after that first rotation.
+
+After a lot of poking around I have finally discovered the *dumpsys SurfaceFlinger* command, which allows me to see the details of my surface, and that gives me some new information. When the view is bad it looks like this:  
+`-------------------------------------------------------------------------------`  
+ `Layer name`  
+`Z |  Comp Type |   Disp Frame (LTRB) |          Source Crop (LTRB)`  
+`-------------------------------------------------------------------------------`  
+ `SurfaceView - com.myApp/com.myApp.CameraActivity#0`  
+  `4294967294 |     Device |    0    0  720 1229 |   39.0    0.0  960.0  720.0`  
+`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -`  
+ `com.myApp/com.myApp.CameraActivity#0`  
+`21055 |     Device |    0   20  720 1280 |    0.0   20.0  720.0 1280.0`  
+`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -`
+
+But when it is good it looks like this: 
+
+`-------------------------------------------------------------------------------`  
+ `Layer name`  
+`Z |  Comp Type |   Disp Frame (LTRB) |          Source Crop (LTRB)`  
+`-------------------------------------------------------------------------------`  
+ `SurfaceView - com.myApp/com.myApp.CameraActivity#0`  
+  `4294967294 |     Device |    0    0  720 1184 |    0.0    0.0 1280.0  720.0`  
+`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -`  
+`com.myApp/com.myApp.CameraActivity#0`  
+`21055 |     Device |    0   20  720 1280 |    0.0   20.0  720.0 1280.0`  
+`- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -`
+
+Clearly the Source Crop is being set completely differently in both cases - but can anyone tell me why? Where does the Source Crop come from and how can I change it? If I can't change it, is there a way to find what the Source Crop is set to for my surface? If I know that I should be able to find a way to compensate for the disparity.
+
+&amp;#x200B;",1
+3124,camera,"SHUT UP AND TAKE MY MONEY 
+
+What a great app. I had been using camscanner for this, but it's awful by comparison to handy scanner. 
+
+Some minor feature requests: 
+
+* I think that capture from camera should have a dedicated button. 
+
+* on my gs2, the image I see using the built-in camera function is cropped to fit the aspect ratio of the screen. So when I'm trying to frame a sheet of paper so that it just fits on the screen, I actually have a bit of margin on the sides. I'd rather see the camera's entire capture area with padding around the sides. 
+
+Great app, guys, I will definitely be doing more scanning thanks to this! ",1
+11913,cameras,"You may have been reading too much into rumors and just false information. Android isn't going anywhere.
+
+Now, let's say they did stop evolving Android and instead took Fuchsia. So what? It won't be this completely new thing with all different paradigms. Sure, APIs might differ, but the core stuff will be the same. You'll still need knowledge about application lifecycles, how to produce well-architected code, how to test your stuff on various levels, work with cameras and BLE and GPS and whatnot. You'll still have permissions you need to handle.
+
+It seems you're a newcomer to this, so just focus on learning Kotlin (and Java) and learn Android. It's going to be relevant whether or not Android is going to be there in five years - and I'm pretty sure it will be.",1
+12299,cameras,"I think Google's APIs are dramatically more developer-friendly in 2019 than in 2005. They barely offered anything at all way back then! The new stuff they offer in terms of API for developer use for free today is incredible. All of Android, for example, is basically a free developer API that anyone can use and is open source. It's the most popular OS in the world with an open API and billions of users. This situation alone, not to mention their AI work in Firebase, Maps, etc, is so dramatically more advanced than anything anyone even imagined in 2005.
+
+If anything I would claim that Google's costs today to developers are largely very reasonable. Perhaps Maps is expensive, but ever think about all the work it takes them to maintain it? They literally drive almost all of the streets in the whole world multiple times per year with high-tech cameras etc. And they rent satellite time to take the pictures from above, airplanes too, the software runs on multiple end-user platforms, etc. Must cost them a lot to run.
+
+&gt;Doesn't it make more sense for google to give a new API technology away for free 10 years to leverage community creativity for their platforms?
+
+By and large, they do. It's exceedingly rare that they make you put up money to use a service, given the number and scale of their APIs offered. I use Google APIs all day long almost every day and most of the time there is a free tier or the API is entirely free. Most paid APIs are reasonably priced.
+
+&gt; leverage community creativity for their platforms?
+
+Google is one of the largest and richest organizations that has ever existed. They do not need to leverage free-tier users for all of their products to improve their platforms. They can spend money, spin up businesses that earn money, and produce value that we can consume as developers, creating additional value for end users.
+
+I think the current situation is wonderful, from the developer perspective.",0
+44,cameras,"Is the Rage Face app by Roadkill working well for you?:I've been running into some issues recently with this app and sending and receiving pictures.
+
+I have Friend A, who has an iPhone 4 on AT&amp;T who usually could send and receive pics from the app with no problem. We would have conversations using them and it worked fine. As of the last week or so, he can see my pic, but I can't see his. I get an error message saying the picture could not be downloaded.
+
+Friend B recently got a new phone. He is on T-Mobile and previously had a BB Pearl. Pics from the app would give him an error message in downloading, something along the lines of ""resolution...too big..resize.. something."" Other pics were sent fine between us. He now has a G2X and I can receive pics from him, but he can't see mine.
+
+It should be noted pics we take with cameras work fine. I am running a D1 with UD 3.3.1, but I have had this issue with the past few weeks of the CM7 nightlies as well. Any clue what could be causing this? I uninstalled and reinstalled the app; same thing happens. ",0
+10800,cameras,"Why is an accurate review (you require permissions that the user doesn't want to give) spam? You might not wanna hear it, but you obviously failed to pick the user up where they are. You can explain why you need this permission, and why it is necessary. If a camera app asks me for the camera permission and maybe even explains why it needs it (duh) I would never give it a one star review for doing so.  
+If you can't explain it there wouldn't be a reason to ask for it. The same applies if it isn't necessary.
+
+Usually permissions are only needed for a small part of the app. Only IFF I want to use that feature should I be prompted for the permission. If I deny it I can't use that one feature. Yet some apps will prompt for permissions on a _splash screen_ and require them to proceed. I will usually rate those apps one star as well.
+
+Very few apps will actually require a permission to even deliver a single feature (e.g. cameras without camera permission) If I don't grant the permission there should be some UI explaining why it is needed.
+
+Apps use _way_ too many permissions and it's the worst anti pattern. Selecting a profile image should neither require camera, nor external storage, yet a lot of apps will _require_ those permissions to do so. If I want my apps to collect all permissions I'll buy an iPhone instead.
+
+I don't know what your app does but I do know that 1 star reviews like the one are often well justified.
+
+PS: I do hope Google's bot detection is a bit better than _rates mostly x stars_ ;)",1
+897,email address,"As an Android developer AND user having your developer account terminated is devastating.:I am coming to terms with the reality that I am no longer allowed to be a Google user, and it's depressing to say the very least.
+I got an email last week letting me know that my Google Wallet card had been suspended due to fraud prevention and that I needed to verify personal information. I sent them a scan of my driver's license and my associated debit card, and received a response that my information could not be verified. I tried to verify again, this time with a bank account statement and my credit card. Again, my account could not be verified. I called Google Wallet support and sat on hold with a representative for 30 minutes while he tried to verify my account, but it could not be verified. He recommended that I contact developer support as it may be part of my Developer account.
+
+I contacted developer support and, while they didn't mention a specific reason, they suggested that I file an appeal as my account may have been terminated due to ""violations by associated developer accounts."" I filed an appeal and was denied -immediately- due to ""multiple policy violations by this or associated accounts"". I was also instructed to not start another account as it would be suspended as well and all funds forfeit. I was told to refer to the emails I received with the subject REASON FOR REMOVAL, however I never received any emails. I was able to eventually isolated the issue as to why my account was terminated: a developer I had worked with in the past, who was still associated with my account, HAD had their account terminated, but not for apps associated with my account, nor had that developer released any apps on my account at all. They were simply associated with my account as a developer. (Not an owner or administrator). I imagine this was Google removing any means of this developer releasing an app, but I would've hoped terminating *their* account would've accomplished there.
+
+How bad is the termination? The termination comes along with suspending my Google Wallet account, which can also not be re-opened. Not by my real name, bank account, email address, or credit card. This means that Google will literally no longer accept money from me for any reason. My Google Drive subscription lapsed today and can not be renewed. My Google Music subscription will lapse at the end of the month and can not be renewed. I got into the Google Domains beta and I'm lucky I didn't transfer any domains to them because I likely wouldn't have been able to pay for those as well. I can no longer purchase ANYTHING from the Play store; Not music, not movies, not apps, and not even devices like Glass. I can no longer purchase micro-transactions in the apps I already own. I can never make an NFC payment again.
+
+At this point, literally, my only option to be able to continue as a mobile user and developer is to commit completely to iOS. I have to buy an iPhone*. I have to find a new music subscription service. I have to purchase music and videos either through iTunes or Amazon.
+
+Worst of all, my story is not the only one. The internet is full of stories of users who have been terminated for reason they can not entirely understand. A termination from being an Android Developer is a termination from being a Google user and you are automatically guilty by association even if you have violated no policies yourself.
+
+I am not happy to say the very least.
+
+tl;dr: Termination of your developer account also permanently suspends your Google Wallet.
+
+*Addendum: After further research I could probably use the Amazon app store, something like rdio or Spotify for music, and Dropbox or Skydrive for a Drive replacement, but I'd just really rather not have to do any of that. I could also buy an Amazon or Windows Phone but.....",0
+6608,email address,"By the way, reading below the appeal form:
+
+&gt; You will receive a response to the email address provided either accepting or denying your appeal. All appeal decisions are final, but you may upload a new, policy-compliant instance of your app if your account is still in good standing. Note that we will not provide guidance on the potential compliance of your future implementation, so submissions requesting advice will not receive an answer.
+
+I don't know exactly what you wrote as the reason, but the decision is final so basically you're screwed. Maybe I would try sending an email again, just in case, but without too much hope. Worst to the worst, just publish it on another store.
+",0
+7207,email address,People/companies have been scraping email address from Play for years. I'm constantly getting spammed about developer crap from multiple sources.,0
+11054,email address,"&gt;You are not entitled to getting their courses for free on your own terms 
+
+Then it's not really free if there are terms now is it? The title of this post shouldn't include ""free"" it should at least say it requires a registration. So the title is misleading. 
+
+&gt;If you worry about them selling your email without any evidence of them doing just that, you can always use a throwaway email like wingnutwilson said.
+
+Sure I can, but that wouldn't do the site any good, it would just litter them with throwaway emails. I'd rather support the site with my real email address if they show me enough incentive to do so - and asking me to register to ""continue watching"" is just a scummy thing to do. I would actually reconsider registering if the content was really actually free, and without them twisting my hand into submission to continue watching the content. If it was TRULY free for the masses I would register. So don't put this on me.",0
+12039,email address,"My biggest issue with this is that a tester must sign in with their Google account on the device. This is a one-time hassle for personal tester devices (gotta enter password then do 2FA), but for shared QA devices it's even more annoying. You now either need a shared QA Google account that ...does nothing, but ya gotta have it to use App Distribution, or else someone has to use their personal account on a shared device.
+
+When you're distributing your app to your company, you want the process to be as close to one click as possible or else many people won't bother.
+
+Fabric Beta only required an email address as an id, you didn't need to actually sign in with an account to the device. Does anyone know what additional features App Distribution has over Fabric Beta that mandates Google account login?",1
+10,email address,"Selling apps as an private individual on Android Market:Hi gents,
+
+I have spent a while developing an Android app, and am hoping to publish in the coming days. From the Market console, I have tried to make my Checkout account a Merchant account, for which I need to provide both a private (for Google's eyes only) address - which I'm fine with - and an address which the public will see when the buy my software.
+
+I have looked in more detail at the receipts for Android apps I have bought in the past, and sure enough they all have addresses - the difference is they were all (3 of them) businesses, with business premises. As a private individual I do not want just anybody to be given my address over the internet. I can understand completely that Google need one, to verify who I am, but the last thing I need is my address in the public.
+
+Before I go ahead signing up for a merchant account, is there anything I can do about this? Maybe a setting inside merchant account to make your address private? I do intend to provide a support email address and such, but cannot see any valid reason why users on the Android Market need my personal address.
+
+Thanks very much guys, I'm sure someone here has experienced the same?
+
+EDIT: I should have mentioned originally, incase there is a difference in GCheckout over the pond, I'm from the UK.
+
+Also posted on SO, turning to Reddit for your views too - is this possible? Thanks guys",0
+731,email address,"AccessibilityService, other apps, and where the hell are they getting all that info?:Using help from here i've managed to write a class extending AccessibilityService that listens for incoming notifications.
+
+But I'm having problems extracting all the info from the notifications. If I use event.getText(), and the notification is from gmail, I only get the senders name. But other apps are able to extract more info, (email title, email subject, email address of sender, even images).
+
+I've tried printing out all the info from within the event, but can't figure out where it's coming from.
+
+Any ideas?",1
+11908,first name,"You really need to make some of the changes to make the article more believable - as I suggested above:
+
+- more info on your apps - hopefully a screenshot of them, and definitely show the URL for the apps (right now even Google won't know who you are given the information you have provided - so how can Google followup on the article and fix this issue ?)
+
+- the name you were using for account before (before you changed to ""Android Apps Shop"").  This gives readers a better understanding of the change you made.
+
+- more screenshots of the chat you had with Google Support using the Google Developer Console android app.  This will give more context than just the one screenshot currently there.
+
+- you may want to show the name of the Google chat person (since Google already knows who they are if they check who chatted with you) - and for readers of your article their first name won't identify them anyway.  So I think it will add to credibility to show the chat screenshots without blacking out their name
+
+- correct any spelling mistakes and add spaces between sentences - currently it is hard to read - example:
+
+change:
+
+&gt;Hi all ,Hoping everyone doing great.I work on Mobility and Web Apps.I Learned so many technologies and best practices.I maintained Google Play Store Account Successfully 3 years. 
+
+to:
+
+&gt;Hi all.  Hoping everyone doing great.  I work on Mobility and Web Apps.  I Learned so many technologies and best practices.  I maintained Google Play Store Account Successfully 3 years. 
+
+
+- you could correct some of the English - but that maybe ok, since readers will know that you are not an English speaker.  You may want to add at the top in the Summary - that you are not an English speaker, so please excuse the language etc.",0
+4220,gallery,"Under Settings, in the newer Samsung handsets with LED lit displays, there is are options to switch between various color modes such as ""Dynamic"" and ""Natural."" Dynamic probably switches to the ""Natural"" color mode while viewing photos with the stock gallery application; otherwise, photos will appear significantly saturated. This threw me off for a long time while viewing photos on my handset I took for work. The ""Natural"" profile corrects image saturation, but makes everything appear very dull. ",0
+7083,gallery,"I've actually heard that a few times and the general line is Activity == Controller, View == UIView etc. This is misleading as activity has no equivalent in any mass market OS ever produced (maybe Windows OLE to some degree?). It's a really insane set of concepts mixing lifecycle/UI etc. into one.
+
+The view system in pretty much any GUI system I've worked with includes a hierarchy of components so having View and UIView would make sense but they couldn't be more further apart. Android views are laid out using layout managers where Apple only recently started automating that and even then it's with a ""one size fits all autolayout"" which is pretty cool but insane.
+
+Google conceptually has a mishmash of half baked ideas that conflict with one another thru it's entire messy API whereas Apple conceptually puts out very little choice in terms of options to support very specific use case. E.g. if you want to open a picture from a gallery in Android you fire intents and do all of the complex stuff where some application will take it from there. Under iOS you have a class specifically designed to do that...
+
+Under the hood in the graphics layer Android maps to OGL/Vulkan where OGL is pretty much a hardware standard so everyone aligns to it (including Apple) but everything else changes. Apple has Metal and it built core-animation on top. This is really a scene-graph API although no one calls it that... Android has again a confusing array of immediate mode calls with complex hardware/software rendering semantics and lets not delve into renderscript...
+
+Besides Objective-C/Swift being different languages they are very different conceptually. Non-managed compiled languages with a simulator that compiles to a completely different architecture. ARC might seem like a GC until you find yourself cursing for thinking that...
+
+I can go on but this will take all day.",1
+10942,gallery,"Also keep in mind many come out to this subreddit and walk away thinking ""I don't know crap, I suck at Android, I am not using any of the tech (sob)""
+
+I gave a list of stuff I use in an app being used daily (well 40% of the users are on it daily) and currently sitting at 0 ANR and 0 Crash on Play Store. Guess what I am doing works but it is the best, cleanest, most tech friendly code? Probably not and probably never will be.
+
+I update and refactor as I go along and so far have been able to maintain it and address issues as they arise. New releases of the app every couple of weeks and it does a lot of crap including interacting with 3rd party Credit Card reader, using Google Voice for customer and product look up, hand key credit card web service support, notifications, themes, help, Google Drive, camera, gallery, etc. 
+
+I call it simple because it is a ton of screens doing REST calls and standard CRUD interactions. Not tons of data massaging. Still there are 150 files in my `layout` directory so there are a lot of activities, fragments, dialogs, cells being dealt with.
+
+As I tell everyone taking advice ""take what works for you and leave the rest""",0
+2983,gallery,looks interesting.  my immediate question is -- how is the ViewPager different than the old Gallery control?,0
+2999,gallery,"Well, Heres my question. First, How much cash do you have. This is important because without cash your looking at a sub-par dev (probably a student) that would do your work for free. Also when your not paying for it your not really entitled to anything so the project can quickly go awry if the guy isn't at the top of his game. Also, a sub-par dev can give you a wrong estimate of the time it takes for projects like these. I sometimes make this mistake with my own projects (""Oh it'll only take a few days"" translates to ""It took 2 weeks""). 
+
+As for what to explain to them, You need to be as specific as possible. Preferably with some crude drawings explaining what you want. Write out exactly what the app should do, down to the individual pages. 
+
+eg: There should be a photo gallery with thumbnails of all photos from their phone with captions under each thumbnail. Photos should be sorted first by folder then by date.
+
+ Don't mandate specific layout/ button placements (unless its JUST a dev job and not a dev+design job) . As long as you keep up on what they're doing, ask for milestones, and have constant communication with them you should be able to get exactly what you want.
+
+If you want you can pm me with specifics and I could give you some estimates as to how long a job would take, cost, and anything else you want to know.",0
+290,gallery,"Does anyone know any available libraries that implement a scrollable gallery of images that can pinch-to-zoom, etc.?:Basically, I'm trying to implement a gallery view like the stock Gallery application that lets your view pictures on your device. I want to be able to zoom on the pictures with basic gestures. This seems like a pretty basic thing that there should be a widget for, but I haven't been able to find anything. Can anyone help?",1
+1041,gallery,"I need help with uploading pictures to a server and displaying them for users.:Basically I want to create a quick, cheap, functional app that will allow my friends and I to upload pictures to a gallery and view all of them. We have 25 people going on a ski trip together in a month and I thought it would be convenient if I could assemble all of the pictures in one place. I don't want them to have to create an account and I don't care what they will upload. I envision it as that ""Wedding Pics"" app only they don't have to register or do anything to upload pictures. Just essentially download the app and start uploading. The problem is that I have no idea how to go about doing this. Will this be over my head as a beginner? Will I need space to host the pictures or could I have them uploaded to my Box.com account and then have the app display just the folder they are uploaded to? I apologize for the lengthy explanation but I'm just not sure where to get started.",1
+8941,gallery,"Good looking app. I'm just getting started with it and it looks like something I might use ... if I wasn't already using a multi-platform password utility and a cloud note-taker.
+
+Just wanted to point out a grammar error in the store video and one crash. 
+
+I think first-impressions are important, and cringe when I make mistakes. 
+I recommend changing: ""Put your Password to Pinbox for never lose it.""
+To something like: ""Save your passwords in Pinbox and never lose them.""
+ 
+I got one crash when running the Nexus 5X emulator on Android Studio. The app was in the middle of uploading 6 images that I'd selected from my photo album, and about halfway through, the app closed and the phone said ""Pinbox has stopped..."".  Perhaps it was an emulator issue, perhaps not. However, when I returned to the app, all 6 photos were in my app gallery. Not what I was expecting... did they upload?",1
+10137,gallery,"I got test task from potential employer and it turned out as a neat small app: simple photo editor. User select an image from gallery or camera, apply filters from drop-down list and use ""share"" button to send it through mail or messengers with certain title and text (or select ""original"" filter to revert changes). It took 10 hours, it use MVP and half of the time has been spent to handle screen rotations correctly.",1
+5885,guid,"I've created a GUID service managed on the server side so that it can be redeemed in app. You could even poll it once in a while if you wanted to provide ""temporary"" access. Then just link the user to the code somehow in case of uninstalls. Keeping the codes on the client side opens it up to hackers.",1
+853,home address,"Disagree with Google's new publicly-available address policy? This is what you should do about it.:In case you didn't know, Google is implementing a policy which says **all developers of paid apps must provide a physical address which will be publicly available to all users on the app's store listing page**.
+
+
+This policy is likely a result of EU's Consumer Rights Directive, and is stupid because Google is mandating it for all developers, not just those selling to EU consumers.
+
+
+Places like Etsy and eBay have already implemented this change correctly. They explained to sellers why the change was happening and who it applies to. Etsy and eBay sellers have the option of providing a physical address only if they sell to EU consumers. Google isn't giving anyone the option.
+
+
+----
+
+
+And FYI, there's a possibility that PO Boxes can't be used as your ""physical address""; see page 23 of the guidance document for the EU directive:
+
+
+&gt; Since the information about the 'geographical' address is 
+required, it should refer to a physical location:
+&gt; 
+&gt; * For example, it is not sufficient to merely provide the PO Box number as the trader's address.
+
+
+For a lot of indie developers, this means you will be required to make your home address publicly available to all users.
+
+
+----
+
+
+If, like me, you think this is stupid, here's what you should do: Go into your developer console, click the help icon in the top-right corner, and click ""Send feedback"".
+
+
+
+Example feedback message:
+
+
+
+&gt; I'm protesting the new policy where a physical address has to be provided which will be made public to all users. If this is due to the new EU Consumer Rights Directive, I think the field should be made optional, or at least developers of paid apps should be allowed to opt-out if the app is not distributed to countries that have implemented this law. This is the approach other sites like Etsy (https://blog.etsy.com/en/2014/what-etsy-sellers-should-know-about-the-european-unions-new-online-selling-regulations-2/) and eBay (http://pages.ebay.de/help/sell/business/international-business-sellers.html) are already taking.",0
+7499,home addresses,"Wrong, it has to be a physical address:
+
+http://www.androidauthority.com/google-forcing-developers-to-publish-home-addresses-527772/",0
+3555,identification number,Doesn't Admob require a tax identification number in order to withdraw any more than $500 a month? I always assumed they report your earnings to the IRS.,1
+10820,imei,"The original IMEI is fine, I want to get it back to the original?",0
+12229,imei,"Yes. queryDetailsForUid can be used for Wifi. 
+
+IMEI is a unique Identifier for your device. IMSI is a unique Identifier for your SIM card. IMEI is hard coded on your phone. IMSI is stored on the SIM. 
+
+queryDetailsForUid method requires IMSI number of a SIM card to get the data used from Mobile data. If you want to get WiFi data used, then you can pass empty string to that method.  On Android Q, IMSI is prohibited for User apps and that method breaks if you want to access data used from Mobile data. You can find IMEI in Phone's settings. But I don't think you can find IMSI number through settings. You need to fetch it programmatically. But again, that's not possible in Q now.",1
+3006,imei,He might be using the IMEI as a unique identifier.,1
+12230,imsi,"Yes. queryDetailsForUid can be used for Wifi. 
+
+IMEI is a unique Identifier for your device. IMSI is a unique Identifier for your SIM card. IMEI is hard coded on your phone. IMSI is stored on the SIM. 
+
+queryDetailsForUid method requires IMSI number of a SIM card to get the data used from Mobile data. If you want to get WiFi data used, then you can pass empty string to that method.  On Android Q, IMSI is prohibited for User apps and that method breaks if you want to access data used from Mobile data. You can find IMEI in Phone's settings. But I don't think you can find IMSI number through settings. You need to fetch it programmatically. But again, that's not possible in Q now.",1
+4319,IP address,"Maybe I should have explained that better, but I was out with friends and get yelled at by some of them for being anti social if I tried to type all of this out. 
+
+Okay, we deal with a couple of things. Number one though, for example I used action bar Sherlock on one project, and the boss thought it was inconsistent with android design, but more importantly all other apps that we had. Doesn't make a shit load of sense, but I don't get to make that decision. 
+
+Secondly, anything I write for android has to completely match the iOS app flow, which sucks. So say in our LanScan that's not out yet, I have to be able to take it to our airport and run through ~7k addresses or so in about 30 seconds. Not only that, but my adapters and control over particular cells in the UI thread is pretty heavy duty since one cell is constantly being updated with a progress dialog, read out of the most recently found node, what kind of scan I am doing (""bonjour, NetBios, ping, port, native, arp, etc""), and in the meantime of all of that, it has to be able to sort the result cells by IP address, pull forward any settings (like name and vendor) from the database, oh and the worst part... Quit the test and restart one in less than 2 seconds. That means my thread control has to be pretty picky with consistently check interruptions (which only act as flags by the way, not a variable, meaning if the thread somehow survives the interruption for whatever reason, it no longer thinks it's being interrupted). A lot of libraries are really bad about those things, and incredibly wasteful with resources, if they even exist. 
+
+Thirdly, the library we use was actually written by me and translated from The original, which was in C. That library is actually proprietary to the point that McAfee purchased the rights to include certain parts in their security software for multiple millions. It does things like network packet intrusion detection, geographical traceroutes, device detection, etc. 
+
+Some of our other work has been consulting for companies that are publicly traded and their stuff is rather proprietary and very specific in the server process of what it expects on login, notification of upcoming tasks, etc, and again nothing really does that. Even if it did, we don't have a legal department, and have to make absolutely sure that we don't expose them to any issues. With some of their profiles, it also means that acknowledgement of using open source is not going to happen, so lose that option there. 
+
+So while I wish I was doing simple things, I really don't get to. We had a project break last week, and me and the boss each wrote a coin converter for crypto currencies. That was fun, and I actually did get to use some libraries that made it really easy. 
+
+So basically, no, most of the stuff I do doesn't exist in anything open source, and if it does, I won't get to use it for one of many reasons. Also, boss wrote the compression algorithms for the original zip file, while Phil Katz wrote the self extractor. Needless to say, when your shit doesn't stink.... Your opinion is the only one who's matters. ",1
+10556,IP address,"I have to agree with u/TheGameCamel here. Your response was unprofessional and unsuiting for a consumer-facing representative of your brand (that being you).
+
+I agree that the contents of the review display a complete and total lack of understanding of the Internet and its relevant protocols, but, with that said, a large part of marketing is developing trust between you and your customers. Your response to the review builds a wall between you and any potential consumers who happen to see it, and it's likely that a large part of your user base also does not have an understanding of Internet Protocols.
+
+If it was me (in my admittedly unprofessional opinion - I also don't know how or why you use the IP Address), I would have responded with the following:
+
+&gt;Thank you for your feedback. We care about your privacy and data security, we understand that it is of a major concern to our users, and we value your safety. You can read more about how we collect, share, and process your data, including your IP Address, in our Privacy Policy.  
+&gt;  
+&gt;Our application does not attempt to ""hot boot"" or restart your device in any way, nor do we gain access to your device in any ways other than those listed in our Privacy Policy and Terms of Service.  
+&gt;  
+&gt;While ""hacked"" can be a broad term, if you believe your device has been infected with a virus, spyware, or malware, we recommend downloading an Anti-Virus Solution from the Google Play Store. If you believe the infection is related to our application, please contact the developer with more information at example@domain.com. Please note that we can not be responsible if you attained the application by an illegal means or by breaching our Terms of Service.  
+&gt;  
+&gt;Security is of our utmost concern, so please don't hesitate to contact us with any questions, worries, or concerns.  
+&gt;  
+&gt;\- The \[Application Name\] Team
+
+I can't say if that is what you should have said, it is just what I would have said.
+
+It's not important that the reviewer reads and understands this - they sound like their review should indeed be flagged - it's important that other potential lay customers, who can't differentiate between the reviewer's comment and the truth, see your response to an issue as important as data privacy.",1
+5996,IP address,"I'm very new to this world (just finished the beginner Udacity course) and am trying to write a garage door opener app. I'm using an ESP8266 connected to a relay to trigger my garage door with the aREST library running my server for me off of the ESP. 
+
+
+To trigger the door, I basically enter the IP address of the ESP into a web browser: ""http://192.168.1.44/digital/2/1"". This turns digital 2 pin high, and I wait 3 seconds before sending the command to turn the pin low to release the relay. 
+
+
+This is working great, except I can't figure out how to send such a command with java. Everything I find is utilizing HttpPost which has been depreciated. It has been replaced with openConnection, but I can't seem to figure out how to use this for my (I think) simple task. 
+
+This site seems to be the closest to what I want to do, but I couldn't seem to get it working either:
+
+    URL urlToRequest = new URL(urlStr);
+    HttpURLConnection urlConnection = (HttpURLConnection) urlToRequest.openConnection();
+    urlConnection.setDoOutput(true);
+    urlConnection.setRequestMethod(""POST"");
+    urlConnection.setRequestProperty(""Content-Type"", ""application/x-www-form-urlencoded"");
+
+This gives me an error because it throws an exception. I also found this site with this bit of code which I think is also what I'm try to do and handles the exceptions:
+
+     public void pingServer() {
+            HttpURLConnection urlConnection = null;
+            String serviceUrl = ""http://192.168.1.44/digital/2/1"";
+            int CONNECTION_TIMEOUT = 10000;
+            int DATARETRIEVAL_TIMEOUT = 10000;
+            try {
+                // create connection
+                URL urlToRequest = new URL(serviceUrl);
+                urlConnection = (HttpURLConnection) urlToRequest.openConnection();
+                urlConnection.setConnectTimeout(CONNECTION_TIMEOUT);
+                urlConnection.setReadTimeout(DATARETRIEVAL_TIMEOUT);
+                // handle issues
+                int statusCode = urlConnection.getResponseCode();
+                if (statusCode == HttpURLConnection.HTTP_UNAUTHORIZED) {
+                    // handle unauthorized (if service requires user login)
+                } else if (statusCode != HttpURLConnection.HTTP_OK) {
+                    // handle any other errors, like 404, 500,..
+                }
+            } catch (MalformedURLException e) {
+                // URL is invalid
+            } catch (SocketTimeoutException e) {
+                // data retrieval or connection timed out
+            } catch (IOException e) {
+                // could not read response body
+            } finally {
+                if (urlConnection != null) {
+                    urlConnection.disconnect();
+                }
+            }
+        }
+
+This code compiles with no issues and runs on the phone, but nothing happens when the code executes. I ran the app in debug mode and stepped through that code line by line, but nothing stands out as the issue.
+
+Any help would be greatly appreciated!",1
+3362,IP address,"&gt; That's untrue. You can easily poke holes in NAT so people can reach you from the outside world using a STUN server.
+
+I didn't say the device is unreachable, I said its private IP address is not useful to a device not on the same local network. STUN is just a way for a device to find out the public IP and port addresses of the NAT device that it is behind, which it can then use to allow others to traverse past the NAT device. The devices private IP is still not useful outside of the private network.",1
+12014,last name,"Your question is very broad...but I'll add what comes to mind
+
+You'd want your backend to use OAuth 2, and since you're coding the app you'd make use of the password grant type. OAuth is well documented and most APIs make use of it, so you should be able to find all the information you need. Make sure that your token refresh works.
+
+As for the client, whether you do single Activity, or multiple Activity, use androidx navigation, or do your own thing is really up to you. Don't ever persist a user's password (in plain text form) for security reasons. If you want form validation on the login, then just show errors as a hint. Don't disable the login. (My bank literally locked me out of my account because they switched their client to max. 20 character passwords, while I was using 40...)
+
+If you want better UX then you can integrate smart lock which stores the credentials with the user's Google account. Make sure to also link the website, if you have one. Smart lock may also help to prefill some forms on signup
+
+For signup, think about what data you actually need, and don't require first name / last name, unless really necessary. Don't ask for data you don't need.
+
+Make sure that there is a privacy policy / terms and conditions accessible from the login/signup screen.
+
+And don't ask for permissions on app start / login",1
+4452,location,"Sites like that are gimmicks. They most likely use Google Maps (or comparable maps API) and they simply make a site that returns one random food place within X miles of location and then adds some themed text and thats it. Its like http://thefuckingweather.com  
+  
+Do you think that site really has their own weather service? Does someone gather the weather for the day in every area and deliver it to those users? No. They use yahoo or other weather service and instead of using it like a normal dev would, to display all relevant information in a detailed method, they went for a simplistic/comical approach and instead deliver the weather in a clever text based manner. These apps are nice because they do not require many API calls to the parent library and they are just one simple API call to usually get a random (or a randomizer method if the API doesnt support calling for a random entry) and display only one result in a pretty way.  
+  
+If you want to make basically that website for android, you should looking into Maps API or whatever google API houses the food/places info.",0
+655,location,"Unity 3d game dev looking to move to native Android dev, help advice and tips please.:So I've been developing games via Unity for mobile devices for 5 years now, so I'm not exactly new to the subject. I would like to start off Android development efficiently and on the right track.
+
+* Does a typical Android dev working in the industry use Eclipse primarily? Are there other staple softwares I need to know about?
+* Should I beeline towards Java as my go to language?
+* What are some mistakes new Android devs often make?
+
+My goal is to get working in the industry, as much as I enjoy being a game dev the jobs just aren't available in my location. Android dev and iOS dev jobs are however in high-demand. (I intend to learn iOS dev once I've mastered Android dev).
+
+My current plan is to do this XDADevelopers course on YouTube, and then perhaps find a Java course, is this a wise course of action?
+
+Thanks for reading!
+
+
+---- Edit ----
+
+I've created a new post with a study plan based on the replies in this post, hoping it might be of use to others.",0
+4764,location,"Use gradle wrapper with this gitignore file
+
+https://github.com/github/gitignore/blob/master/Android.gitignore
+
+You'll have gradlew.sh for *nix systems and gradlew.bat for windows
+
+Each machine can specify their SDK location in their local.properties file",0
+5454,location,"You just have to explain it to them. There are amazing iOS apps that if ported 100% to Android, would be terrible apps (and vice versa). Every app must take into account the uniqueness that comes with the platform.
+
+The reason it is so important to make use of platform design standards is that you can build an instantly familiar UI by re-using familiar design components. This drastically lowers the learning curve when a user first opens the app. Most Android users are familiar with the hamburger navigation and how it works. You tap the hamburger icon, and out pops a menu that overlays your content. If I saw a menu that pushed my content to the left - it would make me uncomfortable, because I am not used to that.
+
+By re-using familiar design components, you get the UI out of the way. When users do not notice your UI design choices, it's a good thing.
+
+Let's say you drive a car that has the parking brake near the center console. This is what you are used to. Imagine you got into your friends car, and the parking brake is in a different location. Maybe under the steering wheel, or a button on the door. You would be annoyed, because you cannot find it immediately, because it is not where you'd expect. 
+
+When designing a UI, do not force the user to learn something new when you do not have to. As material design proliferates, more users will come to expect it. By designing your app based on material design - you are making it easier for your users to navigate around your app.",0
+5793,location,"There's a new thing now where you get 50% back if you pass the courses. It's really not that expensive when you compare the price of other courses. The courses I normally take, where you have to travel to a location, learn for a few days, and then come back, usually costs around $1000-$2000.",0
+6163,location,"We have a fragmentation problem. The one which used to haunt the devs is disappearing since last couple of years (thanks kitkat for that). The v2.0 of fragmentation is caused by some rogue apps. I have said this before, task killers, memory cleaners are still popular here in India, comes pre-installed on device that-I pretty much guess-have system level permissions, and they suck. 
+
+They were the reason we had to ditch FusedLocationProvider and location permission with gms, and even are the reason of some of the bugs (Happening in only two or three, unfortunately important devices). 
+
+I hope these rogue apps are no problem in USA and Europe where the primary market is. But targeting local (esp Indian) market is becoming bit difficult because of that.",1
+1372,location,"Building AOSP &amp; Adding Features Site/Blog:Apologies for the self-promotion; I've started a site to have a centralized location with information about building AOSP but more importantly (and less well documented) how to add features and customize the OS to your liking.
+
+Please check it out, make requests, give feedback, comment etc. if you or anyone else would find it useful.
+
+The link is: http://littlelostandroid.wordpress.com
+
+From tomorrow the following (nicer) link should also work: www.alittlelostandroid.com 
+
+Thanks.",0
+6276,location,"If you do wish to obfuscate your app and not just minify it, then you should keep your mapping files in version control
+
+At the moment, the developers of the application I work on receive stack traces in two ways:
+
+1. **Application crashes in the wild:** For this, we use Crashlytics and their Gradle task silently uploads the mapping file, which makes the use of ProGuard transparent from the dev point of view. Should the mapping file upload fail (it happens once in a blue moon), you will need your mapping file to make your stack traces useful.
+
+2. **User submitted bugs:** Our users are capable of reporting issues to us via email, which will automatically add an internal log file of everything the user has done over the last little while. This file does require de-obfuscation, and this is where we actually need the mapping file.
+
+Our team uses git tags for the purposes of cutting releases, and we have a set of scripts that we use for automating our build process: incrementing the version code/name, assembling the release build, copying the newly-generated mapping file to a git-tracked location, committing the updated version and mapping file to version control, tagging it with the specified release name, and pushing the commit and tag.",0
+6286,location,"I found it as an empty file in that directory. I opened it and pasted the location of the custom JDK within it (eg. echo ""/path/to/jdk"" &gt; studio.jdk). I'll update the OP. If the file doesn't exist I imagine creating it would work.",0
+7797,location,"&gt; Curious how breakpoints work,will line numbers still be right in crash reports?
+
+Debugging would happen over standard JDPA layers, which will map the source line (assuming a line breakpoint) to the right location in the compiled bytecode and vice versa.",0
+8101,location,"Hi GrandAdmiralDan,
+Well, I’m happy to hear you guys are working on this. And I’m really happy to hear ICU will become public API.
+But frankly, considering we are 8 years into Android and you are only starting to fix this now, still doesn’t really reflect well. 
+
+I know it is easy to workaround the NDK to get Lua built, but for my time constraints and audience background, it is reflective of the types of problems we developers still fight on a regular basis. Lua is the easiest to deal with, but there are many more which are much more painful and time consuming. 
+
+I could have gotten into how the newer NDK API levels removed a few things which prevented ICU from building. Or the problems and bugs I encountered trying to build Swift on Android with different API versions. Or I could have gotten into other never fixed roadblocking bugs like the infamous bug 3434. And I didn’t talk about Android fragmentation and the fact is that over 1/4 is still pre-API 21. (And a stdio deadlocking bug in 5.0 which affects Swift so 5.1 is the minimum instead of 5.0, losing nearly another 10% of the current available devices.) Even with your changes that may be coming in a few years, we still have to add extra years on top of that before we can use them.
+
+
+But here’s a another problem I’m facing maybe you can help with. As I said in the talk, I am adding CMake support for Swift. I also said Android is officially adding CMake support. However, for time, what I did not say is that there is a new hell that has been created because there are now 3 major CMake toolchains now competing with each other, and all are incompatible. There is the OpenCV toolchain which everybody has forked from for the past many years (including me), the official CMake just added Android support, and you guys have your own fork which is incompatible with both of them and is stuck on an old CMake 3.6 (CMake is now on 3.8).
+
+I just posted to the NDK mailing list asking about how I can leverage yours, but I need to be able to merge in my changes and invoke CMake sitting in a different location than yours. But so far, the answer seems to be that I can’t do this, and your CMake source is not something I can pull and merge with. But no answer from the person who would know for sure. Maybe you can find out how to make this possible get your CMake git repo published.
+
+
+I also want to point out that I’m am seriously disappointed that you guys didn’t add Android Studio project generation to your CMake implementation, so you still need to have both an Android Studio project and a CMake description. (And I am still uncovering a lot of limitations.) This is just one more of those time sucking things that makes it so unpleasant to support Android. This is one of things I implemented for Blurrr to solve for other people, but is a PITA to maintain. You guys implementing this, maintaining it, and contributing it back to CMake would be actually really valuable to the world.
+
+One more thing. As you fix the C++ side of the NDK, please don’t forget C. Maybe it’s just me, but I’m getting this overall vibe that the NDK team may still be thinking of C support as a second class citizen. I’m seeing this in Android Studio as there are things explicitly labeled C++, even when I’m only dealing with C. Back to the one of the premises of the talk, C is one of the most important foundational things that everything else can stand on.
+",0
+8317,location,"One real example that I keep seeing is that the database stores a file location, when a record is deleted from the database, the file should also be removed from disk.
+
+There are plenty of other valid cases when you combine multiple data sources and create a single point of entry for all them.
+
+If you have an interface for your repository, as well, testing becomes trivial. ",0
+1630,location,"We’re on the engineering team for Android O. Ask us Anything! (starts July 19):**EDIT 7/19 @1:25PM PT:** We're just about to wrap things up! Still working on a few more responses. Again, a big thank you to everyone in the Android dev community. 
+***
+**EDIT 7/19 @12:37PM PT:** Here's the team hard at work answering your questions! http://imgur.com/a/Sqll9
+***
+**EDIT 7/19 @12:00PM PT:** We're kicking off today's AMA on Android O. We'll do our best to get through your questions. Appreciate the time and patience! 
+
+***
+As part of the Android engineering team, we are excited to participate in another AMA on r/androiddev this Wednesday, July 19! A few weeks ago, we announced the third developer preview of the next version of the OS: Android O. We have another developer preview coming up soon, followed by the public release later this summer.
+***
+This your chance to ask us technical questions related to the latest features specifically in Android O -- from the APIs and SDK to Android Instant Apps. Please note that we want to keep the conversation focused strictly on the engineering of the platform. 
+
+***
+
+We'll start answering questions on Wednesday, July 19 at 12:00 PM PST / 3:00 PM EST (UTC 1900) and continue until 1:30 PM PST / 4:20 PM EST. **Feel free to submit your questions ahead of time.**
+
+***
+*Proof* || 
+Recent AMA on Android Studio: https://www.reddit.com/r/androiddev/comments/60hrpm/the_eng_team_for_android_studio_the_official/
+***
+
+**Here's the full list of participants from the Android team**
+
+* Adam Powell: TLM on UI toolkit/framework; views, lifecycle, fragments, support libs 
+
+* Adam Cohen: TLM on Android Launcher
+
+* Allen Huang: Product manager covering launcher, notifications, search integrations and more!
+
+* Alan Viverette (/u/alanviverette): Tech Lead / Manager of the Support Library team
+
+* Anwar Ghuloum: Engineering Director for Android Core Platform (Runtime/Languages, Media, Camera, Location &amp; Context, Auth/Identity)
+
+* Aurash Mahbod: Engineering Director for Android Instant Apps and Play Store app
+
+* Ben Poiesz (/u/bpoiesz): Product manager covering Android OS Framework, System Health and Metrics
+
+* Chet Haase: Lead/Manager of the UI Toolkit team (views &amp; widgets, text rendering, HWUI, support libraries)
+
+* Dianne Hackborn: Manager of the Android framework team (Resources, Window Manager, Activity Manager, Multi-user, Printing, Accessibility, etc.) 
+
+* Dirk Dougherty: Developer Advocate for Android (Developer Preview programs, Android Developers site)
+
+* Jonathan Karmel: Senior Product Manager, Android Instant Apps
+
+* Kathy Kam: Technical Program Manager, Support Library Team
+
+* Lukas Bergstrom (/u/lukasb): Product Manager for Developer Frameworks and Platform (Architecture Components, App Links)
+
+* Mike Cleron: Engineer covering Android’s application framework, system UI, and SDK
+
+* Narayan Kamath: Engineer on Runtime/languages/core libraries.
+
+* Rachel Garb: UX Manager leading a team of designers, researchers, and writers responsible for the Android OS user experience on phones and tablets
+
+* Romain Guy (/u/romainguy): TLM of the Android Graphics team responsible for Vulkan, OpenGL ES, SurfaceFlinger and Hardware Composer.
+
+* Selim Cinek: (u/selimcinek) Engineer on Android SystemUI and responsible for the visual display of Notifications.
+
+* Stephanie Saad Cuthbertson (/u/steph---): Director of Product Management, Android
+
+* Tim Murray: TLM for Android performance
+
+* Trevor Johns (u/trevorjohns): Engineer, Android Developer Programs
+
+* Xiaowen Xin: Product manager for Android security
+
+* Yigit Boyar: (u/yboyar) TL on Architecture Components; +RecyclerView, +Data Binding",0
+1982,location,"Modern UI and navigation designs:Hey guys. Which design are most people using nowadays? Topnav with swiping or botnav? If neither, is there a custom design youve come up with? What is your preference? 
+
+&amp;#x200B;
+
+Personally, for the first app i am developing, i am using bottom nav at the moment because it just seems easy to switch between the tabs using your thumb. However, i want to take a different approach now. I want to drop the appbar from the top to the bottom. This way it is easier to reach and all the functions such as searching and filtering are at a very convenient location. Then i want to take the navigation bar completely remove it and use swiping for navigation because that seems a lot easier. Do you think this is a good design?",0
+2257,location,"We am a start-up with 500k investment and our app was suspended and removed from Google Play! Help us please: 
+
+Hi people!
+
+Our app was suspended from Google Play after one major update.
+
+After appeal we received this e-mail from Google:
+
+Hi developer,
+
+Thanks for contacting Google Play team. 
+
+**Status of app: Suspended from Google Play due to policy violation**
+
+I’ve reviewed your appeal request and found that your app violates the **Malicious Behavior** policy. We don’t allow apps that steal data, secretly monitor or harm users, or are otherwise malicious. We have determined that your app is being promoted as a means of carrying out spying or secret surveillance of others.
+
+Surveillance and ""Commercial Spyware"" are explicitly prohibited on Google Play. Only policy compliant apps exclusively designed and marketed for parental (including family) monitoring or enterprise management may distribute on the Store with tracking and reporting features, provided they fully comply with the requirements described below:
+
+Qualified apps that monitor or track a user’s behavior on a device must comply with these requirements:
+
+* Apps must not present themselves as a spying or secret surveillance solution.
+* Apps must not hide or cloak tracking behavior or attempt to mislead users about such functionality.
+* Present users with a persistent notification and unique icon that clearly identifies the app.
+* Apps and app listings on Google Play must not provide any means to activate or access functionality that violate these terms, such as linking to a non-compliant APK hosted outside Google Play.
+* You are solely responsible for determining the legality of your app in its targeted locale. Apps determined to be unlawful in locations where they are published will be removed.
+
+You can read through the Malicious Behavior policy page for more details. 
+
+For example, your app currently is not exclusively designed and marketed for parental (including family) monitoring or enterprise management may distribute on the Store with tracking and reporting features.
+
+Please note that suspensions count as strikes against the good standing of your Google Play Developer account. Egregious or multiple policy violations can result in suspension, as can repeated app rejections or removals.
+
+If your developer credentials are still in good standing with Google Play and if your app allows for it, you can publish a new compliant version of the app by following these steps:
+
+1. Make the necessary changes to your app to address the issue described above, if possible.
+2. Double check that your app complies with all other Developer Program Policies. Additional enforcement could occur if there are further policy violations.
+3. Sign in to your Play Console and upload a new app using a new package name and a new app name.
+
+Please let me know if you have any other questions. Thanks for your continued support of Google Play.
+
+Regards,Jay  
+The Google Play Team
+
+We send back this e-mail:
+
+Hello Jay,
+
+Thanks for notifying us and helping us better understand our app's problems.
+
+We would like to mention that this application is of a major importance for our team as it has been developed with the contribution of investors funds, our whole team efforts and user's feedback and involvement alike. Therefore - we would like to do whatever necessary to keep our App Name and branding. Submitting our app with a different name would mean changing our business entirely.
+
+We now realise the severity of our breach of conduit. We are extremely sorry and we would like to be given the opportunity to take all the necessary measures to fix this and make sure this won't repeat in the future.
+
+That being said, we would like to be able to upload a new, complaint version of our app, with the following changes:
+
+\- remove all the location tracking related texts (including our site and Play Store) and stop presenting ourselves as a spying or secret surveillance solution.
+
+\- make the necessary changes to our app to only allow location sharing between specific users, with their explicit permission and for a limited time only.
+
+Please let us know if there is anything else we can do so we can reach an agreement and have our application available again for our users.
+
+Thank you for your consideration and for helping our team continue offering the services our users love!
+
+We received that:
+
+Hi developer,
+
+Thanks again for contacting Google Play Developer Support. 
+
+As much as I'd like to help, I’m not able to provide any more information or a better answer to your question. In our previous email, I made sure to include all the information available to me.
+
+You should be able to find more information about your issue here: Malicious Behavior
+
+If you have a different question about the Play Developer Console, please let me know.  
+Regards,Jay  
+The Google Play Team
+
+Check out this short video for more policy guidance and best practices: 10 tips to stay on the right side of Google Play policy.
+
+We send again this:
+
+Hi Jay,
+
+I had the xxxxx application, with package ID xxxxxx, for some time on Google Play.
+
+We found that the app violates your terms and we made all the adjustments.
+
+I'm kindly asking you to remove that single Strike on my Play Developer account (from Suspended to Removed) in order to be able to upload a new compliant version of the application.
+
+We are here for any further questions or any details you need in order to fix this issue as soon as possible.
+
+Yours sincerely,
+
+Amd we received this:
+
+Hi developer,
+
+Thanks again for contacting Google Play Developer Support. 
+
+As much as I'd like to help, I’m not able to provide any more information or a better answer to your question. In our previous email, I made sure to include all the information available to me.
+
+Regards,Jay  
+The Google Play Team
+
+Check out this short video for more policy guidance and best practices: 10 tips to stay on the right side of Google Play policy.
+
+..............
+
+I called at suport in India 2 times, 1 time in UK, 1 time in US and every time the same answer: ""We are not able to help you, create a appeal""
+
+It's imposible for us to continue, and we lost our investment if we don't solve that ....
+
+Question:
+
+If We put anather a new package name and a new app name , can we put in the name of app anather 2 letters and keep the logo and the website , and change only the package name and the App name with 2 more letters?
+
+Help us guys!!!
+
+We are like an hourglass .... tic-tac tic-tac....",1
+11094,location,"*Company*: Freetrade
+
+*Job*: Senior Android Engineer
+
+*Job*: Principal Android Engineer
+
+*Location*: London, United Kingdom
+
+*Allows remote*: Not right now
+
+*Visa*: Yes
+
+Freetrade is a next-generation stockbroker that makes investing accessible to everyone through zero-fee investing. We have developed a new technology platform that has brought free stock trading to the UK and Europe for the first time through a simple app.
+
+We're looking for talented Android engineers to join our rapidly growing team. We're using Kotlin, RxJava, Firebase Realtime Database, Dagger2 - all the fun stuff. Highly consumer/product focused. Cross-functional teams. 
+
+Great office location, competitive salaries, nice perks. More than happy to field any questions that people might have. DM me for more info. 
+
+Please note that I'm not accepting applications directly or referring people - I'm here to answer questions that you might have about the role.",0
+11545,location,"From a first lol, the application is really nice. 
+I am on a slow wifi network, so finding the city and loading the map was a but jittery. I understand that there isn't much that can be done about that unfortunately. Different theme options would be a great addition, and maybe the ability to set an image from unsplash/pixabay or to change it for cities would be another good addition. Lastly, when I switch from a location to another one by swiping, the animation appears to be really slow, it makes it look janky.",0
+2876,location,"I've been thinking about trying my hand at this for a while, and supporting a group effort sounds like a great way to learn. Perhaps we can create a project on github or sourceforge as a central location. That way we can all be contributors when we want.
+
+I've been using Java for about 6 years now so I suppose I could offer a decent amount of support there.",0
+98,location,"Location of ActiveSync files on the device?:I am doing some research for my boss, he requested i locate the raw data files for ActiveSync accounts on Android and determine what happens to the files when the account is removed (locally and from the ActiveSync server).
+
+question is, does anyone know the raw location of ActiveSync files on the Android platform?  is it based on what Email application is used?
+
+thanks!!",0
+3175,location,Location matters too.  $28k goes a lot farther in Mississippi than it does in New York.,0
+3178,location,"Very good points. A lot of people forget about location when looking at salaries. The only problem is just because someone is ""experienced"" they may not have the paper credentials to back it up. I feel a lot of talent goes wasted that way.",0
+3438,location,"So you want your app X to work with google maps and send your location info to foreign app Y? Not sure I'm getting the question. Why doesn't app Y use google maps in the first place?
+
+Google for ""android google maps"" and you will see all the many things you can do in your app. Sending that location info to another app might be a little trickier...
+
+
+
+",1
+3441,location,"First of all, congrats on your first app!
+
+Here are some things I'd fix
+
+* The main screen - The dashboard layout is old and dated. Perhaps try something like a ViewPager for the different modes, and let the user set the default. Or maybe a spinner in the Action Bar
+* The find location button in the action bar - Add an icon. Some people like the text buttons, but I feel like they are too attention grabbing on a phone sized screen.
+* In the Help Me mode - Change the ActionBar title to say Help Me. The stars are uncentered, but I don't know if that is just some weird error. Maybe move the Calculate button into the action bar, or make the button anchored to the bottom. Make the fonts a bit bigger too. The same things can be applied to the other modes as well.
+
+But overall, this is a great start! Keep working at it!",1
+233,location,"I have a great idea for an App, but I'm a novice. Will you guys help me think this out?:I'm sorry but I think I should keep it a secret just in case the idea gets stolen, but I'll try to give a general idea. It's actually not too unique since after going on G play I figured out there were apps like my idea. The problem is that they don't look so great and I think I can do better. I did think about this before seeing apps like these. I'm also working with my cousin who just knows a little bit about design.
+The idea is pretty much like a ""store"" locator except it's a special type of one and only shows those types of stores. You can find the nearest spot through some map. I want it to be fast and simple for my user's also great looking. Emphasis on the the design.
+I have a few questions though:
+
+What software should I have my cousin use for design and any extra tools like those touch pens?
+Do you think I can create a decent app within 3 months or so considering I am a novice?
+Should the app use Google maps to find the stores and how would I ""filter"" out the right one?
+Should I trademark the name or anything like that?
+Monthly costs to run the app? (is there any hosting?)
+Should I really just focus on getting the app up and running then update it later consistently improving it every time?
+I don't like apps forcing me to turn on my GPS every time I use them. If the user just wants to quickly find the nearest store can I let them bypass GPS and use the network location? Telling them they can improve their accuracy if they turn it on latter. (Or will google handle all that for me?
+Last profits from ads seem small should I just perfect my apps first then add ads latter on?
+
+I would appreciate any help thank you!
+",1
+546,location,"Finally released my first app (geo/map painting) - feedback appreciated!:I've just released my first android app and would love to get some feedback on it. The app allows you to paint pictures onto a map at your current location, which are then saved for everyone to see.
+
+Took quite a lot of work to finally get it all working but I've learnt a lot while doing it.
+
+You can get it here",1
+4268,location,"The issue happened again,  but this time it was ended as soon as Google's location process received a LOW_POWER_MODE_DISABLED powerMode change: 
+
+    03-15 11:30:09.000 E/qcom_sensors_hal(  786): hal_acquire_resources: Failed for handle 30 @ samp 1 Hz rpt 0 Hz WuFF 0 batched 0
+    03-15 11:30:09.020 E/qcom_sensors_hal(  786): hal_process_sam_smd_resp: Msg 2; Result: 1, Error: 6
+    03-15 11:30:09.020 E/qcom_sensors_hal(  786): hal_acquire_resources: Failed for handle 30 @ samp 1 Hz rpt 0 Hz WuFF 0 batched 0
+    03-15 11:30:09.030 I/GCoreUlr( 1330): Received powerMode change from NLP: com.google.android.location.activity.LOW_POWER_MODE_DISABLED
+    03-15 11:30:09.030 I/GCoreUlr( 1330): Starting service, intent=Intent { cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) }, extras=Bundle[{intentType=3}]
+    03-15 11:30:09.030 E/qcom_sensors_hal(  786): hal_process_sam_smd_resp: Msg 3; Result: 1, Error: 6
+    03-15 11:30:09.080 I/art     ( 1330): Heap trim of managed (duration=6.735520ms, advised=2MB) and native (duration=1.844740ms, advised=112KB) heaps. Managed heap utilization of 32%.
+    03-15 11:30:09.110 E/qcom_sensors_hal(  786): hal_process_report_ind: Bad item quality: 11 
+    03-15 11:30:09.120 I/GCoreUlr( 1330): Ensuring that reporting is stopped because of reasons: {account#13#=[InactiveReason{mVersionCode=0, mIdentifier=6, mName='ReportingNotSelected'}]}
+    03-15 11:30:09.120 D/GCoreFlp( 1330): Unknown pending intent to remove.
+    03-15 11:30:09.120 I/GCoreUlr( 1330): Unbound from all location providers",1
+636,location,"Trouble querying database with GPS coordinates.:I'm working on an app that queries a database with a set of longitude and latitude coordinates to get the nearest landmark to the user's current location. I'm using rawquery so I can get more out of my query statements, however, I seem to have a peculiar syntax error and I hope someone can help me figure it out.
+Here's is the getFilename() function in my databasehelper class:
+
+
+     public String getFileName(double userlat, double userlong){
+        
+             String la = Double.toString(userlat);
+             String lo = Double.toString(userlong); 
+             String ex = ""abs(latitude – "" + la + "") + abs(longitude – "" + lo + "")"";
+              String Q = ""SELECT lmarkalert FROM landmark WHERE "" + ex + "" IN ( SELECT min( "" + ex + "") FROM landmark);"";
+         Cursor c = db.rawQuery(Q, null);
+
+             String filename = c.getString(0);
+             Log.d(""SQLPlay2"", ""lmarkalert:"" + filename);
+        
+         
+            return filename;
+             }
+
+So I call this function in onlocaitonChanged with the user's current latitude and longitude coordinates like so:
+ 
+    String alert = db.getFileName(location.getLatitude(), location.getLongitude());
+
+
+The error I'm getting has to do with a ""-:"" syntax in my query statement. Here's the relevant except from my logcat:
+
+
+05-02 06:08:33.910: E/SQLiteLog(1425): (1) near ""–"": syntax error
+05-02 06:08:33.920: D/AndroidRuntime(1425): Shutting down VM
+05-02 06:08:33.920: W/dalvikvm(1425): threadid=1: thread exiting with uncaught exception (group=0xb1a43ba8)
+05-02 06:08:34.010: E/AndroidRuntime(1425): FATAL EXCEPTION: main
+05-02 06:08:34.010: E/AndroidRuntime(1425): Process: com.example.speedalert, PID: 1425
+05-02 06:08:34.010: E/AndroidRuntime(1425): android.database.sqlite.SQLiteException: near ""–"": syntax error (code 1): , while compiling: SELECT lmarkalert FROM landmark WHERE abs(latitude – 5.643693333333332) + abs(longitude – -0.18587166666666669) IN ( SELECT min( abs(latitude – 5.643693333333332) + abs(longitude – -0.18587166666666669)) FROM landmark);
+
+
+NB: I tested the app on the emulator by sending the following mock gps data to it: longitute:-0.185871972 latitude:5.643693991. Thanks in advance.",1
+653,location,"Looking to list nearest locations based off of your location vs a pre designated list:So as the title suggests, I have a list of coordinates for about 5000-7000 locations.  I am looking to incorporate google maps into my application.  Essentially, I want the user to be able to hit a button and based off of their location, it would either pull an ordered list of all locations closest to furthest, or pull the closest 10 locations and order them closest to furthest.
+
+I am trying to find a tutorial which could get me started on that functionality but I am having trouble finding something similar.
+
+Obviously, I want to be able to supply a table with all of my long/lat values, and then compare that to the users location, and then take the closest 10 and pull the information from google for those locations (or mark them on the map and let the user select them.)
+
+Does anyone know of good tutorials for this?",1
+718,location,"What are some ad networks that online require the internet permission?:I'm looking to add some mediation networks to my admob banner (and interstitial) ads. I want the ads to only need the internet permission. I don't want some dodgy permissions like Writing External storage or getting location data or getting phone numbers etc.
+
+Just Internet.",1
+4624,location,"You can get a pretty decent idea of location from your IP address alone. 
+
+http://www.iplocation.net/",1
+4845,location,"Make a weather app from one of the free weather feeds. You will learn json, network requests, async connections, location provider, local app storage, interfaces / lists. Just copy one of the simple apps from the store.",1
+5694,location,Sorry for semantics but wouldnt ur example be useless since they address last location with maps play services api? No need to store it yourself right?,1
+1290,location,"How do random places (geo-locations) let pop-up the Playstore of that place where you are right now?:My question is based on THIS comment.
+
+On another thread some time ago, someone was on a flight to china IIRC.... While (s)he flew there, an App (with a Chinese name) requested to be installed with basically all permissions.
+
+How does this work, that if you enter any location, installations get initiated?
+",1
+1430,location,"What are some best practices to explain why you need permissions on Android 6.0 onwards?:- Do you use a pop-up dialog before asking for permissions?
+- Does an open source library take care of that?
+
+For us we are asking the users permission for the microphone for voice commands and location to show local weather. Am wondering the best way to help the user understand why I need access to their microphone and weather. Thanks! ",1
+6693,location,You basically need to check their location then let them know that you will let them know when its available in their area.,1
+1464,location,"Accurate Location Updates?:So i want to track the user location on map and show its progress on the map,something like Uber?Currently i am using fusedlocation provider of android.Is there any better way than this for accuracy or can me improve it via any method for accuracy and efficiency?",1
+6769,location,"You only need Google Maps API if you intend to use a Google Map to show the current position or the tracking history to the user on the mobile phone or to other users on the web page. For obtaining the location, as somebody already said, you need the Location API only. But, if you want to show a map on a web page and use the Javascript Google Maps API to overlay the users positions, that could certanly be considered an asset tracking user case, but only if you intend to it use for commercial purposes. Seeing this is an educational project free to use, i believe that restriction doesn't apply to you. (See Google Maps Terms Section 10.4.c.iv) 
+
+But my advice to you would be to track the user positions on the phone and build a .KML file of the ""recording"" session. This file can later be uploaded to a server when a data connection is available or shared to your contacts via intents through mail, instant messaging or whatever. Then, the user contacts or the user himself can load this kml on Google Earth or Google My Maps to see the location path. This way you don't need to bother with Google Maps API license at all, and only set up a simple server to store those kml files (if you really want to store them).",1
+7022,location,"There's no way to do this alone on the device because you need to either get the currently connected mobile network (which needs the phone permission and not all devices have mobile connection), or via GPS (which needs the location permission, not all devices have a GPS receiver and GPS is not 100% accurate).
+
+You can do it on the server side with IP geolocation, which only needs the Internet permission on the device (granted by default on M) but then again it's not 100% accurate, and the device needs Internet access.",1
+1504,location,"Looking for advice on how to integrate Google Play Services location SettingsAPI with MVP architecture:Hey /r/androiddev,
+
+I have an MVP architecture app that utilizes Google Play Services, Dagger 2, and RxJava but I'm having a hard time integrating Google's APIs into MVP. It seems like many of Google's APIs lend themselves to tons of logic inside of Activities (Which goes against single responsibility principle and MVP).
+
+I have a screen that needs to access the phone's location so I'm checking if location settings are enabled in my presenter. To do this, I've written a reactive wrapper around Google Play Services Location so my presenter delegates to `LocationInteractor` which calls into Google Play Services.
+
+To check if location settings are enabled you need to call into Google's SettingsAPI,  jump through a ton of hoops and callbacks, and eventually get back a `LocationSettingsResult` object. Fine. To get the status of the settings you need to call `locationSettingsResult.getStatus()` and check if the `status.getStatusCode()` is equal to either `LocationSettingsStatusCodes.SUCCESS`, `LocationSettingsStatusCodes.RESOLUTION_REQUIRED`, or `LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE`. If the status code is `RESOLUTION_REQUIRED`, then calling `status.startResolutionForResult(Activity activity, int requestCode)` will open this wonderful dialog prompting the user to enable location services. 
+
+Ok. So my `LocationInteractor` takes care of this and returns a `Status` object from Google Play Services:
+`public Single&lt;Status&gt; getLocationSettingStatus(){...}`All fine and dandy. Since opening this dialog requires an Activity, I'm having my presenter call back to the view with this `Status` object:
+    
+    // Inside of some presenter method
+    locationInteractor.getLocationSettingStatus()
+                            .subscribe(status -&gt; {
+                                if (status.getStatusCode() == LocationSettingsStatusCodes.SUCCESS) {
+                                    doSomethingThatRequiresLocation();
+                                } else if (status.getStatusCode() == LocationSettingsStatusCodes.RESOLUTION_REQUIRED) {
+                                    if (isViewAttached()) {
+                                        view.showDialog(status);
+                                    }
+                                } else {
+                                    if (isViewAttached()) {
+                                        view.onErrorNoLocation();
+                                    }
+                                }
+                            }, throwable -&gt; {
+                                if (isViewAttached()) {
+                                    view.onErrorNoLocation();
+                                }
+                            });
+The View's `showDialog` method looks like this:
+
+    @Override
+        public void showDialog(Status status) {
+            try {
+                status.startResolutionForResult(this, 0);
+            } catch (IntentSender.SendIntentException e) {
+                onErrorLocation();
+            }
+        }
+
+However, this still isn't enough! You need to catch the result of this dialog in `onActivityResult`!!
+
+     @Override
+        public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            switch (requestCode) {
+                case 0:
+                    switch (resultCode) {
+                        case Activity.RESULT_OK:
+                            // Call to presenter
+                            // Location settings now enabled
+                            break;
+    
+                        case Activity.RESULT_CANCELED:
+                            // Location settings still disabled
+                            onErrorLocation();
+                            break;
+                    }
+                    break;
+            }
+        }
+
+I really really hate all this boilerplate. Every place that I want to check for location settings I am going to need to add this boilerplate in my presenter and views. This is a lot of code to be copying around! Furthermore, the `Status` object is final which makes it super hard to mock it during tests of my presenter.  
+
+Does anyone know a better way of interacting with this API in an MVP context?
+
+Although I really love how this dialog window will automatically enable location services, I am thinking about ditching Google's SettingsAPI since it is such a PITA to use. I'd rather open a custom dialog that has a button which opens the phone location settings. It won't be automatic like the SettingsAPI, but it will fit into my architecture, be easier to use, and be easy to test.
+
+**Should I deal with all this Google Play Services boilerplate or just roll my own dialog which will obey MVP principles?**
+
+Sorry for the wall of text I really needed to rant about this API. 
+
+
+
+
+",1
+7105,location,"Hmm...strange library design. You might want to call `.bind()` right before you return the library instance in your Dagger module (If you can do that).
+
+IMO you really should be setting some kind of ""connected"" listener on `library` and only call `doSomething()` when that happens. This is similar to how you have to connect a `GoogleApiClient` before you can get the phone's location with `FusedLocationProviderApi` that uses the api client. Short answer, I don't think you should do anything differently on the Dagger side.
+",1
+7479,location,"I used Location Manager to get device's location but 
+the accuracy of location that is shown in my app is about 60 + accuracy of location that is shown in Google Maps. Why? I used two providers, network and gps, and take the more accurate location.
+
+I haven't used Fused location before. If I use Fused Location, is there any chance that I can get device's location faster and more accurate?",1
+7533,location,"Hey guys noob here, Ive been trying to figure out how to extract the gps location of an uploaded photo. Ive tryed using exif interface with the file path but no luck, Im thinking the resources i was looking at might be outdated. If anyone knows or could point in the right direction? That would be greatly appreciated.",1
+7952,location,"Hello, I have a Geotag Notes app I am working on that needs to store the current location of the user when they add a note entry into a SQLite database. I have the code to get the user location, but I am getting some errors that I am not sure how to fix in this Java class. I will post the Java class below. 
+
+	
+I get these two types of errors from the first code snippet: Error:(55, 27) The method PermissionGranted(String, Context) is undefined for the type Utils 
+
+Error:(78, 19) The method Toast(Context, String) is undefined for the type Utils
+
+https://gist.github.com/anonymous/287b53900ec4d46e0291629b95573c05
+
+Does anyone know what is causing this?",1
+8544,location,"I just read the docs. I thought everyone did. It's pretty clear. 
+https://developer.android.com/about/versions/oreo/background-location-limits.html
+
+https://developer.android.com/about/versions/oreo/background.html",1
+9433,location,How are you requesting location updates? I'd have thought if you use the fused location provider you'd get updates when Google's apps receive data.,1
+9446,location,"The situation would be more tolerable if there were general options for straightforward user dialogs to disable power saver, or to exclude an app from power saver.
+
+The Android SDK offers two intents to exclude an app from power saver restrictions:
+
+ACTION\_REQUEST\_IGNORE\_BATTERY\_OPTIMIZATIONS is user\-friendly, but not available on many devices from what I see, and legal only for certain use cases, not currently for location use cases.
+
+ACTION\_IGNORE\_BATTERY\_OPTIMIZATION\_SETTINGS is not user\-friendly, but available on more devices, and has no restriction in terms of legal use cases. I don't consider it suitable for regular users, though, just power users. On stock Android it takes the user to a screen listing apps that are currently excluded from power saver; the user has to find the option to show all apps on the device, and then sift through the list of 100\+ more\-or\-less obscure apps to find the desired app. This won't work for a majority of users IMO.
+
+I wonder if that kind of watchdog that you mention can be made reliable. The system may pretend that you're getting location data, but instead feed you stale data. \(User not moving.\) You could create your own AI to battle Google's AI...
+
+Based on the complexity of the issue I'm quite sure manufacturers will screw it up to a degree where it will be near impossible for a dev to ensure predictable app behavior once some sort of power saver kicks in. I guess it already is rather impossible today.",1
+9569,location,"Usually for apps which use ads, this is the source of revenue, thus it is covered by legitimate interest and you probably don't need to obtain consent for processing the smallest amounts of data for this to work.  You do however have to make an effort to minimise the data and you can ask your users if they want the rich, full, experience using personalised ads or if they want to use non\-personalised ads.  This is not consent, this is just an option.  It's all been confused because Google kept talking about consent and even named their own SDK the consent SDK.  Consent is required for when you need to process data which is not absolutely required for your app to work \(so for crash reports, if location is optional and so on\).  \(Think about a bank, they also have to comply with GDPR \- I cannot go to my bank and tell them that I no longer want them to process my personal data \- they need this in order to function.  But, they need to limit the data they are processing.\)
+
+I don't think your suggestion is viable since each developer using AdMob might use different providers.  Remember, GDPR requires you to tell your users where the data is going and what it is used for.  This is different for each developer and you really need to consider other consent too \(more important than AdMob is obtaining consent for grabbing crash reports as that is entirely optional in operation of most apps!\).",1
+1943,location,"Background processing:I am developing an app and came to a point where I need to do some heavy work in the background. I found my self in two differente scenarios where I see this is needed:
+
+1. My app manages a set of data and there is an import section that can potentially take long to execute, since for every entry a different rest request needs to be performed. So I though about doing this the same way imgur does with image uploading: Triggering some kind of background execution that displays its progress in a notification and lets you know when its done. You can still use the app in the meantime and if you go to the import section you can also see the progress of the task being executed.
+2. I need to know the location of the user (provided they gave permission) in many points through the app. I got a library that handles location requests through RxJava and it works nicely, also lets me subscribe to periodic updates in the form of an Observable. However this means i need to subscribe again from every activity / screen. So i thought maybe there is a way to request updates constantly while the app is open and launch a broadcast message to whoever is listening to let them know of the new data. 
+
+I started digging up a bit online to see how to accomplish these two tasks but I got quickly overwhelmed by old and new documentation talking about many different solutions such as JobIntents, JobSchedulers, Services, Background &amp; Foreground Services, IntentServices, WorkManagers, AlarmManagers... 
+
+Can you give me some guidance here please?",1
+2046,location,"Background location update doesn't work at all in most Chinese manufacturers. Is there any workaround?:I was experimenting with updating user location in background. Android Oreo limits the  number of times your app receive location update in background but devices of Oppo, Vivo, Realme, OnePlus (these are only ones I've tested so far) doesn't allow background location updates at all. There is an option in settings to allow background operation in these devices but it is at different location in all these devices. Besides most users are not even aware of this setting. Is there any way we can either bypass it or send user directly to that setting screen based on the device?",1
+10628,location,Of course. Geo fences and maps are 2 separate things. Maps are just useful to pick a location to fence around,1
+2154,location,"I added a product flavor to my app (e.g. location tracking vs non location tracking) and now the imported dependencies in /main cannot resolve and my application is broken. Can anyone view my setup and offer help/advice?:I've inherited a not so well maintained / documented android app and I need to add a simple product flavor to allow versioning in our app, specifically, a version that doesn't track location, and one that does (like our app already does).  
+
+
+Here is my project's file structure:
+
+!img
+
+I've added the product flavor to my app build.gradle file as instructed by android's dev documentation. Here is the app level build.gradle file:   
+
+
+`apply plugin: 'com.android.library'`  
+`apply plugin: 'com.novoda.bintray-release'`  
+`android {`  
+`flavorDimensions ""version""`  
+ `compileSdkVersion 27`  
+ `defaultConfig {`  
+`minSdkVersion 14`  
+ `targetSdkVersion 27`  
+ `versionCode 1`  
+ `versionName version`  
+ `}`  
+`compileOptions {`  
+`sourceCompatibility JavaVersion.VERSION_1_8`  
+ `targetCompatibility JavaVersion.VERSION_1_8`  
+ `}`  
+`buildTypes {`  
+`release {`  
+ `minifyEnabled false`  
+ `proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'`  
+ `}`  
+`}`  
+
+
+   `productFlavors {`  
+`nonLocationTracking {`  
+`dimension ""version""`  
+ `minSdkVersion 14`  
+ `targetSdkVersion 27`  
+ `versionCode 1`  
+ `manifestPlaceholders = [appName: ""@string/app_name_non_location""]`  
+`}`  
+`locationTracking {`  
+`dimension ""version""`  
+ `minSdkVersion 14`  
+ `targetSdkVersion 27`  
+ `versionCode 1`  
+ `manifestPlaceholders = [appName: ""@string/app_name_location""]`  
+`}`  
+`}`  
+
+
+   `lintOptions {`  
+`abortOnError false`  
+ `}`  
+
+
+   `publishNonDefault true`  
+`}`  
+
+
+`configurations {`  
+ `javadocDeps`  
+`}`  
+
+
+`dependencies {`  
+`implementation fileTree(include: ['*.jar'], dir: 'libs')`  
+`implementation 'com.android.support:support-annotations:27.1.1'`  
+ `implementation 'com.android.support.constraint:constraint-layout:1.1.2'`  
+ `implementation 'com.mcxiaoke.volley:library:1.0.19'`  
+ `implementation 'com.google.android.gms:play-services-ads:15.0.1'`  
+`}`  
+
+
+`publish {`  
+ `userOrg = '****'`  
+ `groupId = 'com.***.android'`  
+ `artifactId = '****'`  
+ `publishVersion = '2.0.0'`  
+ `desc = '**** sdk'`  
+ `website = '``https://github.com/*/****-android-public-sdk``'`  
+`}`  
+This sdk is loaded into the sample app that exists within this project folder as seen in the file structure screenshot above. The specific problem is that the sample app can no longer resolve the imported dependencies that come from the imported sdk. 
+
+  
+Here is the sample app's build.gradle file:  
+
+
+`apply plugin: 'com.android.application'`  
+`def computeVersionCode = { -&gt;`  
+ `def stdout = new ByteArrayOutputStream()`  
+`exec {`  
+`commandLine 'git', 'rev-list', 'HEAD', '--count'`  
+ `standardOutput = stdout`  
+`}`  
+ `return stdout.toString().trim().toInteger();`  
+`}`  
+
+
+`android {`  
+`compileSdkVersion 27`  
+ `defaultConfig {`  
+`applicationId ""com.****.demo""`  
+ `minSdkVersion 15`  
+ `targetSdkVersion 27`  
+ `versionCode computeVersionCode()`  
+`versionName ""1.0""`  
+ `renderscriptTargetApi 20`  
+ `renderscriptSupportModeEnabled true`  
+ `}`  
+`buildTypes {`  
+`release {`  
+ `minifyEnabled false`  
+ `proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'`  
+ `}`  
+`}`  
+`compileOptions {`  
+`sourceCompatibility JavaVersion.VERSION_1_8`  
+ `targetCompatibility JavaVersion.VERSION_1_8`  
+ `}`  
+
+
+   `signingConfigs {`  
+`debugConfig {`  
+ `storeFile file(""debug.jks"")`  
+ `storePassword ""****""`  
+ `keyAlias ""com.****.android""`  
+ `keyPassword ""****""`  
+ `}`  
+
+
+`releaseConfig {`  
+ `storeFile file(""release.jks"")`  
+ `storePassword ""****""`  
+ `keyAlias ""com.****.android""`  
+ `keyPassword ""****""`  
+ `}`  
+`}`  
+
+
+   `buildTypes {`  
+`debug {`  
+ `signingConfig signingConfigs.debugConfig`  
+ `}`  
+`release {`  
+ `signingConfig signingConfigs.releaseConfig`  
+`minifyEnabled false`  
+ `proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'`  
+ `}`  
+`}`  
+
+
+   `lintOptions {`  
+`abortOnError false`  
+ `}`  
+`}`  
+
+
+`dependencies {`  
+`implementation fileTree(dir: 'libs', include: ['*.jar'])`  
+`implementation 'com.android.support:appcompat-v7:27.1.1'`  
+ `implementation 'com.android.support.constraint:constraint-layout:1.1.2'`  
+ `implementation 'com.android.support:design:27.1.1'`  
+ `implementation 'com.android.support:preference-v7:27.1.1'`  
+ `implementation 'com.google.guava:guava:23.0'`  
+ `implementation 'com.squareup:seismic:1.0.2'`  
+ `implementation 'net.hockeyapp.android:HockeySDK:3.7.0'`  
+ `implementation 'jp.wasabeef:blurry:1.0.5'`  
+ `implementation project(path: ':****-sdk', configuration: 'default')`  
+`testImplementation 'junit:junit:4.12'`  
+`}`
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+It's my understanding that product flavors will still make use of anything inside of /main that isn't overridden in the product flavor's directory. Am I wrong about this, or am I doing something else wrong? How should my product flavors be importing shared code? The locationTracking and nonLocationTracking product flavor directories are currently empty.. Only thing I changed was adding the product flavors in the build.gradle file and then creating the directories for each product flavor as siblings of /main. Any help would be extremely appreciated!   
+
+
+\*Note: only thing I changed in the pasted code is I replaced my organization's name with '\*\*\*\*'",1
+2220,location,New to App development. I'm building an app that uses sms as a fallback for no data access to send location data using a travel/check in app. Should I be worried?:I'm building a travel/peace of mind app for location tracking abroad and it will have a feature of being able to use sms when data is not available to send location updates with latitude and longitude. I've read on here about the sms/call permissions problems happening now. Should I be worried?,1
+11113,location,"That's such a false comparaison.
+
+They change default behaviour when they feel like there is a privacy (or related) issue that needs to be fixed asap. If you don't do that, apps just dont target Q and call it a day: see how many apps still target &lt;23? Well, enough for them to force those apps to display a revokable list of permissions on start.
+Sure the play store forces it but what about apps that will not be updated? What about apps distributed outside of the store?
+
+The API itself then stays bug compatible. But if they want to change how the OS fundamentally works, they'll break apps. Storage and clipboard access bring huge problems.
+The location permission change is a good example. iOS has shown that given the choice, devs will mostly not provide the choice to only grant location when in use, so they forced it in 12.
+
+Google did the same with Q, and they're rightw",1
+11257,location,"When working with real time tracking on map with polyline, instead of getting new polyline data after sometime, is there a better way of doing it instead of repeated API call which would end up being costly.
+
+Maybe a library which keeps track of polyline and user's current location and update existing polyline points accordingly and only fetch new data when going out of range.",1
+11418,location,"Depends on your end goal. 
+
+&gt;My problem is that all the project ideas I'm having seem to be more suited for a mobile app. Vaguely, one is an app that finds people with common interests in a certain geographic location and facilitates a meet up. (Similar to Tinder, just different goals). Another is a sort of social media/e-commerce site.
+
+The front end, meaning the Android/iOS or web app are the easy part on these projects. The harder part is the backend typically. Typically IMO web is the easiest to make something that'll ""work"" with modern web technologies. And that way you can just open a browser and can use the functionality on any platform or on a PC.
+
+ PWA, Progressive web apps, are websites that you can ""install"" on your mobile phones and users won't know they're not an app. If your app doesn't have a lot of stuff that requires really high performance, you're just displaying data, then that would be my vote. 
+
+In the future if your app takes off and you want/need the increased performance from a native app, you can tackle that problem in the future. You'll already have the backend made, and having made a front end on one platform, the rest are pretty similar.",1
+11634,location,"Hi!
+
+&amp;#x200B;
+
+In the meanwhile, I did some more testing with the emulator. I started the app, a job is deployed to run each 20 minutes, used the app for a couple of minutes, and then I exited the app by pressing ""back"" until it was closed.
+
+&amp;#x200B;
+
+Of course, I selected ""allow only while using the app"" when asked.
+
+&amp;#x200B;
+
+When the job was fired by the workmanager 20, the location permission was there and the job could use the location services successfully. 
+
+&amp;#x200B;
+
+In theory, it works, but I don't feel confident. We will see...",1
+2794,location,"Thanks for the test. Can other apps find your location, such as GPS Status? It won't work if you're inside with lots of concrete. I'll try to find a local N1 and see what's going on.",1
+11918,location,I wish this was the default and it was an extra permission for location in background.,1
+2535,location,"Check my open source Kotlin MVVM Family Track Application developed by recommending Architecture compenents:A nice open-source project has been created with fun! I have developed a family tracking concept based application where let you add the members of your family and track where they are as real-time location fetching occurs.  The motivation behind this project is to apply never-ending background services on android with a clean architecture and working with some back-end operations by using Firebase. Check out the source code below and do not hesitate to give me feedback.
+
+Github: https://github.com/mehmettas/MVVM\_firebase\_realtime\_family\_tracker
+
+!img",1
+12302,location,"This is precisely what I'm saying - one single update to the consent library, and after that, push updates to a common central server. If the consent library is generic, it can request the appropriate info from the server based on location, IP address, etc., and display it to the user, instead of updating it every time a new region gets a new law/regulation. Once you update to this generic version, you don't need to worry anymore, as the configuration would live online (and possibly cached locally too).",1
+2748,location,"NEWBIE PROJECT:So im a complete beginner when it comes to android studio but i do know java and oop
+
+I want to develop an app which is essentially a booking application, it would need to users to log in and register with MySql,then have a profile page containing details of the user, also have a google maps location , allow users to book and cancel 
+
+Any tips on how to start, where to look for help etc etc",1
+101,location,"My first app, Tap Location, hoping for some feedback.:Tap Location
+
+I finished my first app, it's basic, but I worked through some coding that I will use in later apps that I'll develop later on. I wanted to get feedback on the app before moving onto bigger and better things so I don't end up making the same mistakes. 
+
+I tried to make an easy way to send your current location to anyone in your contacts. Hopefully it's simple enough that it's self explanatory: get address - send text message. Down the road I'd like to add more functionality for email or possibly social integration. 
+
+It was a fun process and I'm glad I was able to finish it to get my boots wet. Let me know what I could change to make it better. Thanks for looking.",1
+3660,locations,"You can mock locations (or multiple locations) on a device/emulator. You can run multiple emulators on a machine. Run emulators on your schools lab machines.
+
+Check out this page to start with. 
+
+This has the additional bonuses:
+
+1. Run tests with lots of installations running simultaneously and repeatedly BEFORE your demo.
+2. No one needs to sign disclaimers.
+3. No one needs to worry about what your app might be collecting.
+4. You can control how diverse the location data is.
+5. You can script the whole thing and rehearse your interview.",1
+691,locations,"Hi fellow devs, I recently made my first Android game, EarthGuesser, a game where you have to guess the locations of random street views, inspired from GeoGuessr. I would love feedback from you guys :D:Store Link
+
+It's my first time making a game of any sort (I've previously stuck to utility apps on Android), and I was wondering how I did! Here's the play store description:
+
+EarthGuesser is an educational puzzle game that takes you to a random Google Street View location around the world and challenges you to guess its location on a map. From the most remote roads in the Amazon to crowded shopping malls and museums, the game trains your awareness of surroundings while offering you breathtaking views.
+
+I have integrated Google Play Games Achievements and Leaderboards into the game, but I am unsure if I did it the ""right"" way. Anyway, I am eager to hear any feedback or pointers for the game moving forward! :)",0
+1292,locations,"Need help with a suggestion to Google:Not sure if this is the right place or not but I want to submit a feature request for Android. My idea: the battery saving feature is great but when I'm at home I would rather not have it turn on automatically since I usually have easy access to a charger. I would like a feature the battery saver can be set so it won't turn on at locations (similar to smart lock location option: Home, work, etc..) But would still pop-up the regular notification giving me the option to easily enable it if needed. 
+
+I hope that made some sense to you and maybe someone can help me reword it to submit to Google. It seems like it would be relatively easy to implement.",1
+6313,locations,"try some aspirational locations - I see you have Sydney, I'm not saying Lancaster is an awful place.. but maybe your first shot should be New York or London ... not sure if it's possible but you could even try localising the screenshots?",0
+6319,locations,"MySQL has a HTTP plugin which exposes the DB via a REST API. You can probably find other tools with a Google search that expose MySQL. You can make a HTTP call to get your data and another HTTP to update it on the server. 
+
+That's fine if he wants to have a local server but make sure that they understand scaling and building out hardware/new locations. Along with managing security of all that data... From physical access, firewalls, and HTTPS certificates. ",0
+6728,locations,"This is the best image I could find and it's with multiple weather locations. I want to be able to dismiss one of the cities but not the whole card.  
+  
+http://www.droid-life.com/wp-content/uploads/2014/05/google-now-weather.jpg",0
+7054,locations,"My GPS won't update and when it does I will be 50 feet away from where I am. For instance, I'm Pokémon go my character will also walk in the opposite direction. My GPS doesn't update on Google maps either. I have changed GPS accuracy, checked for updated firmware, and turned off mock locations.  Is this a hardware issue? I'm using an lg g5 running the latest.",0
+11789,locations,"Imagine that things used to be even worse hah.
+
+Well, android dev is a weird one to say the least. I guess that's why it's relatively well paid and in high demand (in certain locations that is).",0
+299,locations,"Having trouble finding information on location handling/directions and getting a list of nearby locations.:Hey /r/androiddev!  I'm working on a project which includes the replication of parts of the ""local"" app.  I'm not sure if that is a staple across many phones but basically what it does is give you a list of nearby places given your filters and you can tap to get options like map/directions to/or to call them. I suppose that is just about exactly what I need, except I need the list of places to come from my own database.  
+
+Now I've done a bit of digging and couldn't find a way to do directions properly (most resources said that since there is no API you need to handle all cases?)  In addition to that, directions seem to need longitude/latitude instead of an address which isn't optimal.  I'd also need to find distances between multiple locations and the user location and sort them based on that distance.  The sorting should be easy, but I don't know of a best practice way to request so many distances as to do that in real time and I'm not sure if carriers put a restriction/fee in place for spamming through gps.  I suppose I could just do some Pythagorean theorem lovelyness and calculate distance that way... but I'm not sure if users expect as the crow flies distance or road based.
+
+I don't know if I'm looking in the wrong places or searching the wrong terms, but if anyone could lend me a hand I'm be most appreciative.  I'll keep you guys up to date with whatever implementations I find on my own in the mean time.
+
+Thanks!
+
+TL;DR - Having trouble finding a way to do directions with address, launching to directions, and finding distances to nearby places.
+
+
+EDIT:
+
+After digging around for a bit and testing things I found, I discovered how to convert lat/long to an address.  [Here] (http://developer.android.com/training/basics/location/geocoding.html) is the tutorial I found that I used.  If you get a ""cannot connect to service"" error while using geocoder, it appears the only fix is to actually restart your phone, sadly.",1
+8466,locations,"In our app, we're requesting location-updates from the FusedLocationApi with an interval of 120 seconds. You're supposed to disconnect the api from context to prevent leaks.
+
+We're sending the locations to the server via webcalls and this shouldn't happen more than once every 120 seconds.
+
+The issue is that we have multiple activities and in case you start one and get back to the original activity too quickly, the location-updates start right away, which means you get more than 1 update within 120 seconds.
+
+Is there a graceful way to handle for the api to pick up where it left off?",1
+1781,locations,"Bus tracking app?:Hello 
+
+I'm kind of new to the whole development scene and was wondering how I'd go about building an app like the one in question? 
+
+I already started an android course but i want to have a sneak peek on how i can achieve my target idea in the end. 
+
+I want to build a bus tracking app for a local school where each parent would have a username and password that would allow them to track only the bus their child is on. I'll be using a mobile phone as the tracker. 
+
+From what I understand, i need to send the instantaneous location of the tracker phone to a server then have the parent's app only access the locations after supplying the username and password. 
+
+How do I get the device to send its location and how do I get the parent's app to view the location as it moves? I was hoping I'd have something similar to how the uber app or whatsapp live location works. 
+
+I searched online and found the google maps api. However, a friend was telling me that he thinks I don't need all that (especially that it's extremely expensive for me as i live in Egypt). He says i can get the device to send its location without the need of any api whatsoever, and then I just need to get the coordinates off the server and onto the map. 
+
+I know Google offers an asset tracking option with their premium maps api but that seems to be for $10k a year and only for a hundred vehicles. 
+
+Thank you in advance and sorry if this is a noob question.",1
+10640,locations,"&gt; There is no such thing as "" Impregnable"" in Android from my understanding. 
+
+I was worried about that... hrmm...
+
+&gt;How are you going to sync the data when the users go online again?
+
+Just keep track of their gps locations and actions performed during their offline status basically.. then as soon as they get back online send a compressed copy of it back to the servers.
+
+Thank you for the feedback.",1
+115,locations,"[App Request]  device radar/mapping app:I had this idea a while ago and have yet to see someone execute it.  What I'd like is an app that broadcasts the gps coordinates of one device to another over wifi and/or bluetooth.  The receiving device would then take the gps coordinates and overlay them on a map of the area. 
+It would look similar to the radar used in first person shooters,  perhaps even using the compass to orient their locations relative to yours.  You'd be limited to the distance of your wifi connection,  but perhaps you could use some type of mesh network to cover more area as you add additional devices.
+
+I'd like it to work in areas without data connection since some of the devices i'd be using are old and no longer have a cell plan associated with them.
+
+",1
+2413,mac address,"Issues with Gson when a string literal containing a colon (Kotlin):I'm trying to create the following Json object using Gson by doing the following:
+
+&amp;#x200B;
+
+jsonObject = Gson().*fromJson*(""{macAddress:  $value}"")
+
+&amp;#x200B;
+
+Where value is the string literal of a mac address (i.e. ""00:A0:C9:14:C8:29""). As long as I have the colons in the string literal, I receive a malformed json exception. I was under the impression that colons didn't have to be escaped? What am I doing wrong here?",1
+10936,microphone,done more than a google search and i have already seen the above page i dont have windows 10 i have 7 i was unabble to find a microphone setting since i dont have a microphone on my pc,0
+1691,microphone,"Getting state through interface (regarding coupling)?:Say I have a MyView class - an activity or fragment - and a MyAudioRecorder class - responsible for recording audio from the microphone to an mp3 file on the device. Whenever the user clicks a 'record' button in MyView, an instance of MyAudioRecorder should start recording the audio.
+
+So I create a View interface (implemented by MyView) and an AudioRecorder interface (implemented by MyAudioRecorder) and I define the methods I want them to be able to call on each other (such as startRecording() on MyAudioRecorder and showSuccessToast() on MyView, for example).
+
+What if MyAudioRecorder has to know about some aspect of MyView's state inside the startRecording() method in order to do it's job correctly? For example, after spawning a new thread and preparing the underlying logic, MyAudioRecorder has to check if isStillTouchingRecBtn is true before it calls start(). How should I go about it?
+
+Is it ok to have a boolean getIsStillTouchingRecBtn() method or something to that effect in the View interface? Or is it bad practice to get information about state that way?",1
+2985,microphone,"There are some open-source FFT libraries out there.  You might be able to use that to have the device analyze microphone input and recognize whether you are whistling the right note or not.  Heck, there might be an open-source guitar tuner app or something out there.
+
+Or, take the simpler approach, where you whistle/sing/whatever a note, and then push a button on the phone to have it play the correct note, so you can tell if you had it right.",1
+4520,phone number,"It basically needs to be like the app I have linked to iBuildApp. 
+
+Let's say we click on the button ""About us"", I would want it to then display the location with possibly a google map, hours, and a short description of the company. 
+
+Let's say we click ""Contact us"", I would want it to display the phone number and email.
+
+Let's say instead of an ""Our Apps"" button I would have a ""Products"" button that would display a picture next to every item available in the store with a short description about the item and a price.
+
+The ""facebook"" button would direct the user to the store's facebook page.
+
+And so on. I would modify the sample source code to my liking to have these choices I have described any possibly some other ones.
+
+ I found several great websites with a lot of open source code but nothing I found useful for the app I am trying to work make. **This** being one of the biggest lists. ",0
+6073,phone number,"I'm sorry you've had that experience. However, I'm a little bit confused, as we don't even ask for the phone number for JRebel for Android?",0
+9883,phone number,"Well, I did not know about the EU. It is just my thought but is it really necessary to make the developer's physical address public? I mean, what would general users do with that, visiting the developer's house for a refund? That information may only be useful if the developer is fraudulent or has done some illegal activities. So, doesn't it make more sense to let Google keep the address information, and only when a user accuses the developer for illegal activities (fake app, stealing personal information), Google discloses the address to the user or to the public?
+
+Developers are already getting spam e-mails because that information is public on the Play Store and spammers scrap that data. Spammers would love to have the developers' phone number and physical address...",0
+11471,phone number,"Face it. It's China.
+
+Tencent:
+
+* Scan National Citizen ID card (contains fingerprint, facial recognition features, and other personal data)
+
+* Link WeChat account
+
+* Bank card
+
+* Phone number
+
+* Landline number",0
+3163,phone number,"I'm not entirely sure if it's possible, but can't you call them? That's what I always do if email fails. But I'm not sure if Google has a phone number for that kind of stuff.",0
+4086,phone number,"**There is no secure way to do what you're asking.** 
+
+A better possible solution, I posted above, is to authenticate the user to your service using social platforms (Facebook, Google oAuth), and determine who else has installed the app based on information in their social media's profile. You should then communicate the information to the user's device. These requests should be done in good faith, as controlled by the user, that no private profile data other than consumer keys be stored on your service. This is a cross-platform, phone-number independent solution.
+
+If you create an endpoint that, given a list of contacts, returns contact information- it will be inevitably stolen.",1
+4089,phone number,"&gt;The reason I said it was a PK was to basically make the point that it is unique
+
+Then just say it's unique? Also, phone numbers are hardly unique.
+
+&gt;Why am I being downvoted for asking questions about Android Development in the Android Development subreddit?
+
+Technically this is not really an Android development question at all. Nothing you are asking about is really Android-specific.
+
+Frankly I'm not sure what the big deal regarding storing the actual phone number is, assuming you've actually told the user that you are doing so.
+
+Anyway, if you store the number at all, it should be the full international version, without any such nonsense like parens or spaces or dashes.
+
+Really, if you're currently storing the users' full number with country code, I don't understand what you are asking. It seems like you should just...continue to store the full number with country code. What exactly is changing now that you have more users not from the UK?",1
+1111,phone number,"Contact lookup by partial phone number?:Hello,
+
+I'm building an SMS app for learning purposes and I am having some trouble figuring this out. I have been looking at Android Dev resouces to learn about Content Providers and I know I can use CONTENT_FILTER_URI to do this using CONTACT_NAME, but there is no equivalent for phone number?
+
+I found PhoneLookup.CONTENT_FILTER_URI which kind of does the same thing, but only returns fully matching numbers. Is there a way to use this with partial numbers? 
+
+I've searched StackOverflow and Android Dev resources for solutions, but I'm turning to you guys now because I can't find anything.
+
+Please help!",1
+11150,phone number,"You can get phone number on pre-pie devices using just PHONE\_STATE permission by reading EXTRA\_INCOMING\_NUMBER. It works for outgoing calls as well. However, the documentation says it requires READ\_CALL\_LOG, it's true for Android 9 only. But I don't risk to read it on pre-pie devices, because Google might consider it as a violation.",1
+2851,phone number,"Works well. One small complaint - if you push the ""advanced..."" button in the options menu, you should transfer the name and phone number to the text inputs there if they've already been typed out.",1
+5261,phone numbers,"I actually work heavily on both platforms, and i used to be frustrated with Apple more because it honestly started like this, with heavy decrees over vague language and automated emails.  Now all the hoop jumping has phone numbers associated with them, and you can get someone to bypass things when the system messes up.  I hope this is a growing pain and that they grow up soon, as I too feel like the conversation somehow ends up blaming the developer in situations its clearly a Google issue. ",0
+1415,phone numbers,"Phone Number Formating In Android:I have a database of users where I have the user name and user phone number, now I want to take the users contacts and show them the people in their contact list who are already registered in my app, the problem is people store phone numbers in different format For ex, a number is valid if its stored in following formats in india
+
+type 1-  +91-9712345848
+type 2-  09712345848
+type 3-  9712345848
+
+so If I have say type 1 for a user stored in my database and lets say other users store the number in their contact as type 2 how should I be able to match this number to the one in my database?
+
+I have googled and found out a lib https://github.com/googlei18n/libphonenumber
+
+My solution was to format the number to type 1 with this library  but it for that I need to know the defaultCountryIso for the given number which I am not aware of 
+
+Can anyone please help me with this issue?",1
+10062,physical address,"You don't have to use your real name, you can publish under a company name. This company doesn't have to be registered or anything, it's just what you tell google you are calling yourself. Make a new gmail account for your newly formed app company and publish under that account.
+
+I had to give my physical address and Google mailed a verification code to that address. You can publish your app but all payments are withheld until you verify your physical address. They refused a postbox, and since my *business* doesn't have an address I had to use my personal address.
+
+Google handles absolutely everything that needs to be done for taxes for every country, you don't have to do anything other than deciding what you want to charge. *What about countries where they don't add the sales tax?* Google absolved themselves themselves from the responsibility because some countries are difficult to deal with, they say it's now over to the developers because they legally cannot say screw it no tax in those countries. The reality of the situation is that if and when those countries decide to tax apps, they will ask Google to implement. They will never expect to collect from foreign developers.
+
+Edit: The address verification was for Google AdSense not for Google Play.",0
+7637,postal address,"This is straight from the dev console. It has no mention of ads. You will not have to publish your home address unless you have IAPs or are selling your app.
+
+&gt; Please provide a current, valid postal address where you may be contacted. If you offer apps or in-app items for sale, you are required to provide a postal address under our developer terms and consumer protection laws; failure to do so may result in the suspension of your account and/or sales of your apps. Please ensure that you keep these details up to date if they change. By providing your email or postal address information, you confirm that you consent to Google publicly displaying or disclosing that information in connection with your apps.
+
+Feel free to read the whole distribution agreement: https://play.google.com/about/developer-distribution-agreement.html
+",0
+5784,real name,"Technically your real name is your company name until you register a business entity with your state using a different name. That business entity gets a tax ID, but while you don't have a business registered your tax ID is your SSN. So while you may not have an official business name, you are still a business entity as an individual. You should use your own name unless you register a business.",0
+6188,real name,"&gt;I was wondering if you guys have some ideas of things I should really know when going into this interview
+
+Number one, try not to give away sensitive/confidential information that your prospective employer might not want you to - for example a detailed account of the hiring process, the various steps in it and even specific questions they ask.
+
+If you do that, try not to do it somewhere they're reasonably likely to find it, such as plastering it all over reddit.
+
+If you do *that*, at least make sure your reddit handle isn't your real name so they know exactly which applicant to reject, and/or give away enough information for them to reliably identify your application even so. Posting pictures of your face on the same account would probably be a really bad idea, too.
+
+So, uh... yeah. Good luck getting that job at Facebook, anyway.
+
+**TL;DR:**
+
+&gt;Is there anything that I should study?
+
+Professional discretion?",0
+3682,real names,"I'd say no, but this is also just a guess.
+
+Talking about the real football: PES had in their games only fake names and Fifa, as a license was allowed to use the real names of clubs and players. This is where my guess comes from.",0
+1237,real names,"Using my real name lowers my downloads :/:I'm from Bangladesh with a, what I imagine you might think, a long weird and unpronounceable name. 
+
+I've been using a ""XYZ studio"" name for my developer name for two years, just something I randomly thought of. But since my apps are now quite popular, I thought I should try to put my name out so people know who's behind my apps. 
+
+Even in my own experience, ""third world"" developers that use their real names, their apps tend to suck or be clones or simply not worth my own time, statistically speaking. That is, I, and I imagine others as well, expect apps from developers from poor countries (as denoted by their names) to be of lower quality. But I am one of them myself now. Yes, I could probably be a little more positive, but the evidence says something else.
+
+After I mustered up the courage to put my real name out there, after 2 years, my downloads dropped from 8k to 6k/daily (in all the 3 times I tested this, over 2 months, in which I alternated between old and new dev names). I don't think I should be ashamed of my name, but my little experiment showed me I'm wrong. The developer name was the only thing I changed and it dropped my downloads by 25% immediately. 
+
+I'm not sure what I should do. Should I just register an LLC or something and go back to using something like 'XYZ games studio'? 
+
+",0
+4682,SSN,"This does seem like the simpler option.  Unless someone posts some reason why AdMob is not worth my time, it seems to be better in this case because I can use my SSN (MoPub does require a business EID).  Plus, AdMob has some mediation options so I can still increase fill rate that way.",0
+5093,user id,"I have some experience with login screens..
+
+You want to make 1 view with a login screen ( email + password probably ) then you probably want another view where the user can register.
+
+For the login screen: whenever the user enters the email and password they will likely press the login button which then will send the data to a login call on your server which then validates if the data is correct and if this is true then the id of the user will be sent back.
+
+Then you have to retrieve that id and save it ( preferrably in a sessionmanager if you don't want the user to keep logging in every time they open the app ).
+
+Then whenever you want to execute a crud command you just send the user id back to the server and then you know which user executed a certain operation.
+
+*Advanced: make a token that is bound to a user for a set amount of time and use the token to validate everything and if the token expired let the user relog
+
+
+-------------
+For the counting / liking you want to make a junction table since i assume that you don't want users to like something twice.
+
+Whenever the user presses the like button you will have to check if the user already liked the post if not then you can place it into the database.
+
+Then to count the likes you want to execute a count command on the junction table and return that value.
+
+To count the views you kinda have to do the same thing but then whenever the user gets focus on the qoute send a viewed request to the server
+
+*Advanced: save the posts that the user liked local ( For example in ORMlite ) so you can show the liked status on the posts if the user liked it.
+
+---------
+
+All the requests and such should probably be done with a REST API on your server :)
+
+
++ you might want to look into mysqli instead of MySQL to be a little bit more secure
+
+Hope it helps :)",1
+7122,user id,"My idea was that on successful sign up, the user creates a database entry under ""users"" that maps the users email to their user ID in the database. The user just grabs his UID (`getUid()`) from a `FirebaseAuth`object.
+
+So after an owner adds a user ID to the group, now a group has a list of user ID's and if a user tries to access the group's data, a read/write rule is written that the user attempting to access has a UID that exists in the group's UID list.",1
+2521,user name,"Why do I keep getting the Github dialog via the IDE?:I've used Android Studio for a long time together with the ability to commit&amp;push to Github, including to both public repositories (here, if anyone is curious) and private ones.
+
+Recently almost each time I push the changes, I get this dialog:
+
+&amp;#x200B;
+
+https://i.redd.it/dkr8icut4jj31.png
+
+Sometimes it's even being shown a short time after another, and sometimes I even see two of those.
+
+What is going on? How can I make it remember me and stop asking for user-name and password?",0
+1566,userid,"For those of you who use Conductor, how do you handle deep links/URI based navigation?:My goal is to have deep links within the application so I can navigate declaritively.
+
+Having a 'superRouter' of sorts will allow me to map deep links to different controllers; similar to how routers on web pages work. I can then navigate within my application but just linking to the destination's deep link/URI.
+
+It seems faily easy to imagine a way to have top level mappings like:
+
+`/tasks/ -&gt; TasksController()`
+
+`/tasks/{taskID} -&gt; TasksController(taskID)`
+
+However I'm having trouble figuring out how one would handle something like this:
+
+
+`/tasks/{taskID}/notes -&gt; &lt;???&gt;`
+
+`/tasks/{taskID}/notes/{noteID} -&gt; &lt;???&gt;`
+
+
+Here are some examples of other libraries that have implemented what I am talking about.
+#Routable Android
+
+Example setup
+
+
+
+    // Set the global context
+    Router.sharedRouter().setContext(getApplicationContext());
+    // Symbol-esque params are passed as intent extras to the activities
+    Router.sharedRouter().map(""users/:id"", UserActivity.class);
+    Router.sharedRouter().map(""users/new/:name/:zip"", NewUserActivity.class);
+
+
+grabbing param info
+
+
+    import com.usepropeller.routable.Router;
+    public class UserActivity extends Activity {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            Bundle intentExtras = getIntent().getExtras();
+            // Note this extra, and how it corresponds to the "":id"" above
+            String userId = intentExtras.get(""id"");
+        }
+    }
+
+    public class NewUserActivity extends Activity {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+
+            Bundle intentExtras = getIntent().getExtras();
+            // Corresponds to the "":name"" above
+            String name = intentExtras.get(""name"");
+            // Corresponds to the "":zip"" above
+            String zip = intentExtras.get(""zip"");
+        }
+    }
+
+Example usage
+
+    // starts a new UserActivity
+    Router.sharedRouter().open(""users/16"");
+    // starts a new NewUserActivity
+    Router.sharedRouter().open(""users/new/Clay/94303"");
+
+
+#android-router
+Example Setup
+
+    ActivityRouter.getDefault()
+        .add(""/splashscreen"", SplashScreenActivity.class)
+        .add(""/login"", LoginActivity.class)
+        .add(""/profile/:userId"", ProfileActivity.class);
+
+To navigate to an activity
+
+    ActivityRouter.getDefault().route(mContext, ""/profile/"" + mUserId);
+
+To grab parameters out of the url
+
+    String userId = getIntent().getStringExtra(""userId"")
+
+
+This particular library also handles routing deeper into nested views.
+
+    public class MainActivity extends Activity {
+        ViewRouter mRouter = new ViewRouter(this);
+        ...
+        mRouter
+            .add(""/splashscreen"", SplashScreen.class)
+            .add(""/login"", LoginScreen.class)
+            .add(""/profile/:userId/..."", ProfileScreen.class); // note the ""..."" - it allows to nest view routers
+
+        mRouter.route(String.format(""/profile/%s/general"", ""user1234""));
+define the screen and reminder
+    public class ProfileScreen extends ViewGroup {
+
+        String userId; // will be set to ""user1234"" automatically
+        String uriRemainder; // will be set to ""general""
+
+        ViewRouter mPageRouter;
+
+        ProfileScreen(Context c) {
+            // Nested router will dispatch between certain view mounted inside the current one
+            mPageRouter = new ViewRouter(findViewById(R.id.page_content))
+                .add(""/general"", ProfileGeneralView.class)
+                .add(""/general"", ProfileGeneralView.class);
+        }
+
+        @Override
+        public void onAttachedToWindow() {
+            super.onAttachedToWindow();
+            mPageRouter.route(this, uriRemainder);
+        }
+    }
+This particular library seems to be handling the URI remainder. This seems like a promising strategy, has anyone done something like this?
+
+
+#AndRouter
+Declare routes via annotations
+
+    @RouterMap({""activity://second"", ""activity://second2""})
+    public class SecondActivity extends Activity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_second);
+        }
+    }
+
+Or via initializer
+
+    Router.initActivityRouter(getApplicationContext(), new IActivityRouteTableInitializer() {
+        @Override
+        public void initRouterTable(Map&lt;String, Class&lt;? extends Activity&gt;&gt; router) {
+            // only if the host is equal and pathes match, it matches.
+            // The url ""activity://first/kris/26/birthday"" is one of the matches. ""kris"" and 26 are values of key ""name"" and ""age"". and the ""name"" value type is string, the age value type is integer.
+            router.put(""activity://first/:s{name}/:i{age}/birthday"", FirstActivity.class); 
+            router.put(""activity://second/:{name}"", SecondActivity.class);  
+            router.put(""activity://third/home/:i{room1}/printdoor/:s{color}"", ThirdActivity.class); 
+            router.put(""activity://four/buy/:s{name}/:f{price}"", FourActivity.class);                           
+        }
+    });
+
+navigate
+
+    private void openSecondActivity(){
+        Router.open(""activity://second/汤二狗"");
+    }
+
+grab parameters
+
+    public void getTheValueOfName(){
+        String name = getIntent().getStringExtra(""name"")
+    }
+
+Even get results from activities
+
+    private void openSecondActivityForResult(){
+        ActivityRoute activityRoute = (ActivityRoute) Router.getRoute(""activity://second/汤二狗"");
+        activityRoute.withOpenMethodStartForResult(this, 200).open();
+    }
+
+
+I would like to know existing Conductor patterns that solve the above use cases.
+
+I think hydrating a controller through it's constructor instead of through intent extras allows for more type safety and a cleaner api experience. I'm curious to see if something like this is leveraged in some more advanced Conductor patterns.
+
+
+",1
+7876,userid,"Hey. I have a Firebase related question. I'm trying to join 2 tables Users and Events. Events table holds userID and some other info. Users table holds userID as key and as childs some user info. The code I wrote simply gets all the events first, then the users and it adds the events to a list. Which means all my events are same events. I need to get an event then get the user of that event(publisher) and add them to my list. How can I do that?
+
+My temporary solution is to store whole user object inside events object in Firebase.",1
+6731,username,"I can't really give you a correct answer since i'm just a beginner in C# and Xamarin, but I've been working with Xamarin.iOS for the past 3 weeks, and I should say formatting the JSON as you expect it is really easy, since i use a library called RestSharp which can do it automatically for you! I used http://json2csharp.com/ to create a class from my data and then all I need to do is just parse my data to JSON after creating the class objects and bam, you can use it. I use it mainly to fetch data from an api. 
+
+
+An example would be for my class is 
+
+    public class Item
+            {
+                    // Properties
+                    public int Id { get; set; }
+                public string Url { get; set; }
+                public string Username { get; set; }
+                public string Title { get; set; }
+                public string Created { get; set; }
+                public string Body { get; set; }
+                public string Category { get; set; }
+                public string Condition { get; set; }
+                public string Price { get; set; }
+                public bool Active { get; set; }
+                public bool Sold { get; set; }
+                public bool Premium { get; set; }
+    
+    
+            }
+    
+And that's how I fetch my data, convert it to my class and then returning my data in the shape of the class I have made above:
+
+    public List&lt;Item&gt; DoSearch (string category = null)
+                    {
+                            string uri = String.Format(""item/?title=&amp;category={0}"", category);
+                            itemsList = new List&lt;Item&gt;();
+                            var client = new RestClient (""http://dev.foo.io/api/"");
+                            var request = new RestRequest (uri, Method.GET);
+    
+                            request.AddHeader(""Content-Type"", ""application/json"");
+                            request.RequestFormat = DataFormat.Json;
+    
+                            IRestResponse&lt;List&lt;Item&gt;&gt; response = client.Execute&lt;List&lt;Item&gt;&gt;(request);
+    
+                            List&lt;Item&gt; temp_items = response.Data;
+    
+                            HttpStatusCode statusCode = response.StatusCode;
+                            int numericStatusCode = (int)statusCode;
+    
+                            Console.WriteLine(""Numeric status code: "" + numericStatusCode);
+    
+                            if (numericStatusCode &gt;= 400 ) {
+                                    Console.WriteLine(""Something went wrong.."");
+                            } else {
+                                    foreach (Item i in temp_items) {
+                                            itemsList.Add(i);
+                                    }
+                            }
+    
+                            return itemsList;
+    }
+    
+
+                
+
+                        ",1
+8199,username,It's hard to believe this is the first username that contains Hitler that you come across.,0
+11218,username,"Username checks out, this wasn't r/mAndroidDev",0
+4794,username,"I wasn't expecting responses until tomorrow anyway so it's okay.
+
+All data will eventually be returned in JSON format which I now understand pretty well how to process, which is the easy part. The hard part of which I need help with is the fact that this a user based service where I must POST a username and password and then GET information from different sub components of the API.
+
+Thing is that there are sooooooo many pieces to this API it is complex and convoluted to someone who has no experience with this kind of thing. 
+
+Ultimately my goal is to use RoboSpice and Retrofit together to make things simpler and have my data being processed in the background so that when a certain part of the app is loaded the data is ready or almost ready to be accessed ",1
+1209,username,"Handling user login. Am I doing it right?:I'm developing an application where user login is essential for the first time. Since I've never done it before, I'm a bit worried that my method is flawed, or that there is a method everyone should follow that I don't know about.
+
+**So, this is how I handle user login**
+
+1. I created a class called *User* which saves username, password and authorization token. It also has a constructor to create *User* from JSONObject and a method that converts it to JSONObject.
+
+2. The second class is called *SharedManager* and it takes care of everything that has to do with saving the account to SharedPreferences.
+
+3. When a user logs in, I create a new *User* object, convert it to JSONObject and then save the JSON to SharedPreferences using SharedManager. Then whenever I need to check if a user is logged in, I simply call SharedManager.getUserAccount(context) and this method checks the SharedPreferences if the user is saved.
+
+4. When the user logs out, I simply clear SharedPreferences.
+
+The thing that I'm worried about is the fact that I'm saving user's password to SharedPreferences. Is this a safe thing to do or is saving password a bad and useless idea?
+
+*Additional info: the SharedPreferences class was a Singleton at first but then I made it an ordinary class because the app will be able to have 2 logged in users at once.**
+
+**Thank you for your answer in advance!**",1
+7169,username,"You would normally want a server to act as a middleman. UserA -&gt; server -&gt; firebase -&gt; UserB.  The server would save user info for everyone and be able to map a user to a phone(s) so that you wouldn't need to know the GCM key of a user to send the message just there username.  
+
+Edit: direct messages can be sent the same way you just need to have the server key on both devices and you would need to exchange keys to be able to talk.  Then the flow would be:  UserA -&gt; Firebase -&gt; UserB",1
+10615,username,"No no no no no.
+
+You create a server that allows you to register using username/password/yaddayadda. E.g. `POST /users/register`
+
+You implement a system that allows you to login using username and password, and let the server return a token that has a limited lifetime. You also generate a refresh token, that allows a user to get a new token when the old ons has expired. e.g. `POST /users/authenticate` --&gt; `{ id: 54654654s6d4ds64fdsf4sd6f46ds54f65sd4f64sd6f6sd4f45, refresh: sd6f4ds64f6ds54f64dsf465ds465456f4sd654f6 }`
+
+The app logs in using above calls and stores the tokens in sharedPreferences. Every API call contains the idToken in the header. The backend checks for the header and if the token is unknown or expired, throws a 401. When you get a 401, you perform a `POST /user/renew` with the refresh token and try the API call again.
+
+No user credentials are saved on the client!",1
+8640,voice,I read that in your voice :D,0
+9047,voice,"Company: Discord
+
+Job: Senior Android Developer Job Listing
+
+Location: San Francisco, CA, USA
+
+Allows remote: No
+
+VISA: No
+
+Internships: No
+
+------------------
+
+Discord is a group of passionate gamers whose mission is to bring people together around games. Help build the Android client of a voice and text chat app that makes people excited to play games with each other. Our Android team is still small! That means you will be free to follow your engineering interests and have real ownership over your work that will reach a rapidly growing number of users.
+
+You will be responsible for building new features, squashing bugs, architecting cleaner code solutions, and extending device support across the Android ecosystem.
+
+Bonus points if you are experienced with RxJava and Kotlin (both of which our app uses heavily). A passion for gaming doesn't hurt either :)
+
+------------------
+
+Find other jobs at Discord here: Jobs at Discord",0
+9787,voice,"Ooh boy, sounds like support alright.
+
+One thing I learned from working as a voice agent. If their team says they do not support helping with a concern that falls in a certain category they literally can't. Most of the times because they don't have training for it, they'll be liable if they give info when tey're not supposed to, or their systems might not have what the software access to what you need, etc.. And while they're under the ""Google"" team they literally can't do anything like contacting someone for a special case. The directive here is to just transfer to a team based on a specific issue which even they don't know how operates or who the members are (outsourced to india/philippines, etc..). There's just maybe a button they press to transfer the case to the other team. It's all system based, they don't get to check if it passed through, if someone will reply, etc.. Basically if that team does not have voice or real time chat capabilities, you're fucked. 
+
+Also the note of ""CUSTOMER HAS RECEIVED NO HELP AT ALL"" will do fuck all. Agents will only care if their metrics are hit negatively like you leave a negative survey for the agent and even then it'll just end up in numbers noone will care about the note. Even the QA who might bring this case up to evaluate the agent will evaluate the agent based on following policy and saying things as directed. He/She won't pass that note along.
+
+The company is to be blamed I assure you.",0
+9965,voice,"Android is probably one of the most blood bathed areas of non scientific development. 
+
+Api's move fast, every component Google gives you is the most bare bone possible in existence, java will make you pull out your hair. You will find tutorials but you might not be able to find what you need due to old Api's.
+
+Everything will move in stages of 1 year at minimum, you will have to be ready to update yourself (as any development specialization, but this time to ease development).
+
+But in the end, after some time you will be able to design and implement apps as if you were hearing god's voice.
+
+Do not be afraid, nobody is perfect, nobody in the industry knows where is heading to, there is more shitty code in the wild that we want to admit. 
+
+And the best two virtues you should master is: learn how to search your problems and knowledge when you need to ask for help.",0
+11470,voice,"Company: &lt;Play Sports Network&gt;
+
+Job: &lt;Android Developers, at all levels&gt;
+
+Location: &lt;Bath, South West England, UK&gt;
+
+Allows remote: &lt;Yes: one or two days each week&gt;
+
+Visa: &lt;No&gt;
+
+\--
+
+Hello all,
+
+Play Sports Network is bringing together a new apps team and we wondered if this may appeal.
+
+Combining our knowledge of the world of cycling with new approaches in data, we're launching exciting new apps - social media for cyclists, currently in beta - with scope to reach millions worldwide.
+
+Don't worry, enthusiasm about cycling or sport isn't a must-have! Above all, this is about building out great experiences that people will love. It's a near greenfield situation where can have a voice and make your mark, delivering the data-driven solutions that you always dreamed of.
+
+You can find the job profile at; http://techfolk.co.uk/current-jobs/android-developer-bath-1275 and, for Seniors, at; http://techfolk.co.uk/current-jobs/senior-android-developer-bath-1276
+
+We're open minded on remit and would love to explore the kind of role we can create around you. We can equally consider supporting someone ready to transfer from hybrid apps to native. 
+
+We're also hiring full stack and back end developers.
+
+You can join us right away, this summer or well into the autumn. 
+
+We're located in central Bath and potentially commutable from Bristol, including by train. We can support partial remote working - one or two days weekly - once up to speed. We're also open to reasonable requests for support around travel season tickets or, for those further afield, possibly relocation.
+
+Regret that we can't offer work permits or sponsorship transfer.
+
+We've just begun the quest and I would be pleased to answer your questions.
+
+Thanks for your time,
+
+Andrew
+
+Andrew Gifford, Founder 
+
+techfolk Ltd - working on behalf of Play Sports Network
+
+0117 318 2447 | 07710 794225 
+
+andrew@techfolk.co.uk | http://techfolk.co.uk | http://twitter.com/we\_are\_techfolk 
+
+2 Charnwood House, Marsh Road, Ashton, Bristol, BS3 2NA",0
+11514,voice,"The voice of reason has spoken. Lol, I hate animations like this.",0
+3493,voice,There was an update to Google Voice on Android like yesterday.,1
+305,voice,"Doing a course project in android, need some help. XPost from /r/android:I have never programmed in android before. I am currently a sophomore at a computer science program in my university and am taking a OOp course in java. As a final project i picked making an android app that integrates SMS, google voice, and whatsapp.
+
+First of all id like to know an estimate on how long this should take me, i am by no means an expert at programming but i have been among the top students in my class.
+
+Secondly id like some advice on wether or not to use the existing codebase to start with, or start fresh. (AOSP or cynogen mod)
+
+Thirdly id like to know if anyone has any experince with the reverse engeneered whatsapp api on github. Is it any good? is it robust? is there a way to interface with the default whatsapp client without using the api, etc.
+
+Lastly any fast learning android guides would be welcome, I perfer not to learn from vids as they are very slow.",1
+4276,voice,"another video about using voice to reply to messages.
+i wonder if the phone has to be unlocked, or not have a pattern lock on it
+https://www.youtube.com/watch?v=SEZbZK4jFLY",1
+5194,voice,And Google Voice (Grand Central),1
+6113,voices,"On what OS version are you experimenting? The high-quality Google TTS voices have gotten very good, but they don't ship on older devices.",0
+1443,voices,"Bottom Navigation feature request for Support library:Make your voices heard before the API is defined!
+
+https://code.google.com/p/android/issues/detail?id=203974",0

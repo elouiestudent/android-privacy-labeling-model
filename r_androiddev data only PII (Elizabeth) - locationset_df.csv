@@ -1,0 +1,878 @@
+,keyword,text,label, 
+4452,location,"Sites like that are gimmicks. They most likely use Google Maps (or comparable maps API) and they simply make a site that returns one random food place within X miles of location and then adds some themed text and thats it. Its like http://thefuckingweather.com  
+  
+Do you think that site really has their own weather service? Does someone gather the weather for the day in every area and deliver it to those users? No. They use yahoo or other weather service and instead of using it like a normal dev would, to display all relevant information in a detailed method, they went for a simplistic/comical approach and instead deliver the weather in a clever text based manner. These apps are nice because they do not require many API calls to the parent library and they are just one simple API call to usually get a random (or a randomizer method if the API doesnt support calling for a random entry) and display only one result in a pretty way.  
+  
+If you want to make basically that website for android, you should looking into Maps API or whatever google API houses the food/places info.",0
+655,location,"Unity 3d game dev looking to move to native Android dev, help advice and tips please.:So I've been developing games via Unity for mobile devices for 5 years now, so I'm not exactly new to the subject. I would like to start off Android development efficiently and on the right track.
+
+* Does a typical Android dev working in the industry use Eclipse primarily? Are there other staple softwares I need to know about?
+* Should I beeline towards Java as my go to language?
+* What are some mistakes new Android devs often make?
+
+My goal is to get working in the industry, as much as I enjoy being a game dev the jobs just aren't available in my location. Android dev and iOS dev jobs are however in high-demand. (I intend to learn iOS dev once I've mastered Android dev).
+
+My current plan is to do this XDADevelopers course on YouTube, and then perhaps find a Java course, is this a wise course of action?
+
+Thanks for reading!
+
+
+---- Edit ----
+
+I've created a new post with a study plan based on the replies in this post, hoping it might be of use to others.",0
+4764,location,"Use gradle wrapper with this gitignore file
+
+https://github.com/github/gitignore/blob/master/Android.gitignore
+
+You'll have gradlew.sh for *nix systems and gradlew.bat for windows
+
+Each machine can specify their SDK location in their local.properties file",0
+5454,location,"You just have to explain it to them. There are amazing iOS apps that if ported 100% to Android, would be terrible apps (and vice versa). Every app must take into account the uniqueness that comes with the platform.
+
+The reason it is so important to make use of platform design standards is that you can build an instantly familiar UI by re-using familiar design components. This drastically lowers the learning curve when a user first opens the app. Most Android users are familiar with the hamburger navigation and how it works. You tap the hamburger icon, and out pops a menu that overlays your content. If I saw a menu that pushed my content to the left - it would make me uncomfortable, because I am not used to that.
+
+By re-using familiar design components, you get the UI out of the way. When users do not notice your UI design choices, it's a good thing.
+
+Let's say you drive a car that has the parking brake near the center console. This is what you are used to. Imagine you got into your friends car, and the parking brake is in a different location. Maybe under the steering wheel, or a button on the door. You would be annoyed, because you cannot find it immediately, because it is not where you'd expect. 
+
+When designing a UI, do not force the user to learn something new when you do not have to. As material design proliferates, more users will come to expect it. By designing your app based on material design - you are making it easier for your users to navigate around your app.",0
+5793,location,"There's a new thing now where you get 50% back if you pass the courses. It's really not that expensive when you compare the price of other courses. The courses I normally take, where you have to travel to a location, learn for a few days, and then come back, usually costs around $1000-$2000.",0
+6163,location,"We have a fragmentation problem. The one which used to haunt the devs is disappearing since last couple of years (thanks kitkat for that). The v2.0 of fragmentation is caused by some rogue apps. I have said this before, task killers, memory cleaners are still popular here in India, comes pre-installed on device that-I pretty much guess-have system level permissions, and they suck. 
+
+They were the reason we had to ditch FusedLocationProvider and location permission with gms, and even are the reason of some of the bugs (Happening in only two or three, unfortunately important devices). 
+
+I hope these rogue apps are no problem in USA and Europe where the primary market is. But targeting local (esp Indian) market is becoming bit difficult because of that.",1
+1372,location,"Building AOSP &amp; Adding Features Site/Blog:Apologies for the self-promotion; I've started a site to have a centralized location with information about building AOSP but more importantly (and less well documented) how to add features and customize the OS to your liking.
+
+Please check it out, make requests, give feedback, comment etc. if you or anyone else would find it useful.
+
+The link is: http://littlelostandroid.wordpress.com
+
+From tomorrow the following (nicer) link should also work: www.alittlelostandroid.com 
+
+Thanks.",0
+6276,location,"If you do wish to obfuscate your app and not just minify it, then you should keep your mapping files in version control
+
+At the moment, the developers of the application I work on receive stack traces in two ways:
+
+1. **Application crashes in the wild:** For this, we use Crashlytics and their Gradle task silently uploads the mapping file, which makes the use of ProGuard transparent from the dev point of view. Should the mapping file upload fail (it happens once in a blue moon), you will need your mapping file to make your stack traces useful.
+
+2. **User submitted bugs:** Our users are capable of reporting issues to us via email, which will automatically add an internal log file of everything the user has done over the last little while. This file does require de-obfuscation, and this is where we actually need the mapping file.
+
+Our team uses git tags for the purposes of cutting releases, and we have a set of scripts that we use for automating our build process: incrementing the version code/name, assembling the release build, copying the newly-generated mapping file to a git-tracked location, committing the updated version and mapping file to version control, tagging it with the specified release name, and pushing the commit and tag.",0
+6286,location,"I found it as an empty file in that directory. I opened it and pasted the location of the custom JDK within it (eg. echo ""/path/to/jdk"" &gt; studio.jdk). I'll update the OP. If the file doesn't exist I imagine creating it would work.",0
+7797,location,"&gt; Curious how breakpoints work,will line numbers still be right in crash reports?
+
+Debugging would happen over standard JDPA layers, which will map the source line (assuming a line breakpoint) to the right location in the compiled bytecode and vice versa.",0
+8101,location,"Hi GrandAdmiralDan,
+Well, I’m happy to hear you guys are working on this. And I’m really happy to hear ICU will become public API.
+But frankly, considering we are 8 years into Android and you are only starting to fix this now, still doesn’t really reflect well. 
+
+I know it is easy to workaround the NDK to get Lua built, but for my time constraints and audience background, it is reflective of the types of problems we developers still fight on a regular basis. Lua is the easiest to deal with, but there are many more which are much more painful and time consuming. 
+
+I could have gotten into how the newer NDK API levels removed a few things which prevented ICU from building. Or the problems and bugs I encountered trying to build Swift on Android with different API versions. Or I could have gotten into other never fixed roadblocking bugs like the infamous bug 3434. And I didn’t talk about Android fragmentation and the fact is that over 1/4 is still pre-API 21. (And a stdio deadlocking bug in 5.0 which affects Swift so 5.1 is the minimum instead of 5.0, losing nearly another 10% of the current available devices.) Even with your changes that may be coming in a few years, we still have to add extra years on top of that before we can use them.
+
+
+But here’s a another problem I’m facing maybe you can help with. As I said in the talk, I am adding CMake support for Swift. I also said Android is officially adding CMake support. However, for time, what I did not say is that there is a new hell that has been created because there are now 3 major CMake toolchains now competing with each other, and all are incompatible. There is the OpenCV toolchain which everybody has forked from for the past many years (including me), the official CMake just added Android support, and you guys have your own fork which is incompatible with both of them and is stuck on an old CMake 3.6 (CMake is now on 3.8).
+
+I just posted to the NDK mailing list asking about how I can leverage yours, but I need to be able to merge in my changes and invoke CMake sitting in a different location than yours. But so far, the answer seems to be that I can’t do this, and your CMake source is not something I can pull and merge with. But no answer from the person who would know for sure. Maybe you can find out how to make this possible get your CMake git repo published.
+
+
+I also want to point out that I’m am seriously disappointed that you guys didn’t add Android Studio project generation to your CMake implementation, so you still need to have both an Android Studio project and a CMake description. (And I am still uncovering a lot of limitations.) This is just one more of those time sucking things that makes it so unpleasant to support Android. This is one of things I implemented for Blurrr to solve for other people, but is a PITA to maintain. You guys implementing this, maintaining it, and contributing it back to CMake would be actually really valuable to the world.
+
+One more thing. As you fix the C++ side of the NDK, please don’t forget C. Maybe it’s just me, but I’m getting this overall vibe that the NDK team may still be thinking of C support as a second class citizen. I’m seeing this in Android Studio as there are things explicitly labeled C++, even when I’m only dealing with C. Back to the one of the premises of the talk, C is one of the most important foundational things that everything else can stand on.
+",0
+8317,location,"One real example that I keep seeing is that the database stores a file location, when a record is deleted from the database, the file should also be removed from disk.
+
+There are plenty of other valid cases when you combine multiple data sources and create a single point of entry for all them.
+
+If you have an interface for your repository, as well, testing becomes trivial. ",0
+1630,location,"We’re on the engineering team for Android O. Ask us Anything! (starts July 19):**EDIT 7/19 @1:25PM PT:** We're just about to wrap things up! Still working on a few more responses. Again, a big thank you to everyone in the Android dev community. 
+***
+**EDIT 7/19 @12:37PM PT:** Here's the team hard at work answering your questions! http://imgur.com/a/Sqll9
+***
+**EDIT 7/19 @12:00PM PT:** We're kicking off today's AMA on Android O. We'll do our best to get through your questions. Appreciate the time and patience! 
+
+***
+As part of the Android engineering team, we are excited to participate in another AMA on r/androiddev this Wednesday, July 19! A few weeks ago, we announced the third developer preview of the next version of the OS: Android O. We have another developer preview coming up soon, followed by the public release later this summer.
+***
+This your chance to ask us technical questions related to the latest features specifically in Android O -- from the APIs and SDK to Android Instant Apps. Please note that we want to keep the conversation focused strictly on the engineering of the platform. 
+
+***
+
+We'll start answering questions on Wednesday, July 19 at 12:00 PM PST / 3:00 PM EST (UTC 1900) and continue until 1:30 PM PST / 4:20 PM EST. **Feel free to submit your questions ahead of time.**
+
+***
+*Proof* || 
+Recent AMA on Android Studio: https://www.reddit.com/r/androiddev/comments/60hrpm/the_eng_team_for_android_studio_the_official/
+***
+
+**Here's the full list of participants from the Android team**
+
+* Adam Powell: TLM on UI toolkit/framework; views, lifecycle, fragments, support libs 
+
+* Adam Cohen: TLM on Android Launcher
+
+* Allen Huang: Product manager covering launcher, notifications, search integrations and more!
+
+* Alan Viverette (/u/alanviverette): Tech Lead / Manager of the Support Library team
+
+* Anwar Ghuloum: Engineering Director for Android Core Platform (Runtime/Languages, Media, Camera, Location &amp; Context, Auth/Identity)
+
+* Aurash Mahbod: Engineering Director for Android Instant Apps and Play Store app
+
+* Ben Poiesz (/u/bpoiesz): Product manager covering Android OS Framework, System Health and Metrics
+
+* Chet Haase: Lead/Manager of the UI Toolkit team (views &amp; widgets, text rendering, HWUI, support libraries)
+
+* Dianne Hackborn: Manager of the Android framework team (Resources, Window Manager, Activity Manager, Multi-user, Printing, Accessibility, etc.) 
+
+* Dirk Dougherty: Developer Advocate for Android (Developer Preview programs, Android Developers site)
+
+* Jonathan Karmel: Senior Product Manager, Android Instant Apps
+
+* Kathy Kam: Technical Program Manager, Support Library Team
+
+* Lukas Bergstrom (/u/lukasb): Product Manager for Developer Frameworks and Platform (Architecture Components, App Links)
+
+* Mike Cleron: Engineer covering Android’s application framework, system UI, and SDK
+
+* Narayan Kamath: Engineer on Runtime/languages/core libraries.
+
+* Rachel Garb: UX Manager leading a team of designers, researchers, and writers responsible for the Android OS user experience on phones and tablets
+
+* Romain Guy (/u/romainguy): TLM of the Android Graphics team responsible for Vulkan, OpenGL ES, SurfaceFlinger and Hardware Composer.
+
+* Selim Cinek: (u/selimcinek) Engineer on Android SystemUI and responsible for the visual display of Notifications.
+
+* Stephanie Saad Cuthbertson (/u/steph---): Director of Product Management, Android
+
+* Tim Murray: TLM for Android performance
+
+* Trevor Johns (u/trevorjohns): Engineer, Android Developer Programs
+
+* Xiaowen Xin: Product manager for Android security
+
+* Yigit Boyar: (u/yboyar) TL on Architecture Components; +RecyclerView, +Data Binding",0
+1982,location,"Modern UI and navigation designs:Hey guys. Which design are most people using nowadays? Topnav with swiping or botnav? If neither, is there a custom design youve come up with? What is your preference? 
+
+&amp;#x200B;
+
+Personally, for the first app i am developing, i am using bottom nav at the moment because it just seems easy to switch between the tabs using your thumb. However, i want to take a different approach now. I want to drop the appbar from the top to the bottom. This way it is easier to reach and all the functions such as searching and filtering are at a very convenient location. Then i want to take the navigation bar completely remove it and use swiping for navigation because that seems a lot easier. Do you think this is a good design?",0
+2257,location,"We am a start-up with 500k investment and our app was suspended and removed from Google Play! Help us please: 
+
+Hi people!
+
+Our app was suspended from Google Play after one major update.
+
+After appeal we received this e-mail from Google:
+
+Hi developer,
+
+Thanks for contacting Google Play team. 
+
+**Status of app: Suspended from Google Play due to policy violation**
+
+I’ve reviewed your appeal request and found that your app violates the **Malicious Behavior** policy. We don’t allow apps that steal data, secretly monitor or harm users, or are otherwise malicious. We have determined that your app is being promoted as a means of carrying out spying or secret surveillance of others.
+
+Surveillance and ""Commercial Spyware"" are explicitly prohibited on Google Play. Only policy compliant apps exclusively designed and marketed for parental (including family) monitoring or enterprise management may distribute on the Store with tracking and reporting features, provided they fully comply with the requirements described below:
+
+Qualified apps that monitor or track a user’s behavior on a device must comply with these requirements:
+
+* Apps must not present themselves as a spying or secret surveillance solution.
+* Apps must not hide or cloak tracking behavior or attempt to mislead users about such functionality.
+* Present users with a persistent notification and unique icon that clearly identifies the app.
+* Apps and app listings on Google Play must not provide any means to activate or access functionality that violate these terms, such as linking to a non-compliant APK hosted outside Google Play.
+* You are solely responsible for determining the legality of your app in its targeted locale. Apps determined to be unlawful in locations where they are published will be removed.
+
+You can read through the Malicious Behavior policy page for more details. 
+
+For example, your app currently is not exclusively designed and marketed for parental (including family) monitoring or enterprise management may distribute on the Store with tracking and reporting features.
+
+Please note that suspensions count as strikes against the good standing of your Google Play Developer account. Egregious or multiple policy violations can result in suspension, as can repeated app rejections or removals.
+
+If your developer credentials are still in good standing with Google Play and if your app allows for it, you can publish a new compliant version of the app by following these steps:
+
+1. Make the necessary changes to your app to address the issue described above, if possible.
+2. Double check that your app complies with all other Developer Program Policies. Additional enforcement could occur if there are further policy violations.
+3. Sign in to your Play Console and upload a new app using a new package name and a new app name.
+
+Please let me know if you have any other questions. Thanks for your continued support of Google Play.
+
+Regards,Jay  
+The Google Play Team
+
+We send back this e-mail:
+
+Hello Jay,
+
+Thanks for notifying us and helping us better understand our app's problems.
+
+We would like to mention that this application is of a major importance for our team as it has been developed with the contribution of investors funds, our whole team efforts and user's feedback and involvement alike. Therefore - we would like to do whatever necessary to keep our App Name and branding. Submitting our app with a different name would mean changing our business entirely.
+
+We now realise the severity of our breach of conduit. We are extremely sorry and we would like to be given the opportunity to take all the necessary measures to fix this and make sure this won't repeat in the future.
+
+That being said, we would like to be able to upload a new, complaint version of our app, with the following changes:
+
+\- remove all the location tracking related texts (including our site and Play Store) and stop presenting ourselves as a spying or secret surveillance solution.
+
+\- make the necessary changes to our app to only allow location sharing between specific users, with their explicit permission and for a limited time only.
+
+Please let us know if there is anything else we can do so we can reach an agreement and have our application available again for our users.
+
+Thank you for your consideration and for helping our team continue offering the services our users love!
+
+We received that:
+
+Hi developer,
+
+Thanks again for contacting Google Play Developer Support. 
+
+As much as I'd like to help, I’m not able to provide any more information or a better answer to your question. In our previous email, I made sure to include all the information available to me.
+
+You should be able to find more information about your issue here: Malicious Behavior
+
+If you have a different question about the Play Developer Console, please let me know.  
+Regards,Jay  
+The Google Play Team
+
+Check out this short video for more policy guidance and best practices: 10 tips to stay on the right side of Google Play policy.
+
+We send again this:
+
+Hi Jay,
+
+I had the xxxxx application, with package ID xxxxxx, for some time on Google Play.
+
+We found that the app violates your terms and we made all the adjustments.
+
+I'm kindly asking you to remove that single Strike on my Play Developer account (from Suspended to Removed) in order to be able to upload a new compliant version of the application.
+
+We are here for any further questions or any details you need in order to fix this issue as soon as possible.
+
+Yours sincerely,
+
+Amd we received this:
+
+Hi developer,
+
+Thanks again for contacting Google Play Developer Support. 
+
+As much as I'd like to help, I’m not able to provide any more information or a better answer to your question. In our previous email, I made sure to include all the information available to me.
+
+Regards,Jay  
+The Google Play Team
+
+Check out this short video for more policy guidance and best practices: 10 tips to stay on the right side of Google Play policy.
+
+..............
+
+I called at suport in India 2 times, 1 time in UK, 1 time in US and every time the same answer: ""We are not able to help you, create a appeal""
+
+It's imposible for us to continue, and we lost our investment if we don't solve that ....
+
+Question:
+
+If We put anather a new package name and a new app name , can we put in the name of app anather 2 letters and keep the logo and the website , and change only the package name and the App name with 2 more letters?
+
+Help us guys!!!
+
+We are like an hourglass .... tic-tac tic-tac....",1
+11094,location,"*Company*: Freetrade
+
+*Job*: Senior Android Engineer
+
+*Job*: Principal Android Engineer
+
+*Location*: London, United Kingdom
+
+*Allows remote*: Not right now
+
+*Visa*: Yes
+
+Freetrade is a next-generation stockbroker that makes investing accessible to everyone through zero-fee investing. We have developed a new technology platform that has brought free stock trading to the UK and Europe for the first time through a simple app.
+
+We're looking for talented Android engineers to join our rapidly growing team. We're using Kotlin, RxJava, Firebase Realtime Database, Dagger2 - all the fun stuff. Highly consumer/product focused. Cross-functional teams. 
+
+Great office location, competitive salaries, nice perks. More than happy to field any questions that people might have. DM me for more info. 
+
+Please note that I'm not accepting applications directly or referring people - I'm here to answer questions that you might have about the role.",0
+11545,location,"From a first lol, the application is really nice. 
+I am on a slow wifi network, so finding the city and loading the map was a but jittery. I understand that there isn't much that can be done about that unfortunately. Different theme options would be a great addition, and maybe the ability to set an image from unsplash/pixabay or to change it for cities would be another good addition. Lastly, when I switch from a location to another one by swiping, the animation appears to be really slow, it makes it look janky.",0
+2876,location,"I've been thinking about trying my hand at this for a while, and supporting a group effort sounds like a great way to learn. Perhaps we can create a project on github or sourceforge as a central location. That way we can all be contributors when we want.
+
+I've been using Java for about 6 years now so I suppose I could offer a decent amount of support there.",0
+98,location,"Location of ActiveSync files on the device?:I am doing some research for my boss, he requested i locate the raw data files for ActiveSync accounts on Android and determine what happens to the files when the account is removed (locally and from the ActiveSync server).
+
+question is, does anyone know the raw location of ActiveSync files on the Android platform?  is it based on what Email application is used?
+
+thanks!!",0
+3175,location,Location matters too.  $28k goes a lot farther in Mississippi than it does in New York.,0
+3178,location,"Very good points. A lot of people forget about location when looking at salaries. The only problem is just because someone is ""experienced"" they may not have the paper credentials to back it up. I feel a lot of talent goes wasted that way.",0
+3438,location,"So you want your app X to work with google maps and send your location info to foreign app Y? Not sure I'm getting the question. Why doesn't app Y use google maps in the first place?
+
+Google for ""android google maps"" and you will see all the many things you can do in your app. Sending that location info to another app might be a little trickier...
+
+
+
+",1
+3441,location,"First of all, congrats on your first app!
+
+Here are some things I'd fix
+
+* The main screen - The dashboard layout is old and dated. Perhaps try something like a ViewPager for the different modes, and let the user set the default. Or maybe a spinner in the Action Bar
+* The find location button in the action bar - Add an icon. Some people like the text buttons, but I feel like they are too attention grabbing on a phone sized screen.
+* In the Help Me mode - Change the ActionBar title to say Help Me. The stars are uncentered, but I don't know if that is just some weird error. Maybe move the Calculate button into the action bar, or make the button anchored to the bottom. Make the fonts a bit bigger too. The same things can be applied to the other modes as well.
+
+But overall, this is a great start! Keep working at it!",1
+233,location,"I have a great idea for an App, but I'm a novice. Will you guys help me think this out?:I'm sorry but I think I should keep it a secret just in case the idea gets stolen, but I'll try to give a general idea. It's actually not too unique since after going on G play I figured out there were apps like my idea. The problem is that they don't look so great and I think I can do better. I did think about this before seeing apps like these. I'm also working with my cousin who just knows a little bit about design.
+The idea is pretty much like a ""store"" locator except it's a special type of one and only shows those types of stores. You can find the nearest spot through some map. I want it to be fast and simple for my user's also great looking. Emphasis on the the design.
+I have a few questions though:
+
+What software should I have my cousin use for design and any extra tools like those touch pens?
+Do you think I can create a decent app within 3 months or so considering I am a novice?
+Should the app use Google maps to find the stores and how would I ""filter"" out the right one?
+Should I trademark the name or anything like that?
+Monthly costs to run the app? (is there any hosting?)
+Should I really just focus on getting the app up and running then update it later consistently improving it every time?
+I don't like apps forcing me to turn on my GPS every time I use them. If the user just wants to quickly find the nearest store can I let them bypass GPS and use the network location? Telling them they can improve their accuracy if they turn it on latter. (Or will google handle all that for me?
+Last profits from ads seem small should I just perfect my apps first then add ads latter on?
+
+I would appreciate any help thank you!
+",1
+546,location,"Finally released my first app (geo/map painting) - feedback appreciated!:I've just released my first android app and would love to get some feedback on it. The app allows you to paint pictures onto a map at your current location, which are then saved for everyone to see.
+
+Took quite a lot of work to finally get it all working but I've learnt a lot while doing it.
+
+You can get it here",1
+4268,location,"The issue happened again,  but this time it was ended as soon as Google's location process received a LOW_POWER_MODE_DISABLED powerMode change: 
+
+    03-15 11:30:09.000 E/qcom_sensors_hal(  786): hal_acquire_resources: Failed for handle 30 @ samp 1 Hz rpt 0 Hz WuFF 0 batched 0
+    03-15 11:30:09.020 E/qcom_sensors_hal(  786): hal_process_sam_smd_resp: Msg 2; Result: 1, Error: 6
+    03-15 11:30:09.020 E/qcom_sensors_hal(  786): hal_acquire_resources: Failed for handle 30 @ samp 1 Hz rpt 0 Hz WuFF 0 batched 0
+    03-15 11:30:09.030 I/GCoreUlr( 1330): Received powerMode change from NLP: com.google.android.location.activity.LOW_POWER_MODE_DISABLED
+    03-15 11:30:09.030 I/GCoreUlr( 1330): Starting service, intent=Intent { cmp=com.google.android.gms/com.google.android.location.reporting.service.DispatchingService (has extras) }, extras=Bundle[{intentType=3}]
+    03-15 11:30:09.030 E/qcom_sensors_hal(  786): hal_process_sam_smd_resp: Msg 3; Result: 1, Error: 6
+    03-15 11:30:09.080 I/art     ( 1330): Heap trim of managed (duration=6.735520ms, advised=2MB) and native (duration=1.844740ms, advised=112KB) heaps. Managed heap utilization of 32%.
+    03-15 11:30:09.110 E/qcom_sensors_hal(  786): hal_process_report_ind: Bad item quality: 11 
+    03-15 11:30:09.120 I/GCoreUlr( 1330): Ensuring that reporting is stopped because of reasons: {account#13#=[InactiveReason{mVersionCode=0, mIdentifier=6, mName='ReportingNotSelected'}]}
+    03-15 11:30:09.120 D/GCoreFlp( 1330): Unknown pending intent to remove.
+    03-15 11:30:09.120 I/GCoreUlr( 1330): Unbound from all location providers",1
+636,location,"Trouble querying database with GPS coordinates.:I'm working on an app that queries a database with a set of longitude and latitude coordinates to get the nearest landmark to the user's current location. I'm using rawquery so I can get more out of my query statements, however, I seem to have a peculiar syntax error and I hope someone can help me figure it out.
+Here's is the getFilename() function in my databasehelper class:
+
+
+     public String getFileName(double userlat, double userlong){
+        
+             String la = Double.toString(userlat);
+             String lo = Double.toString(userlong); 
+             String ex = ""abs(latitude – "" + la + "") + abs(longitude – "" + lo + "")"";
+              String Q = ""SELECT lmarkalert FROM landmark WHERE "" + ex + "" IN ( SELECT min( "" + ex + "") FROM landmark);"";
+         Cursor c = db.rawQuery(Q, null);
+
+             String filename = c.getString(0);
+             Log.d(""SQLPlay2"", ""lmarkalert:"" + filename);
+        
+         
+            return filename;
+             }
+
+So I call this function in onlocaitonChanged with the user's current latitude and longitude coordinates like so:
+ 
+    String alert = db.getFileName(location.getLatitude(), location.getLongitude());
+
+
+The error I'm getting has to do with a ""-:"" syntax in my query statement. Here's the relevant except from my logcat:
+
+
+05-02 06:08:33.910: E/SQLiteLog(1425): (1) near ""–"": syntax error
+05-02 06:08:33.920: D/AndroidRuntime(1425): Shutting down VM
+05-02 06:08:33.920: W/dalvikvm(1425): threadid=1: thread exiting with uncaught exception (group=0xb1a43ba8)
+05-02 06:08:34.010: E/AndroidRuntime(1425): FATAL EXCEPTION: main
+05-02 06:08:34.010: E/AndroidRuntime(1425): Process: com.example.speedalert, PID: 1425
+05-02 06:08:34.010: E/AndroidRuntime(1425): android.database.sqlite.SQLiteException: near ""–"": syntax error (code 1): , while compiling: SELECT lmarkalert FROM landmark WHERE abs(latitude – 5.643693333333332) + abs(longitude – -0.18587166666666669) IN ( SELECT min( abs(latitude – 5.643693333333332) + abs(longitude – -0.18587166666666669)) FROM landmark);
+
+
+NB: I tested the app on the emulator by sending the following mock gps data to it: longitute:-0.185871972 latitude:5.643693991. Thanks in advance.",1
+653,location,"Looking to list nearest locations based off of your location vs a pre designated list:So as the title suggests, I have a list of coordinates for about 5000-7000 locations.  I am looking to incorporate google maps into my application.  Essentially, I want the user to be able to hit a button and based off of their location, it would either pull an ordered list of all locations closest to furthest, or pull the closest 10 locations and order them closest to furthest.
+
+I am trying to find a tutorial which could get me started on that functionality but I am having trouble finding something similar.
+
+Obviously, I want to be able to supply a table with all of my long/lat values, and then compare that to the users location, and then take the closest 10 and pull the information from google for those locations (or mark them on the map and let the user select them.)
+
+Does anyone know of good tutorials for this?",1
+718,location,"What are some ad networks that online require the internet permission?:I'm looking to add some mediation networks to my admob banner (and interstitial) ads. I want the ads to only need the internet permission. I don't want some dodgy permissions like Writing External storage or getting location data or getting phone numbers etc.
+
+Just Internet.",1
+4624,location,"You can get a pretty decent idea of location from your IP address alone. 
+
+http://www.iplocation.net/",1
+4845,location,"Make a weather app from one of the free weather feeds. You will learn json, network requests, async connections, location provider, local app storage, interfaces / lists. Just copy one of the simple apps from the store.",1
+5694,location,Sorry for semantics but wouldnt ur example be useless since they address last location with maps play services api? No need to store it yourself right?,1
+1290,location,"How do random places (geo-locations) let pop-up the Playstore of that place where you are right now?:My question is based on THIS comment.
+
+On another thread some time ago, someone was on a flight to china IIRC.... While (s)he flew there, an App (with a Chinese name) requested to be installed with basically all permissions.
+
+How does this work, that if you enter any location, installations get initiated?
+",1
+1430,location,"What are some best practices to explain why you need permissions on Android 6.0 onwards?:- Do you use a pop-up dialog before asking for permissions?
+- Does an open source library take care of that?
+
+For us we are asking the users permission for the microphone for voice commands and location to show local weather. Am wondering the best way to help the user understand why I need access to their microphone and weather. Thanks! ",1
+6693,location,You basically need to check their location then let them know that you will let them know when its available in their area.,1
+1464,location,"Accurate Location Updates?:So i want to track the user location on map and show its progress on the map,something like Uber?Currently i am using fusedlocation provider of android.Is there any better way than this for accuracy or can me improve it via any method for accuracy and efficiency?",1
+6769,location,"You only need Google Maps API if you intend to use a Google Map to show the current position or the tracking history to the user on the mobile phone or to other users on the web page. For obtaining the location, as somebody already said, you need the Location API only. But, if you want to show a map on a web page and use the Javascript Google Maps API to overlay the users positions, that could certanly be considered an asset tracking user case, but only if you intend to it use for commercial purposes. Seeing this is an educational project free to use, i believe that restriction doesn't apply to you. (See Google Maps Terms Section 10.4.c.iv) 
+
+But my advice to you would be to track the user positions on the phone and build a .KML file of the ""recording"" session. This file can later be uploaded to a server when a data connection is available or shared to your contacts via intents through mail, instant messaging or whatever. Then, the user contacts or the user himself can load this kml on Google Earth or Google My Maps to see the location path. This way you don't need to bother with Google Maps API license at all, and only set up a simple server to store those kml files (if you really want to store them).",1
+7022,location,"There's no way to do this alone on the device because you need to either get the currently connected mobile network (which needs the phone permission and not all devices have mobile connection), or via GPS (which needs the location permission, not all devices have a GPS receiver and GPS is not 100% accurate).
+
+You can do it on the server side with IP geolocation, which only needs the Internet permission on the device (granted by default on M) but then again it's not 100% accurate, and the device needs Internet access.",1
+1504,location,"Looking for advice on how to integrate Google Play Services location SettingsAPI with MVP architecture:Hey /r/androiddev,
+
+I have an MVP architecture app that utilizes Google Play Services, Dagger 2, and RxJava but I'm having a hard time integrating Google's APIs into MVP. It seems like many of Google's APIs lend themselves to tons of logic inside of Activities (Which goes against single responsibility principle and MVP).
+
+I have a screen that needs to access the phone's location so I'm checking if location settings are enabled in my presenter. To do this, I've written a reactive wrapper around Google Play Services Location so my presenter delegates to `LocationInteractor` which calls into Google Play Services.
+
+To check if location settings are enabled you need to call into Google's SettingsAPI,  jump through a ton of hoops and callbacks, and eventually get back a `LocationSettingsResult` object. Fine. To get the status of the settings you need to call `locationSettingsResult.getStatus()` and check if the `status.getStatusCode()` is equal to either `LocationSettingsStatusCodes.SUCCESS`, `LocationSettingsStatusCodes.RESOLUTION_REQUIRED`, or `LocationSettingsStatusCodes.SETTINGS_CHANGE_UNAVAILABLE`. If the status code is `RESOLUTION_REQUIRED`, then calling `status.startResolutionForResult(Activity activity, int requestCode)` will open this wonderful dialog prompting the user to enable location services. 
+
+Ok. So my `LocationInteractor` takes care of this and returns a `Status` object from Google Play Services:
+`public Single&lt;Status&gt; getLocationSettingStatus(){...}`All fine and dandy. Since opening this dialog requires an Activity, I'm having my presenter call back to the view with this `Status` object:
+    
+    // Inside of some presenter method
+    locationInteractor.getLocationSettingStatus()
+                            .subscribe(status -&gt; {
+                                if (status.getStatusCode() == LocationSettingsStatusCodes.SUCCESS) {
+                                    doSomethingThatRequiresLocation();
+                                } else if (status.getStatusCode() == LocationSettingsStatusCodes.RESOLUTION_REQUIRED) {
+                                    if (isViewAttached()) {
+                                        view.showDialog(status);
+                                    }
+                                } else {
+                                    if (isViewAttached()) {
+                                        view.onErrorNoLocation();
+                                    }
+                                }
+                            }, throwable -&gt; {
+                                if (isViewAttached()) {
+                                    view.onErrorNoLocation();
+                                }
+                            });
+The View's `showDialog` method looks like this:
+
+    @Override
+        public void showDialog(Status status) {
+            try {
+                status.startResolutionForResult(this, 0);
+            } catch (IntentSender.SendIntentException e) {
+                onErrorLocation();
+            }
+        }
+
+However, this still isn't enough! You need to catch the result of this dialog in `onActivityResult`!!
+
+     @Override
+        public void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            switch (requestCode) {
+                case 0:
+                    switch (resultCode) {
+                        case Activity.RESULT_OK:
+                            // Call to presenter
+                            // Location settings now enabled
+                            break;
+    
+                        case Activity.RESULT_CANCELED:
+                            // Location settings still disabled
+                            onErrorLocation();
+                            break;
+                    }
+                    break;
+            }
+        }
+
+I really really hate all this boilerplate. Every place that I want to check for location settings I am going to need to add this boilerplate in my presenter and views. This is a lot of code to be copying around! Furthermore, the `Status` object is final which makes it super hard to mock it during tests of my presenter.  
+
+Does anyone know a better way of interacting with this API in an MVP context?
+
+Although I really love how this dialog window will automatically enable location services, I am thinking about ditching Google's SettingsAPI since it is such a PITA to use. I'd rather open a custom dialog that has a button which opens the phone location settings. It won't be automatic like the SettingsAPI, but it will fit into my architecture, be easier to use, and be easy to test.
+
+**Should I deal with all this Google Play Services boilerplate or just roll my own dialog which will obey MVP principles?**
+
+Sorry for the wall of text I really needed to rant about this API. 
+
+
+
+
+",1
+7105,location,"Hmm...strange library design. You might want to call `.bind()` right before you return the library instance in your Dagger module (If you can do that).
+
+IMO you really should be setting some kind of ""connected"" listener on `library` and only call `doSomething()` when that happens. This is similar to how you have to connect a `GoogleApiClient` before you can get the phone's location with `FusedLocationProviderApi` that uses the api client. Short answer, I don't think you should do anything differently on the Dagger side.
+",1
+7479,location,"I used Location Manager to get device's location but 
+the accuracy of location that is shown in my app is about 60 + accuracy of location that is shown in Google Maps. Why? I used two providers, network and gps, and take the more accurate location.
+
+I haven't used Fused location before. If I use Fused Location, is there any chance that I can get device's location faster and more accurate?",1
+7533,location,"Hey guys noob here, Ive been trying to figure out how to extract the gps location of an uploaded photo. Ive tryed using exif interface with the file path but no luck, Im thinking the resources i was looking at might be outdated. If anyone knows or could point in the right direction? That would be greatly appreciated.",1
+7952,location,"Hello, I have a Geotag Notes app I am working on that needs to store the current location of the user when they add a note entry into a SQLite database. I have the code to get the user location, but I am getting some errors that I am not sure how to fix in this Java class. I will post the Java class below. 
+
+	
+I get these two types of errors from the first code snippet: Error:(55, 27) The method PermissionGranted(String, Context) is undefined for the type Utils 
+
+Error:(78, 19) The method Toast(Context, String) is undefined for the type Utils
+
+https://gist.github.com/anonymous/287b53900ec4d46e0291629b95573c05
+
+Does anyone know what is causing this?",1
+8544,location,"I just read the docs. I thought everyone did. It's pretty clear. 
+https://developer.android.com/about/versions/oreo/background-location-limits.html
+
+https://developer.android.com/about/versions/oreo/background.html",1
+9433,location,How are you requesting location updates? I'd have thought if you use the fused location provider you'd get updates when Google's apps receive data.,1
+9446,location,"The situation would be more tolerable if there were general options for straightforward user dialogs to disable power saver, or to exclude an app from power saver.
+
+The Android SDK offers two intents to exclude an app from power saver restrictions:
+
+ACTION\_REQUEST\_IGNORE\_BATTERY\_OPTIMIZATIONS is user\-friendly, but not available on many devices from what I see, and legal only for certain use cases, not currently for location use cases.
+
+ACTION\_IGNORE\_BATTERY\_OPTIMIZATION\_SETTINGS is not user\-friendly, but available on more devices, and has no restriction in terms of legal use cases. I don't consider it suitable for regular users, though, just power users. On stock Android it takes the user to a screen listing apps that are currently excluded from power saver; the user has to find the option to show all apps on the device, and then sift through the list of 100\+ more\-or\-less obscure apps to find the desired app. This won't work for a majority of users IMO.
+
+I wonder if that kind of watchdog that you mention can be made reliable. The system may pretend that you're getting location data, but instead feed you stale data. \(User not moving.\) You could create your own AI to battle Google's AI...
+
+Based on the complexity of the issue I'm quite sure manufacturers will screw it up to a degree where it will be near impossible for a dev to ensure predictable app behavior once some sort of power saver kicks in. I guess it already is rather impossible today.",1
+9569,location,"Usually for apps which use ads, this is the source of revenue, thus it is covered by legitimate interest and you probably don't need to obtain consent for processing the smallest amounts of data for this to work.  You do however have to make an effort to minimise the data and you can ask your users if they want the rich, full, experience using personalised ads or if they want to use non\-personalised ads.  This is not consent, this is just an option.  It's all been confused because Google kept talking about consent and even named their own SDK the consent SDK.  Consent is required for when you need to process data which is not absolutely required for your app to work \(so for crash reports, if location is optional and so on\).  \(Think about a bank, they also have to comply with GDPR \- I cannot go to my bank and tell them that I no longer want them to process my personal data \- they need this in order to function.  But, they need to limit the data they are processing.\)
+
+I don't think your suggestion is viable since each developer using AdMob might use different providers.  Remember, GDPR requires you to tell your users where the data is going and what it is used for.  This is different for each developer and you really need to consider other consent too \(more important than AdMob is obtaining consent for grabbing crash reports as that is entirely optional in operation of most apps!\).",1
+1943,location,"Background processing:I am developing an app and came to a point where I need to do some heavy work in the background. I found my self in two differente scenarios where I see this is needed:
+
+1. My app manages a set of data and there is an import section that can potentially take long to execute, since for every entry a different rest request needs to be performed. So I though about doing this the same way imgur does with image uploading: Triggering some kind of background execution that displays its progress in a notification and lets you know when its done. You can still use the app in the meantime and if you go to the import section you can also see the progress of the task being executed.
+2. I need to know the location of the user (provided they gave permission) in many points through the app. I got a library that handles location requests through RxJava and it works nicely, also lets me subscribe to periodic updates in the form of an Observable. However this means i need to subscribe again from every activity / screen. So i thought maybe there is a way to request updates constantly while the app is open and launch a broadcast message to whoever is listening to let them know of the new data. 
+
+I started digging up a bit online to see how to accomplish these two tasks but I got quickly overwhelmed by old and new documentation talking about many different solutions such as JobIntents, JobSchedulers, Services, Background &amp; Foreground Services, IntentServices, WorkManagers, AlarmManagers... 
+
+Can you give me some guidance here please?",1
+2046,location,"Background location update doesn't work at all in most Chinese manufacturers. Is there any workaround?:I was experimenting with updating user location in background. Android Oreo limits the  number of times your app receive location update in background but devices of Oppo, Vivo, Realme, OnePlus (these are only ones I've tested so far) doesn't allow background location updates at all. There is an option in settings to allow background operation in these devices but it is at different location in all these devices. Besides most users are not even aware of this setting. Is there any way we can either bypass it or send user directly to that setting screen based on the device?",1
+10628,location,Of course. Geo fences and maps are 2 separate things. Maps are just useful to pick a location to fence around,1
+2154,location,"I added a product flavor to my app (e.g. location tracking vs non location tracking) and now the imported dependencies in /main cannot resolve and my application is broken. Can anyone view my setup and offer help/advice?:I've inherited a not so well maintained / documented android app and I need to add a simple product flavor to allow versioning in our app, specifically, a version that doesn't track location, and one that does (like our app already does).  
+
+
+Here is my project's file structure:
+
+!img
+
+I've added the product flavor to my app build.gradle file as instructed by android's dev documentation. Here is the app level build.gradle file:   
+
+
+`apply plugin: 'com.android.library'`  
+`apply plugin: 'com.novoda.bintray-release'`  
+`android {`  
+`flavorDimensions ""version""`  
+ `compileSdkVersion 27`  
+ `defaultConfig {`  
+`minSdkVersion 14`  
+ `targetSdkVersion 27`  
+ `versionCode 1`  
+ `versionName version`  
+ `}`  
+`compileOptions {`  
+`sourceCompatibility JavaVersion.VERSION_1_8`  
+ `targetCompatibility JavaVersion.VERSION_1_8`  
+ `}`  
+`buildTypes {`  
+`release {`  
+ `minifyEnabled false`  
+ `proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'`  
+ `}`  
+`}`  
+
+
+   `productFlavors {`  
+`nonLocationTracking {`  
+`dimension ""version""`  
+ `minSdkVersion 14`  
+ `targetSdkVersion 27`  
+ `versionCode 1`  
+ `manifestPlaceholders = [appName: ""@string/app_name_non_location""]`  
+`}`  
+`locationTracking {`  
+`dimension ""version""`  
+ `minSdkVersion 14`  
+ `targetSdkVersion 27`  
+ `versionCode 1`  
+ `manifestPlaceholders = [appName: ""@string/app_name_location""]`  
+`}`  
+`}`  
+
+
+   `lintOptions {`  
+`abortOnError false`  
+ `}`  
+
+
+   `publishNonDefault true`  
+`}`  
+
+
+`configurations {`  
+ `javadocDeps`  
+`}`  
+
+
+`dependencies {`  
+`implementation fileTree(include: ['*.jar'], dir: 'libs')`  
+`implementation 'com.android.support:support-annotations:27.1.1'`  
+ `implementation 'com.android.support.constraint:constraint-layout:1.1.2'`  
+ `implementation 'com.mcxiaoke.volley:library:1.0.19'`  
+ `implementation 'com.google.android.gms:play-services-ads:15.0.1'`  
+`}`  
+
+
+`publish {`  
+ `userOrg = '****'`  
+ `groupId = 'com.***.android'`  
+ `artifactId = '****'`  
+ `publishVersion = '2.0.0'`  
+ `desc = '**** sdk'`  
+ `website = '``https://github.com/*/****-android-public-sdk``'`  
+`}`  
+This sdk is loaded into the sample app that exists within this project folder as seen in the file structure screenshot above. The specific problem is that the sample app can no longer resolve the imported dependencies that come from the imported sdk. 
+
+  
+Here is the sample app's build.gradle file:  
+
+
+`apply plugin: 'com.android.application'`  
+`def computeVersionCode = { -&gt;`  
+ `def stdout = new ByteArrayOutputStream()`  
+`exec {`  
+`commandLine 'git', 'rev-list', 'HEAD', '--count'`  
+ `standardOutput = stdout`  
+`}`  
+ `return stdout.toString().trim().toInteger();`  
+`}`  
+
+
+`android {`  
+`compileSdkVersion 27`  
+ `defaultConfig {`  
+`applicationId ""com.****.demo""`  
+ `minSdkVersion 15`  
+ `targetSdkVersion 27`  
+ `versionCode computeVersionCode()`  
+`versionName ""1.0""`  
+ `renderscriptTargetApi 20`  
+ `renderscriptSupportModeEnabled true`  
+ `}`  
+`buildTypes {`  
+`release {`  
+ `minifyEnabled false`  
+ `proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'`  
+ `}`  
+`}`  
+`compileOptions {`  
+`sourceCompatibility JavaVersion.VERSION_1_8`  
+ `targetCompatibility JavaVersion.VERSION_1_8`  
+ `}`  
+
+
+   `signingConfigs {`  
+`debugConfig {`  
+ `storeFile file(""debug.jks"")`  
+ `storePassword ""****""`  
+ `keyAlias ""com.****.android""`  
+ `keyPassword ""****""`  
+ `}`  
+
+
+`releaseConfig {`  
+ `storeFile file(""release.jks"")`  
+ `storePassword ""****""`  
+ `keyAlias ""com.****.android""`  
+ `keyPassword ""****""`  
+ `}`  
+`}`  
+
+
+   `buildTypes {`  
+`debug {`  
+ `signingConfig signingConfigs.debugConfig`  
+ `}`  
+`release {`  
+ `signingConfig signingConfigs.releaseConfig`  
+`minifyEnabled false`  
+ `proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'`  
+ `}`  
+`}`  
+
+
+   `lintOptions {`  
+`abortOnError false`  
+ `}`  
+`}`  
+
+
+`dependencies {`  
+`implementation fileTree(dir: 'libs', include: ['*.jar'])`  
+`implementation 'com.android.support:appcompat-v7:27.1.1'`  
+ `implementation 'com.android.support.constraint:constraint-layout:1.1.2'`  
+ `implementation 'com.android.support:design:27.1.1'`  
+ `implementation 'com.android.support:preference-v7:27.1.1'`  
+ `implementation 'com.google.guava:guava:23.0'`  
+ `implementation 'com.squareup:seismic:1.0.2'`  
+ `implementation 'net.hockeyapp.android:HockeySDK:3.7.0'`  
+ `implementation 'jp.wasabeef:blurry:1.0.5'`  
+ `implementation project(path: ':****-sdk', configuration: 'default')`  
+`testImplementation 'junit:junit:4.12'`  
+`}`
+
+&amp;#x200B;
+
+&amp;#x200B;
+
+It's my understanding that product flavors will still make use of anything inside of /main that isn't overridden in the product flavor's directory. Am I wrong about this, or am I doing something else wrong? How should my product flavors be importing shared code? The locationTracking and nonLocationTracking product flavor directories are currently empty.. Only thing I changed was adding the product flavors in the build.gradle file and then creating the directories for each product flavor as siblings of /main. Any help would be extremely appreciated!   
+
+
+\*Note: only thing I changed in the pasted code is I replaced my organization's name with '\*\*\*\*'",1
+2220,location,New to App development. I'm building an app that uses sms as a fallback for no data access to send location data using a travel/check in app. Should I be worried?:I'm building a travel/peace of mind app for location tracking abroad and it will have a feature of being able to use sms when data is not available to send location updates with latitude and longitude. I've read on here about the sms/call permissions problems happening now. Should I be worried?,1
+11113,location,"That's such a false comparaison.
+
+They change default behaviour when they feel like there is a privacy (or related) issue that needs to be fixed asap. If you don't do that, apps just dont target Q and call it a day: see how many apps still target &lt;23? Well, enough for them to force those apps to display a revokable list of permissions on start.
+Sure the play store forces it but what about apps that will not be updated? What about apps distributed outside of the store?
+
+The API itself then stays bug compatible. But if they want to change how the OS fundamentally works, they'll break apps. Storage and clipboard access bring huge problems.
+The location permission change is a good example. iOS has shown that given the choice, devs will mostly not provide the choice to only grant location when in use, so they forced it in 12.
+
+Google did the same with Q, and they're rightw",1
+11257,location,"When working with real time tracking on map with polyline, instead of getting new polyline data after sometime, is there a better way of doing it instead of repeated API call which would end up being costly.
+
+Maybe a library which keeps track of polyline and user's current location and update existing polyline points accordingly and only fetch new data when going out of range.",1
+11418,location,"Depends on your end goal. 
+
+&gt;My problem is that all the project ideas I'm having seem to be more suited for a mobile app. Vaguely, one is an app that finds people with common interests in a certain geographic location and facilitates a meet up. (Similar to Tinder, just different goals). Another is a sort of social media/e-commerce site.
+
+The front end, meaning the Android/iOS or web app are the easy part on these projects. The harder part is the backend typically. Typically IMO web is the easiest to make something that'll ""work"" with modern web technologies. And that way you can just open a browser and can use the functionality on any platform or on a PC.
+
+ PWA, Progressive web apps, are websites that you can ""install"" on your mobile phones and users won't know they're not an app. If your app doesn't have a lot of stuff that requires really high performance, you're just displaying data, then that would be my vote. 
+
+In the future if your app takes off and you want/need the increased performance from a native app, you can tackle that problem in the future. You'll already have the backend made, and having made a front end on one platform, the rest are pretty similar.",1
+11634,location,"Hi!
+
+&amp;#x200B;
+
+In the meanwhile, I did some more testing with the emulator. I started the app, a job is deployed to run each 20 minutes, used the app for a couple of minutes, and then I exited the app by pressing ""back"" until it was closed.
+
+&amp;#x200B;
+
+Of course, I selected ""allow only while using the app"" when asked.
+
+&amp;#x200B;
+
+When the job was fired by the workmanager 20, the location permission was there and the job could use the location services successfully. 
+
+&amp;#x200B;
+
+In theory, it works, but I don't feel confident. We will see...",1
+2794,location,"Thanks for the test. Can other apps find your location, such as GPS Status? It won't work if you're inside with lots of concrete. I'll try to find a local N1 and see what's going on.",1
+11918,location,I wish this was the default and it was an extra permission for location in background.,1
+2535,location,"Check my open source Kotlin MVVM Family Track Application developed by recommending Architecture compenents:A nice open-source project has been created with fun! I have developed a family tracking concept based application where let you add the members of your family and track where they are as real-time location fetching occurs.  The motivation behind this project is to apply never-ending background services on android with a clean architecture and working with some back-end operations by using Firebase. Check out the source code below and do not hesitate to give me feedback.
+
+Github: https://github.com/mehmettas/MVVM\_firebase\_realtime\_family\_tracker
+
+!img",1
+12302,location,"This is precisely what I'm saying - one single update to the consent library, and after that, push updates to a common central server. If the consent library is generic, it can request the appropriate info from the server based on location, IP address, etc., and display it to the user, instead of updating it every time a new region gets a new law/regulation. Once you update to this generic version, you don't need to worry anymore, as the configuration would live online (and possibly cached locally too).",1
+2748,location,"NEWBIE PROJECT:So im a complete beginner when it comes to android studio but i do know java and oop
+
+I want to develop an app which is essentially a booking application, it would need to users to log in and register with MySql,then have a profile page containing details of the user, also have a google maps location , allow users to book and cancel 
+
+Any tips on how to start, where to look for help etc etc",1
+101,location,"My first app, Tap Location, hoping for some feedback.:Tap Location
+
+I finished my first app, it's basic, but I worked through some coding that I will use in later apps that I'll develop later on. I wanted to get feedback on the app before moving onto bigger and better things so I don't end up making the same mistakes. 
+
+I tried to make an easy way to send your current location to anyone in your contacts. Hopefully it's simple enough that it's self explanatory: get address - send text message. Down the road I'd like to add more functionality for email or possibly social integration. 
+
+It was a fun process and I'm glad I was able to finish it to get my boots wet. Let me know what I could change to make it better. Thanks for looking.",1
+3660,locations,"You can mock locations (or multiple locations) on a device/emulator. You can run multiple emulators on a machine. Run emulators on your schools lab machines.
+
+Check out this page to start with. 
+
+This has the additional bonuses:
+
+1. Run tests with lots of installations running simultaneously and repeatedly BEFORE your demo.
+2. No one needs to sign disclaimers.
+3. No one needs to worry about what your app might be collecting.
+4. You can control how diverse the location data is.
+5. You can script the whole thing and rehearse your interview.",1
+691,locations,"Hi fellow devs, I recently made my first Android game, EarthGuesser, a game where you have to guess the locations of random street views, inspired from GeoGuessr. I would love feedback from you guys :D:Store Link
+
+It's my first time making a game of any sort (I've previously stuck to utility apps on Android), and I was wondering how I did! Here's the play store description:
+
+EarthGuesser is an educational puzzle game that takes you to a random Google Street View location around the world and challenges you to guess its location on a map. From the most remote roads in the Amazon to crowded shopping malls and museums, the game trains your awareness of surroundings while offering you breathtaking views.
+
+I have integrated Google Play Games Achievements and Leaderboards into the game, but I am unsure if I did it the ""right"" way. Anyway, I am eager to hear any feedback or pointers for the game moving forward! :)",0
+1292,locations,"Need help with a suggestion to Google:Not sure if this is the right place or not but I want to submit a feature request for Android. My idea: the battery saving feature is great but when I'm at home I would rather not have it turn on automatically since I usually have easy access to a charger. I would like a feature the battery saver can be set so it won't turn on at locations (similar to smart lock location option: Home, work, etc..) But would still pop-up the regular notification giving me the option to easily enable it if needed. 
+
+I hope that made some sense to you and maybe someone can help me reword it to submit to Google. It seems like it would be relatively easy to implement.",1
+6313,locations,"try some aspirational locations - I see you have Sydney, I'm not saying Lancaster is an awful place.. but maybe your first shot should be New York or London ... not sure if it's possible but you could even try localising the screenshots?",0
+6319,locations,"MySQL has a HTTP plugin which exposes the DB via a REST API. You can probably find other tools with a Google search that expose MySQL. You can make a HTTP call to get your data and another HTTP to update it on the server. 
+
+That's fine if he wants to have a local server but make sure that they understand scaling and building out hardware/new locations. Along with managing security of all that data... From physical access, firewalls, and HTTPS certificates. ",0
+6728,locations,"This is the best image I could find and it's with multiple weather locations. I want to be able to dismiss one of the cities but not the whole card.  
+  
+http://www.droid-life.com/wp-content/uploads/2014/05/google-now-weather.jpg",0
+7054,locations,"My GPS won't update and when it does I will be 50 feet away from where I am. For instance, I'm Pokémon go my character will also walk in the opposite direction. My GPS doesn't update on Google maps either. I have changed GPS accuracy, checked for updated firmware, and turned off mock locations.  Is this a hardware issue? I'm using an lg g5 running the latest.",0
+11789,locations,"Imagine that things used to be even worse hah.
+
+Well, android dev is a weird one to say the least. I guess that's why it's relatively well paid and in high demand (in certain locations that is).",0
+299,locations,"Having trouble finding information on location handling/directions and getting a list of nearby locations.:Hey /r/androiddev!  I'm working on a project which includes the replication of parts of the ""local"" app.  I'm not sure if that is a staple across many phones but basically what it does is give you a list of nearby places given your filters and you can tap to get options like map/directions to/or to call them. I suppose that is just about exactly what I need, except I need the list of places to come from my own database.  
+
+Now I've done a bit of digging and couldn't find a way to do directions properly (most resources said that since there is no API you need to handle all cases?)  In addition to that, directions seem to need longitude/latitude instead of an address which isn't optimal.  I'd also need to find distances between multiple locations and the user location and sort them based on that distance.  The sorting should be easy, but I don't know of a best practice way to request so many distances as to do that in real time and I'm not sure if carriers put a restriction/fee in place for spamming through gps.  I suppose I could just do some Pythagorean theorem lovelyness and calculate distance that way... but I'm not sure if users expect as the crow flies distance or road based.
+
+I don't know if I'm looking in the wrong places or searching the wrong terms, but if anyone could lend me a hand I'm be most appreciative.  I'll keep you guys up to date with whatever implementations I find on my own in the mean time.
+
+Thanks!
+
+TL;DR - Having trouble finding a way to do directions with address, launching to directions, and finding distances to nearby places.
+
+
+EDIT:
+
+After digging around for a bit and testing things I found, I discovered how to convert lat/long to an address.  [Here] (http://developer.android.com/training/basics/location/geocoding.html) is the tutorial I found that I used.  If you get a ""cannot connect to service"" error while using geocoder, it appears the only fix is to actually restart your phone, sadly.",1
+8466,locations,"In our app, we're requesting location-updates from the FusedLocationApi with an interval of 120 seconds. You're supposed to disconnect the api from context to prevent leaks.
+
+We're sending the locations to the server via webcalls and this shouldn't happen more than once every 120 seconds.
+
+The issue is that we have multiple activities and in case you start one and get back to the original activity too quickly, the location-updates start right away, which means you get more than 1 update within 120 seconds.
+
+Is there a graceful way to handle for the api to pick up where it left off?",1
+1781,locations,"Bus tracking app?:Hello 
+
+I'm kind of new to the whole development scene and was wondering how I'd go about building an app like the one in question? 
+
+I already started an android course but i want to have a sneak peek on how i can achieve my target idea in the end. 
+
+I want to build a bus tracking app for a local school where each parent would have a username and password that would allow them to track only the bus their child is on. I'll be using a mobile phone as the tracker. 
+
+From what I understand, i need to send the instantaneous location of the tracker phone to a server then have the parent's app only access the locations after supplying the username and password. 
+
+How do I get the device to send its location and how do I get the parent's app to view the location as it moves? I was hoping I'd have something similar to how the uber app or whatsapp live location works. 
+
+I searched online and found the google maps api. However, a friend was telling me that he thinks I don't need all that (especially that it's extremely expensive for me as i live in Egypt). He says i can get the device to send its location without the need of any api whatsoever, and then I just need to get the coordinates off the server and onto the map. 
+
+I know Google offers an asset tracking option with their premium maps api but that seems to be for $10k a year and only for a hundred vehicles. 
+
+Thank you in advance and sorry if this is a noob question.",1
+10640,locations,"&gt; There is no such thing as "" Impregnable"" in Android from my understanding. 
+
+I was worried about that... hrmm...
+
+&gt;How are you going to sync the data when the users go online again?
+
+Just keep track of their gps locations and actions performed during their offline status basically.. then as soon as they get back online send a compressed copy of it back to the servers.
+
+Thank you for the feedback.",1
+115,locations,"[App Request]  device radar/mapping app:I had this idea a while ago and have yet to see someone execute it.  What I'd like is an app that broadcasts the gps coordinates of one device to another over wifi and/or bluetooth.  The receiving device would then take the gps coordinates and overlay them on a map of the area. 
+It would look similar to the radar used in first person shooters,  perhaps even using the compass to orient their locations relative to yours.  You'd be limited to the distance of your wifi connection,  but perhaps you could use some type of mesh network to cover more area as you add additional devices.
+
+I'd like it to work in areas without data connection since some of the devices i'd be using are old and no longer have a cell plan associated with them.
+
+",1
